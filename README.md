@@ -106,7 +106,6 @@ The model produces:
 
 Possible predictions:
 
-```text
 LOW
 MEDIUM
 HIGH
@@ -119,6 +118,8 @@ ChainProof also uses Isolation Forest for anomaly detection.
 The anomaly detector identifies unusual combinations of container security characteristics.
 
 Example:
+```text
+
 
 Unusually large package count
         +
@@ -130,6 +131,8 @@ Unusual image characteristics
         ↓
 Anomalous Security Profile
 
+
+```
 The system returns:
 
 Anomaly detected / normal
@@ -140,6 +143,9 @@ Model status
 ChainProof combines machine-learning predictions with security evidence.
 
 The risk engine considers:
+
+```text
+
 
 Random Forest prediction
         +
@@ -167,6 +173,9 @@ Risk Score	Severity	Verdict
 25–49	MEDIUM	CAUTION
 50–74	HIGH	HIGH RISK
 75–100	CRITICAL	HIGH RISK
+
+```
+
 📊 Risk Breakdown
 
 ChainProof provides an explanation of how different security signals contributed to the final risk score.
