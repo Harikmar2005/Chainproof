@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/dist/
+
+# Vite
+.vite/
+
+# Python generated files
+*.log
+
+# Database / runtime data
+*.db
+*.sqlite
+*.sqlite3
+
+# Reports generated at runtime
+backend/data/reports.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python model cache
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
