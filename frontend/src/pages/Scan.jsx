@@ -45,6 +45,10 @@ function Scan({ onRouteChange, initialImage = "" }) {
     };
 
     const handleScan = async (overrideImage) => {
+        if (loading) {
+            return;
+        }
+
         const targetImage = (overrideImage || image).trim();
 
         if (honeypot) {
@@ -53,8 +57,11 @@ function Scan({ onRouteChange, initialImage = "" }) {
         }
 
         const now = Date.now();
-        if (now - lastScanTimeRef.current < 2000) {
-            setError("Please wait a moment between consecutive scans.");
+        const elapsed = now - lastScanTimeRef.current;
+        const cooldownMs = 1200;
+        if (lastScanTimeRef.current > 0 && elapsed < cooldownMs) {
+            const remaining = ((cooldownMs - elapsed) / 1000).toFixed(1);
+            setError(`Please wait ${remaining}s before initiating another scan.`);
             return;
         }
 
@@ -80,6 +87,7 @@ function Scan({ onRouteChange, initialImage = "" }) {
     };
 
     const handlePresetClick = (preset) => {
+        if (loading) return;
         setImage(preset);
         setError("");
         handleScan(preset);

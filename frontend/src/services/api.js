@@ -1,6 +1,46 @@
 import { Analytics } from "./analytics";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/v1";
+/**
+ * Resolve API Base URL from environment variables:
+ * Supports VITE_API_URL or VITE_API_BASE_URL with fallback to local development.
+ * Normalizes trailing slashes and ensures /api/v1 route prefix.
+ */
+function resolveApiBaseUrl() {
+    const raw = (
+        import.meta.env.VITE_API_URL || 
+        import.meta.env.VITE_API_BASE_URL || 
+        "http://127.0.0.1:8000"
+    ).trim();
+
+    const stripped = raw.replace(/\/+$/, "");
+    if (!stripped) {
+        return "http://127.0.0.1:8000/api/v1";
+    }
+    if (stripped.endsWith("/api/v1")) {
+        return stripped;
+    }
+    return `${stripped}/api/v1`;
+}
+
+export const API_BASE_URL = resolveApiBaseUrl();
+
+// Non-sensitive debug logging in development
+if (import.meta.env.DEV) {
+    console.debug(`[ChainProof API] Configured endpoint: ${API_BASE_URL}`);
+}
+
+/**
+ * Format network errors into clear actionable diagnostic messages
+ */
+function handleNetworkError(err, actionContext = "operation") {
+    if (err instanceof TypeError && (err.message.includes("Failed to fetch") || err.message.includes("NetworkError") || err.message.includes("Load failed"))) {
+        return new Error(
+            `Unable to reach ChainProof Security API at (${API_BASE_URL}). ` +
+            `Please ensure the FastAPI backend is running and accessible.`
+        );
+    }
+    return err;
+}
 
 /**
  * Scan Docker container image
@@ -10,15 +50,22 @@ export async function scanImage(image) {
     
     Analytics.trackEvent("scan_initiated", { image: cleanImage });
 
-    const response = await fetch(`${API_BASE_URL}/scan`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            image: cleanImage,
-        }),
-    });
+    let response;
+    try {
+        response = await fetch(`${API_BASE_URL}/scan`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                image: cleanImage,
+            }),
+        });
+    } catch (networkErr) {
+        const enhancedErr = handleNetworkError(networkErr, "Container scan");
+        Analytics.trackEvent("scan_failed", { image: cleanImage, error: enhancedErr.message });
+        throw enhancedErr;
+    }
 
     if (!response.ok) {
         const error = await response.json().catch(() => ({}));
@@ -40,7 +87,12 @@ export async function scanImage(image) {
  * Fetch historical scan reports
  */
 export async function getReports() {
-    const response = await fetch(`${API_BASE_URL}/reports`);
+    let response;
+    try {
+        response = await fetch(`${API_BASE_URL}/reports`);
+    } catch (networkErr) {
+        throw handleNetworkError(networkErr, "Load reports");
+    }
 
     if (!response.ok) {
         throw new Error("Failed to load scan reports from backend");
@@ -55,9 +107,14 @@ export async function getReports() {
 export async function clearReports() {
     Analytics.trackEvent("reports_cleared");
 
-    const response = await fetch(`${API_BASE_URL}/reports`, {
-        method: "DELETE",
-    });
+    let response;
+    try {
+        response = await fetch(`${API_BASE_URL}/reports`, {
+            method: "DELETE",
+        });
+    } catch (networkErr) {
+        throw handleNetworkError(networkErr, "Clear reports");
+    }
 
     if (!response.ok) {
         throw new Error("Failed to clear scan history");
@@ -72,13 +129,18 @@ export async function clearReports() {
 export async function analyzeScan(scanData) {
     Analytics.trackEvent("ai_analysis_requested", { image: scanData?.image });
 
-    const response = await fetch(`${API_BASE_URL}/analyze`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(scanData),
-    });
+    let response;
+    try {
+        response = await fetch(`${API_BASE_URL}/analyze`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(scanData),
+        });
+    } catch (networkErr) {
+        throw handleNetworkError(networkErr, "AI analysis");
+    }
 
     if (!response.ok) {
         const error = await response.json().catch(() => ({}));
