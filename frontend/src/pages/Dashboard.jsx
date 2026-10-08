@@ -97,7 +97,6 @@ function Dashboard({ onRouteChange, onQuickScan }) {
             return;
         }
         onQuickScan(trimmed);
-        onRouteChange("scan");
     };
 
     const trustRate = stats.totalScans > 0 

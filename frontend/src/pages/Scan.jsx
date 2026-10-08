@@ -25,7 +25,10 @@ function Scan({ onRouteChange, initialImage = "" }) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [honeypot, setHoneypot] = useState("");
-    const lastScanTimeRef = useRef(0);
+    
+    // Synchronous execution lock to completely prevent duplicate triggers from synthetic touch/click events
+    const isScanningRef = useRef(false);
+    const lastCompletedScanTimeRef = useRef(0);
 
     const validateImage = (input) => {
         const clean = input.trim();
@@ -45,7 +48,8 @@ function Scan({ onRouteChange, initialImage = "" }) {
     };
 
     const handleScan = async (overrideImage) => {
-        if (loading) {
+        // Immediate synchronous guard
+        if (isScanningRef.current || loading) {
             return;
         }
 
@@ -56,10 +60,11 @@ function Scan({ onRouteChange, initialImage = "" }) {
             return;
         }
 
+        // Cooldown applies strictly between finished scans
         const now = Date.now();
-        const elapsed = now - lastScanTimeRef.current;
-        const cooldownMs = 1200;
-        if (lastScanTimeRef.current > 0 && elapsed < cooldownMs) {
+        const elapsed = now - lastCompletedScanTimeRef.current;
+        const cooldownMs = 1500;
+        if (lastCompletedScanTimeRef.current > 0 && elapsed < cooldownMs) {
             const remaining = ((cooldownMs - elapsed) / 1000).toFixed(1);
             setError(`Please wait ${remaining}s before initiating another scan.`);
             return;
@@ -72,7 +77,7 @@ function Scan({ onRouteChange, initialImage = "" }) {
         }
 
         try {
-            lastScanTimeRef.current = now;
+            isScanningRef.current = true;
             setLoading(true);
             setError("");
             setResult(null);
@@ -82,12 +87,14 @@ function Scan({ onRouteChange, initialImage = "" }) {
         } catch (err) {
             setError(err?.message || "Container scan failed. Ensure the image exists and Docker daemon is reachable.");
         } finally {
+            lastCompletedScanTimeRef.current = Date.now();
+            isScanningRef.current = false;
             setLoading(false);
         }
     };
 
     const handlePresetClick = (preset) => {
-        if (loading) return;
+        if (isScanningRef.current || loading) return;
         setImage(preset);
         setError("");
         handleScan(preset);
