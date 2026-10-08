@@ -8,10 +8,13 @@ from fastapi import APIRouter, HTTPException
 router = APIRouter(tags=["Reports"])
 
 
+from app.ai.analyst import analyze_scan
+
 REPORTS_FILE = os.path.join(
     "data",
     "reports.json"
 )
+
 
 
 def make_json_safe(value):
@@ -58,6 +61,7 @@ def make_json_safe(value):
 def get_all_reports():
     """
     Reads scan history from reports.json.
+    Enriches with ai_analysis if missing.
     """
 
     if not os.path.exists(REPORTS_FILE):
@@ -71,11 +75,28 @@ def get_all_reports():
             encoding="utf-8"
         ) as f:
 
-            return json.load(f)
+            reports = json.load(f)
+
+        if not isinstance(reports, list):
+            return []
+
+        # Enrich legacy reports if needed
+        for report in reports:
+            if isinstance(report, dict):
+                ai = report.get("ai_analysis")
+                if not ai or not isinstance(ai, dict) or "correlated_risks" not in ai or not ai.get("correlated_risks"):
+                    try:
+                        report["ai_analysis"] = analyze_scan(report)
+                    except Exception:
+                        pass
+
+        return reports
+
 
     except Exception:
 
         return []
+
 
 
 def save_report(scan_data: dict):

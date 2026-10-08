@@ -1,0 +1,966 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - button "ChainProof Home" [ref=e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=e8]
+          - generic [ref=e9]: ChainProof
+          - generic [ref=e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=e11]:
+          - button "Dashboard" [ref=e12] [cursor=pointer]
+          - button "Live Scan" [ref=e14] [cursor=pointer]
+          - button "Audit Reports" [ref=e18] [cursor=pointer]
+          - button "Privacy" [ref=e22] [cursor=pointer]
+          - button "Terms" [ref=e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=e25] [cursor=pointer]: Scan Container
+    - main [ref=e1427]:
+      - generic [ref=e1428]:
+        - generic [ref=e1429]:
+          - generic [ref=e1430]:
+            - generic [ref=e1431]:
+              - button "Dashboard" [ref=e1432] [cursor=pointer]
+              - generic [ref=e1433]: /
+              - generic [ref=e1434]: Audit Reports
+            - heading "Security Audit Records" [level=1] [ref=e1435]
+            - paragraph [ref=e1436]: Enterprise container vulnerability ledger, ML classification archives, and AI security decisions.
+          - generic [ref=e1437]:
+            - button "New Security Scan" [ref=e1438] [cursor=pointer]
+            - button "Clear Ledger" [ref=e1463] [cursor=pointer]
+        - generic [ref=e1441]:
+          - textbox "Filter reports by container image" [ref=e1446]:
+            - /placeholder: Filter by image name (e.g. alpine, juice-shop, python)...
+          - generic [ref=e1447]:
+            - group "Filter by severity" [ref=e1448]:
+              - generic [ref=e1449]: "Severity:"
+              - button "ALL" [ref=e1450] [cursor=pointer]
+              - button "CRITICAL" [ref=e1451] [cursor=pointer]
+              - button "HIGH" [ref=e1452] [cursor=pointer]
+              - button "MEDIUM" [ref=e1453] [cursor=pointer]
+              - button "LOW" [ref=e1454] [cursor=pointer]
+            - group "Filter by decision" [ref=e1455]:
+              - generic [ref=e1456]: "Decision:"
+              - button "ALL" [ref=e1457] [cursor=pointer]
+              - button "BLOCK" [ref=e1458] [cursor=pointer]
+              - button "REVIEW" [ref=e1459] [cursor=pointer]
+              - button "TRUST" [ref=e1460] [cursor=pointer]
+        - table [ref=e1468]:
+          - rowgroup [ref=e1469]:
+            - row [ref=e1470]:
+              - columnheader "#" [ref=e1471]
+              - columnheader "Container Image" [ref=e1472]
+              - columnheader "Date & Time" [ref=e1473]
+              - columnheader "Risk Score" [ref=e1474]
+              - columnheader "Severity" [ref=e1475]
+              - columnheader "Vulnerabilities" [ref=e1476]
+              - columnheader "Signature" [ref=e1477]
+              - columnheader "AI Decision" [ref=e1478]
+              - columnheader "Actions" [ref=e1479]
+          - rowgroup [ref=e1480]:
+            - row [ref=e1481]:
+              - cell "#11" [ref=e1482]
+              - cell "nginx:alpine 7bdf08cc..." [ref=e1484]:
+                - strong [ref=e1485]: nginx:alpine
+                - generic [ref=e1486]: 7bdf08cc...
+              - cell "2026-10-08 09:02:25" [ref=e1487]
+              - cell "92" [ref=e1488]
+              - cell "CRITICAL" [ref=e1491]
+              - cell "18 CVEs" [ref=e1493]
+              - cell "Unsigned" [ref=e1494]
+              - cell "BLOCK" [ref=e1495]
+              - cell [ref=e1499]:
+                - generic [ref=e1500]:
+                  - button "Inspect" [ref=e1501] [cursor=pointer]
+                  - button "JSON" [ref=e1502] [cursor=pointer]
+            - row [ref=e1506]:
+              - cell "#10" [ref=e1507]
+              - cell "nginx:alpine 20ba53a1..." [ref=e1509]:
+                - strong [ref=e1510]: nginx:alpine
+                - generic [ref=e1511]: 20ba53a1...
+              - cell "2026-10-08 09:02:18" [ref=e1512]
+              - cell "92" [ref=e1513]
+              - cell "CRITICAL" [ref=e1516]
+              - cell "18 CVEs" [ref=e1518]
+              - cell "Unsigned" [ref=e1519]
+              - cell "BLOCK" [ref=e1520]
+              - cell [ref=e1524]:
+                - generic [ref=e1525]:
+                  - button "Inspect" [ref=e1526] [cursor=pointer]
+                  - button "JSON" [ref=e1527] [cursor=pointer]
+            - row [ref=e1531]:
+              - cell "#9" [ref=e1532]
+              - cell "bkimminich/juice-shop:latest 23455382..." [ref=e1534]:
+                - strong [ref=e1535]: bkimminich/juice-shop:latest
+                - generic [ref=e1536]: 23455382...
+              - cell "2026-10-08 08:48:18" [ref=e1537]
+              - cell "100" [ref=e1538]
+              - cell "CRITICAL" [ref=e1541]
+              - cell "125 CVEs" [ref=e1543]
+              - cell "Unsigned" [ref=e1544]
+              - cell "BLOCK" [ref=e1545]
+              - cell [ref=e1549]:
+                - generic [ref=e1550]:
+                  - button "Inspect" [active] [ref=e1551] [cursor=pointer]
+                  - button "JSON" [ref=e1552] [cursor=pointer]
+        - dialog [ref=e1556]:
+          - generic [ref=e1557]:
+            - generic [ref=e1558]:
+              - generic [ref=e1559]: ChainProof Enterprise Security Inspector
+              - button "Close modal" [ref=e1560] [cursor=pointer]: ✕
+            - generic [ref=e1562]:
+              - button "Back to Audit Records" [ref=e1564] [cursor=pointer]
+              - generic [ref=e1567]:
+                - generic [ref=e1568]:
+                  - generic [ref=e1569]: CONTAINER SECURITY INTELLIGENCE REPORT
+                  - heading "bkimminich/juice-shop:latest" [level=1] [ref=e1573]
+                  - generic [ref=e1574]:
+                    - generic [ref=e1575]: 2026-10-08 08:48:18
+                    - generic [ref=e1576]: •
+                    - generic [ref=e1577]: "Audit ID: 23455382-5066-4e6b"
+                - generic [ref=e1578]:
+                  - generic [ref=e1583]:
+                    - generic [ref=e1584]: POLICY DECISION
+                    - strong [ref=e1585]: BLOCK DEPLOYMENT
+                  - generic [ref=e1586]:
+                    - text: RISK SCORE
+                    - generic [ref=e1587]:
+                      - generic [ref=e1588]: "100"
+                      - generic [ref=e1589]: /100
+                    - text: CRITICAL
+              - generic [ref=e1590]:
+                - generic [ref=e1591]:
+                  - button "Intelligence Overview" [ref=e1592] [cursor=pointer]
+                  - button "CVE Telemetry (125)" [ref=e1593] [cursor=pointer]
+                  - button "Supply Chain Integrity" [ref=e1594] [cursor=pointer]
+                  - button "ML Risk Models" [ref=e1595] [cursor=pointer]
+                - generic [ref=e1596]:
+                  - button "Export JSON" [ref=e1597] [cursor=pointer]
+                  - button "Done Inspecting" [ref=e1601] [cursor=pointer]
+              - generic [ref=e1602]:
+                - region "AI Security Analyst Intelligence" [ref=e1603]:
+                  - generic [ref=e1604]:
+                    - generic [ref=e1610]:
+                      - generic [ref=e1611]:
+                        - generic [ref=e1612]: AI SECURITY ANALYST
+                        - generic [ref=e1613]: 85% Confidence
+                      - heading "CRITICAL DEPLOYMENT RISK" [level=2] [ref=e1617]
+                    - button "Refresh AI Analysis" [ref=e1618] [cursor=pointer]
+                  - generic [ref=e1623]:
+                    - generic [ref=e1628]:
+                      - text: CHAINPROOF POLICY VERDICT
+                      - heading "BLOCK DEPLOYMENT" [level=3] [ref=e1629]
+                      - paragraph [ref=e1630]: Block deployment to production environments until critical CVEs are resolved and re-verified.
+                    - generic [ref=e1631]: BLOCK
+                  - generic [ref=e1632]:
+                    - heading "Executive Risk Narrative" [level=4] [ref=e1633]
+                    - paragraph [ref=e1634]: Container 'bkimminich/juice-shop:latest' exhibits severe security exposure driven by 10 critical CVE(s) and a high-risk composite score (100/100). Random Forest classified the workload as CRITICAL (75% confidence) with ML anomaly detection triggered.
+                  - generic [ref=e1635]:
+                    - heading "Why This Image Is Flagged (Correlated Evidence)" [level=4] [ref=e1636]
+                    - generic [ref=e1637]:
+                      - generic [ref=e1638]:
+                        - generic [ref=e1639]:
+                          - strong [ref=e1640]: Critical CVE Exposure
+                          - generic [ref=e1641]: CRITICAL
+                        - paragraph [ref=e1642]: 10 critical-severity CVE(s) identified in image dependencies
+                      - generic [ref=e1643]:
+                        - generic [ref=e1644]:
+                          - strong [ref=e1645]: Unsigned Container Artifact
+                          - generic [ref=e1646]: MEDIUM
+                        - paragraph [ref=e1647]: Container is unsigned. No Sigstore Cosign cryptographic provenance found
+                      - generic [ref=e1648]:
+                        - generic [ref=e1649]:
+                          - strong [ref=e1650]: Random Forest Risk Classification
+                          - generic [ref=e1651]: CRITICAL
+                        - paragraph [ref=e1652]: Random Forest model classified security posture as CRITICAL (75% confidence)
+                      - generic [ref=e1653]:
+                        - generic [ref=e1654]:
+                          - strong [ref=e1655]: Isolation Forest Anomaly Flag
+                          - generic [ref=e1656]: HIGH
+                        - paragraph [ref=e1657]: "Isolation Forest identified anomalous feature footprint (Score: -0.1433)"
+                  - generic [ref=e1658]:
+                    - heading "Actionable Remediation Roadmap" [level=4] [ref=e1664]
+                    - list [ref=e1665]:
+                      - listitem [ref=e1666]:
+                        - generic [ref=e1667]: "1"
+                        - generic [ref=e1668]: Immediately patch or replace dependencies associated with the 10 critical vulnerability CVEs.
+                      - listitem [ref=e1669]:
+                        - generic [ref=e1670]: "2"
+                        - generic [ref=e1671]: Sign container artifact using Sigstore Cosign in CI/CD before registry push.
+                      - listitem [ref=e1672]:
+                        - generic [ref=e1673]: "3"
+                        - generic [ref=e1674]: Investigate non-standard base layer configurations and minimize excessive packages.
+                      - listitem [ref=e1675]:
+                        - generic [ref=e1676]: "4"
+                        - generic [ref=e1677]: Rescan container image in ChainProof staging pipeline prior to production release.
+                - generic [ref=e1678]:
+                  - generic [ref=e1679]:
+                    - heading "Vulnerability Risk" [level=4] [ref=e1683]
+                    - generic [ref=e1684]:
+                      - generic [ref=e1685]:
+                        - strong [ref=e1686]: "125"
+                        - text: Total CVEs
+                      - generic [ref=e1687]:
+                        - generic [ref=e1688]: 10 Critical
+                        - generic [ref=e1689]: 52 High
+                        - generic [ref=e1690]: 57 Med
+                    - generic [ref=e1691]:
+                      - generic [ref=e1692]: "Status:"
+                      - strong [ref=e1693]: CRITICAL THREAT
+                  - generic [ref=e1694]:
+                    - heading "Supply Chain Integrity" [level=4] [ref=e1701]
+                    - generic [ref=e1702]:
+                      - generic [ref=e1703]:
+                        - generic [ref=e1704]: "Cosign Signature:"
+                        - strong [ref=e1705]: ✕ Unverified / Unsigned
+                      - generic [ref=e1706]:
+                        - generic [ref=e1707]: "SBOM Catalog:"
+                        - strong [ref=e1708]: 185 packages indexed
+                    - generic [ref=e1709]:
+                      - generic [ref=e1710]: "Keyring:"
+                      - strong [ref=e1711]: Sigstore Transparency Log
+                  - generic [ref=e1712]:
+                    - heading "Random Forest Classifier" [level=4] [ref=e1717]
+                    - generic [ref=e1718]:
+                      - generic [ref=e1719]:
+                        - strong [ref=e1720]: CRITICAL
+                        - text: Predicted Posture
+                      - generic [ref=e1721]:
+                        - generic [ref=e1722]: "Model Confidence:"
+                        - strong [ref=e1723]: 76%
+                    - generic [ref=e1724]:
+                      - generic [ref=e1725]: "Model Status:"
+                      - strong [ref=e1726]: Loaded (v1.0.0)
+                  - generic [ref=e1727]:
+                    - heading "Anomaly Detection" [level=4] [ref=e1732]
+                    - generic [ref=e1733]:
+                      - generic [ref=e1734]:
+                        - strong [ref=e1735]: ANOMALY FLAGGED
+                        - text: Feature Distribution
+                      - generic [ref=e1736]:
+                        - generic [ref=e1737]: "Anomaly Score:"
+                        - strong [ref=e1738]: "-0.1433"
+                    - generic [ref=e1739]:
+                      - generic [ref=e1740]: "Isolation Forest:"
+                      - strong [ref=e1741]: Active
+                - generic [ref=e1742]:
+                  - heading "Vulnerability Summary" [level=2] [ref=e1743]
+                  - generic [ref=e1744]:
+                    - generic [ref=e1745]:
+                      - generic [ref=e1746]: Critical
+                      - strong [ref=e1747]: "10"
+                    - generic [ref=e1748]:
+                      - generic [ref=e1749]: High
+                      - strong [ref=e1750]: "52"
+                    - generic [ref=e1751]:
+                      - generic [ref=e1752]: Medium
+                      - strong [ref=e1753]: "57"
+                    - generic [ref=e1754]:
+                      - generic [ref=e1755]: Low
+                      - strong [ref=e1756]: "6"
+                  - generic [ref=e1757]:
+                    - text: "Total vulnerabilities:"
+                    - strong [ref=e1758]: "125"
+                - generic [ref=e1759]:
+                  - generic [ref=e1760]:
+                    - generic [ref=e1761]:
+                      - heading "Vulnerability Distribution" [level=2] [ref=e1762]
+                      - paragraph [ref=e1763]: Severity distribution detected across the container image.
+                    - generic [ref=e1764]:
+                      - generic [ref=e1765]: Total Detected
+                      - strong [ref=e1766]: "125"
+                  - application [ref=e1770]:
+                    - generic [ref=e1776]:
+                      - generic [ref=e1777]:
+                        - generic [ref=e1778]: Critical
+                        - generic [ref=e1780]: High
+                        - generic [ref=e1782]: Medium
+                        - generic [ref=e1784]: Low
+                      - generic [ref=e1786]:
+                        - generic [ref=e1787]: "0"
+                        - generic [ref=e1789]: "15"
+                        - generic [ref=e1791]: "30"
+                        - generic [ref=e1793]: "45"
+                        - generic [ref=e1795]: "58"
+                  - generic [ref=e1797]:
+                    - generic [ref=e1798]: "Critical: 10"
+                    - generic [ref=e1801]: "High: 52"
+                    - generic [ref=e1804]: "Medium: 57"
+                    - generic [ref=e1807]: "Low: 6"
+                - generic [ref=e1810]:
+                  - heading "Vulnerability Details" [level=2] [ref=e1811]
+                  - table [ref=e1813]:
+                    - rowgroup [ref=e1814]:
+                      - row [ref=e1815]:
+                        - columnheader "CVE" [ref=e1816]
+                        - columnheader "Severity" [ref=e1817]
+                        - columnheader "Details" [ref=e1818]
+                    - rowgroup [ref=e1819]:
+                      - row [ref=e1820]:
+                        - cell [ref=e1821]:
+                          - strong [ref=e1822]: GMS-2015-4
+                        - cell "MEDIUM" [ref=e1823]
+                        - cell "Vulnerability :GMS-2015-4 Severity :UNSPECIFIED Package :pkg:npm/jsonwebtoken@0.4.0 Affected range :<4.2.2 Fixed version :4.2.2" [ref=e1824]
+                      - row [ref=e1825]:
+                        - cell [ref=e1826]:
+                          - strong [ref=e1827]: GMS-2015-4
+                        - cell "MEDIUM" [ref=e1828]
+                        - cell "Vulnerability :GMS-2015-4 Severity :UNSPECIFIED Package :pkg:npm/jsonwebtoken@0.1.0 Affected range :<4.2.2 Fixed version :4.2.2" [ref=e1829]
+                      - row [ref=e1830]:
+                        - cell [ref=e1831]:
+                          - strong [ref=e1832]: GMS-2016-17
+                        - cell "MEDIUM" [ref=e1833]
+                        - cell "Vulnerability :GMS-2016-17 Severity :UNSPECIFIED Package :pkg:npm/sanitize-html@1.4.2 Affected range :<1.11.4 Fixed version :1.11.4" [ref=e1834]
+                      - row [ref=e1835]:
+                        - cell [ref=e1836]:
+                          - strong [ref=e1837]: GMS-2016-54
+                        - cell "MEDIUM" [ref=e1838]
+                        - cell "Vulnerability :GMS-2016-54 Severity :UNSPECIFIED Package :pkg:npm/jws@0.2.6 Affected range :<3.0.0 Fixed version :3.0.0" [ref=e1839]
+                      - row [ref=e1840]:
+                        - cell [ref=e1841]:
+                          - strong [ref=e1842]: GMS-2016-57
+                        - cell "MEDIUM" [ref=e1843]
+                        - cell "Vulnerability :GMS-2016-57 Severity :UNSPECIFIED Package :pkg:npm/sanitize-html@1.4.2 Affected range :<=1.4.2 Fixed version :1.4.3" [ref=e1844]
+                      - row [ref=e1845]:
+                        - cell [ref=e1846]:
+                          - strong [ref=e1847]: GMS-2017-332
+                        - cell "MEDIUM" [ref=e1848]
+                        - cell "Vulnerability :GMS-2017-332 Severity :UNSPECIFIED Package :pkg:npm/moment@2.0.0 Affected range :<2.19.3 Fixed version :2.19.3" [ref=e1849]
+                      - row [ref=e1850]:
+                        - cell [ref=e1851]:
+                          - strong [ref=e1852]: GMS-2018-10
+                        - cell "MEDIUM" [ref=e1853]
+                        - cell "Vulnerability :GMS-2018-10 Severity :UNSPECIFIED Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.5 Fixed version :4.17.5" [ref=e1854]
+                      - row [ref=e1855]:
+                        - cell [ref=e1856]:
+                          - strong [ref=e1857]: CVE-2024-47764
+                        - cell "LOW" [ref=e1858]
+                        - cell "Vulnerability :CVE-2024-47764 Severity :LOW Package :pkg:npm/cookie@0.4.2 Affected range :<0.7.0 Fixed version :0.7.0 EPSS Score :0.007440 EPSS Percentile :0.532480" [ref=e1859]
+                      - row [ref=e1860]:
+                        - cell [ref=e1861]:
+                          - strong [ref=e1862]: CVE-2026-3449
+                        - cell "LOW" [ref=e1863]
+                        - cell "Vulnerability :CVE-2026-3449 Severity :LOW Package :pkg:npm/%40tootallnate/once@1.1.2 Affected range :<2.0.1 Fixed version :3.0.1 CVSS Score :1.9 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P EPSS Score :0.001620 EPSS Percentile :0.048010" [ref=e1864]
+                      - row [ref=e1865]:
+                        - cell [ref=e1866]:
+                          - strong [ref=e1867]: CVE-2026-11525
+                        - cell "LOW" [ref=e1868]
+                        - cell "Vulnerability :CVE-2026-11525 Severity :LOW Package :pkg:npm/undici@5.29.0 Affected range :<6.27.0 Fixed version :6.27.0 CVSS Score :3.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.002380 EPSS Percentile :0.136180" [ref=e1869]
+                      - row [ref=e1870]:
+                        - cell [ref=e1871]:
+                          - strong [ref=e1872]: CVE-2026-18540
+                        - cell "LOW" [ref=e1873]
+                        - cell "Vulnerability :CVE-2026-18540 Severity :LOW Package :pkg:npm/undici@5.29.0 Affected range :<6.28.1 Fixed version :6.28.1 CVSS Score :3.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.002390 EPSS Percentile :0.137150" [ref=e1874]
+                      - row [ref=e1875]:
+                        - cell [ref=e1876]:
+                          - strong [ref=e1877]: CVE-2026-6733
+                        - cell "LOW" [ref=e1878]
+                        - cell "Vulnerability :CVE-2026-6733 Severity :LOW Package :pkg:npm/undici@5.29.0 Affected range :<6.27.0 Fixed version :6.27.0 CVSS Score :3.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.002700 EPSS Percentile :0.175810" [ref=e1879]
+                      - row [ref=e1880]:
+                        - cell [ref=e1881]:
+                          - strong [ref=e1882]: CVE-2026-77063
+                        - cell "LOW" [ref=e1883]
+                        - cell "Vulnerability :CVE-2026-77063 Severity :LOW Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.3.0 Fixed version :2.3.0 CVSS Score :3.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.002330 EPSS Percentile :0.130110" [ref=e1884]
+                      - row [ref=e1885]:
+                        - cell [ref=e1886]:
+                          - strong [ref=e1887]: CVE-2017-16016
+                        - cell "MEDIUM" [ref=e1888]
+                        - cell "Vulnerability :CVE-2017-16016 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<=1.11.1 Fixed version :1.11.4 EPSS Score :0.013570 EPSS Percentile :0.707660" [ref=e1889]
+                      - row [ref=e1890]:
+                        - cell [ref=e1891]:
+                          - strong [ref=e1892]: GHSA-rvg8-pwq2-xj7q
+                        - cell "MEDIUM" [ref=e1893]
+                        - cell "Vulnerability :GHSA-rvg8-pwq2-xj7q Severity :MEDIUM Package :pkg:npm/base64url@0.0.6 Affected range :<3.0.0 Fixed version :3.0.0" [ref=e1894]
+                      - row [ref=e1895]:
+                        - cell [ref=e1896]:
+                          - strong [ref=e1897]: CVE-2026-15157
+                        - cell "MEDIUM" [ref=e1898]
+                        - cell "Vulnerability :CVE-2026-15157 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.28.0 Fixed version :6.28.0 CVSS Score :4.2 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N EPSS Score :0.001930 EPSS Percentile :0.081450" [ref=e1899]
+                      - row [ref=e1900]:
+                        - cell [ref=e1901]:
+                          - strong [ref=e1902]: CVE-2026-1527
+                        - cell "MEDIUM" [ref=e1903]
+                        - cell "Vulnerability :CVE-2026-1527 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.24.0 Fixed version :6.24.0 CVSS Score :4.6 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N EPSS Score :0.002760 EPSS Percentile :0.183180" [ref=e1904]
+                      - row [ref=e1905]:
+                        - cell [ref=e1906]:
+                          - strong [ref=e1907]: CVE-2026-16728
+                        - cell "MEDIUM" [ref=e1908]
+                        - cell "Vulnerability :CVE-2026-16728 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.28.0 Fixed version :6.28.0 CVSS Score :4.8 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N EPSS Score :0.001760 EPSS Percentile :0.065300" [ref=e1909]
+                      - row [ref=e1910]:
+                        - cell [ref=e1911]:
+                          - strong [ref=e1912]: CVE-2026-16729
+                        - cell "MEDIUM" [ref=e1913]
+                        - cell "Vulnerability :CVE-2026-16729 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.28.0 Fixed version :6.28.0 CVSS Score :4.8 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N EPSS Score :0.001910 EPSS Percentile :0.079450" [ref=e1914]
+                      - row [ref=e1915]:
+                        - cell [ref=e1916]:
+                          - strong [ref=e1917]: CVE-2022-23541
+                        - cell "MEDIUM" [ref=e1918]
+                        - cell "Vulnerability :CVE-2022-23541 Severity :MEDIUM Package :pkg:npm/jsonwebtoken@0.1.0 Affected range :<=8.5.1 Fixed version :9.0.0 CVSS Score :5.0 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L EPSS Score :0.007740 EPSS Percentile :0.542800" [ref=e1919]
+                      - row [ref=e1920]:
+                        - cell [ref=e1921]:
+                          - strong [ref=e1922]: CVE-2022-23541
+                        - cell "MEDIUM" [ref=e1923]
+                        - cell "Vulnerability :CVE-2022-23541 Severity :MEDIUM Package :pkg:npm/jsonwebtoken@0.4.0 Affected range :<=8.5.1 Fixed version :9.0.0 CVSS Score :5.0 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L EPSS Score :0.007740 EPSS Percentile :0.542800" [ref=e1924]
+                      - row [ref=e1925]:
+                        - cell [ref=e1926]:
+                          - strong [ref=e1927]: CVE-2021-26539
+                        - cell "MEDIUM" [ref=e1928]
+                        - cell "Vulnerability :CVE-2021-26539 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<2.3.1 Fixed version :2.3.1 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.019530 EPSS Percentile :0.796020" [ref=e1929]
+                      - row [ref=e1930]:
+                        - cell [ref=e1931]:
+                          - strong [ref=e1932]: CVE-2021-26540
+                        - cell "MEDIUM" [ref=e1933]
+                        - cell "Vulnerability :CVE-2021-26540 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<2.3.2 Fixed version :2.3.2 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.017540 EPSS Percentile :0.771720" [ref=e1934]
+                      - row [ref=e1935]:
+                        - cell [ref=e1936]:
+                          - strong [ref=e1937]: CVE-2021-32822
+                        - cell "MEDIUM" [ref=e1938]
+                        - cell "Vulnerability :CVE-2021-32822 Severity :MEDIUM Package :pkg:npm/hbs@4.2.1 Affected range :>=0 Fixed version :not fixed CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N EPSS Score :0.011780 EPSS Percentile :0.666380" [ref=e1939]
+                      - row [ref=e1940]:
+                        - cell [ref=e1941]:
+                          - strong [ref=e1942]: CVE-2022-33987
+                        - cell "MEDIUM" [ref=e1943]
+                        - cell "Vulnerability :CVE-2022-33987 Severity :MEDIUM Package :pkg:npm/got@8.3.2 Affected range :<11.8.5 Fixed version :11.8.5 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.024160 EPSS Percentile :0.836070" [ref=e1944]
+                      - row [ref=e1945]:
+                        - cell [ref=e1946]:
+                          - strong [ref=e1947]: CVE-2024-21501
+                        - cell "MEDIUM" [ref=e1948]
+                        - cell "Vulnerability :CVE-2024-21501 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<2.12.1 Fixed version :2.12.1 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N EPSS Score :0.010270 EPSS Percentile :0.624460" [ref=e1949]
+                      - row [ref=e1950]:
+                        - cell [ref=e1951]:
+                          - strong [ref=e1952]: CVE-2026-102277
+                        - cell "MEDIUM" [ref=e1953]
+                        - cell "Vulnerability :CVE-2026-102277 Severity :MEDIUM Package :pkg:npm/brace-expansion@2.1.4 Affected range :>=2.0.0,<2.1.7 Fixed version :2.1.7 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L EPSS Score :0.003010 EPSS Percentile :0.208760" [ref=e1954]
+                      - row [ref=e1955]:
+                        - cell [ref=e1956]:
+                          - strong [ref=e1957]: CVE-2026-102277
+                        - cell "MEDIUM" [ref=e1958]
+                        - cell "Vulnerability :CVE-2026-102277 Severity :MEDIUM Package :pkg:npm/brace-expansion@1.1.18 Affected range :<1.1.21 Fixed version :1.1.21 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L EPSS Score :0.003010 EPSS Percentile :0.208760" [ref=e1959]
+                      - row [ref=e1960]:
+                        - cell [ref=e1961]:
+                          - strong [ref=e1962]: CVE-2026-15603
+                        - cell "MEDIUM" [ref=e1963]
+                        - cell "Vulnerability :CVE-2026-15603 Severity :MEDIUM Package :pkg:npm/morgan@1.11.0 Affected range :<1.12.0 Fixed version :1.12.0 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.002940 EPSS Percentile :0.201680" [ref=e1964]
+                      - row [ref=e1965]:
+                        - cell [ref=e1966]:
+                          - strong [ref=e1967]: CVE-2026-31808
+                        - cell "MEDIUM" [ref=e1968]
+                        - cell "Vulnerability :CVE-2026-31808 Severity :MEDIUM Package :pkg:npm/file-type@16.5.4 Affected range :>=13.0.0,<21.3.1 Fixed version :21.3.1 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L EPSS Score :0.004180 EPSS Percentile :0.339640" [ref=e1969]
+                      - row [ref=e1970]:
+                        - cell [ref=e1971]:
+                          - strong [ref=e1972]: CVE-2026-59871
+                        - cell "MEDIUM" [ref=e1973]
+                        - cell "Vulnerability :CVE-2026-59871 Severity :MEDIUM Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.17 Fixed version :7.5.18 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L EPSS Score :0.006440 EPSS Percentile :0.491670" [ref=e1974]
+                      - row [ref=e1975]:
+                        - cell [ref=e1976]:
+                          - strong [ref=e1977]: CVE-2026-59875
+                        - cell "MEDIUM" [ref=e1978]
+                        - cell "Vulnerability :CVE-2026-59875 Severity :MEDIUM Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.16 Fixed version :7.5.17 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L EPSS Score :0.005070 EPSS Percentile :0.412170" [ref=e1979]
+                      - row [ref=e1980]:
+                        - cell [ref=e1981]:
+                          - strong [ref=e1982]: CVE-2026-87859
+                        - cell "MEDIUM" [ref=e1983]
+                        - cell "Vulnerability :CVE-2026-87859 Severity :MEDIUM Package :pkg:npm/morgan@1.11.0 Affected range :<1.12.1 Fixed version :1.12.1 CVSS Score :5.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N EPSS Score :0.004100 EPSS Percentile :0.330600" [ref=e1984]
+                      - row [ref=e1985]:
+                        - cell [ref=e1986]:
+                          - strong [ref=e1987]: CVE-2026-39243
+                        - cell "MEDIUM" [ref=e1988]
+                        - cell "Vulnerability :CVE-2026-39243 Severity :MEDIUM Package :pkg:npm/decompress@4.2.1 Affected range :<=4.2.1 Fixed version :not fixed CVSS Score :5.5 CVSS Vector :CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N EPSS Score :0.003010 EPSS Percentile :0.208880" [ref=e1989]
+                      - row [ref=e1990]:
+                        - cell [ref=e1991]:
+                          - strong [ref=e1992]: CVE-2026-10732
+                        - cell "MEDIUM" [ref=e1993]
+                        - cell "Vulnerability :CVE-2026-10732 Severity :MEDIUM Package :pkg:npm/decompress@4.2.1 Affected range :<=4.2.1 Fixed version :not fixed CVSS Score :5.6 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:P EPSS Score :0.005210 EPSS Percentile :0.423000" [ref=e1994]
+                      - row [ref=e1995]:
+                        - cell [ref=e1996]:
+                          - strong [ref=e1997]: CVE-2026-74866
+                        - cell "MEDIUM" [ref=e1998]
+                        - cell "Vulnerability :CVE-2026-74866 Severity :MEDIUM Package :pkg:npm/%40fastify/busboy@2.1.1 Affected range :<3.2.2 Fixed version :3.2.2 CVSS Score :5.8 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:L/A:N EPSS Score :0.003260 EPSS Percentile :0.235590" [ref=e1999]
+                      - row [ref=e2000]:
+                        - cell [ref=e2001]:
+                          - strong [ref=e2002]: CVE-2026-17495
+                        - cell "MEDIUM" [ref=e2003]
+                        - cell "Vulnerability :CVE-2026-17495 Severity :MEDIUM Package :pkg:npm/moment@2.30.1 Affected range :>=2.29.2,<2.31.0 Fixed version :2.31.0 CVSS Score :5.9 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N EPSS Score :0.003570 EPSS Percentile :0.272360" [ref=e2004]
+                      - row [ref=e2005]:
+                        - cell [ref=e2006]:
+                          - strong [ref=e2007]: CVE-2026-22036
+                        - cell "MEDIUM" [ref=e2008]
+                        - cell "Vulnerability :CVE-2026-22036 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.23.0 Fixed version :6.23.0 CVSS Score :5.9 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.004630 EPSS Percentile :0.380750" [ref=e2009]
+                      - row [ref=e2010]:
+                        - cell [ref=e2011]:
+                          - strong [ref=e2012]: CVE-2026-9679
+                        - cell "MEDIUM" [ref=e2013]
+                        - cell "Vulnerability :CVE-2026-9679 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.27.0 Fixed version :6.27.0 CVSS Score :5.9 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N EPSS Score :0.003320 EPSS Percentile :0.242360" [ref=e2014]
+                      - row [ref=e2015]:
+                        - cell [ref=e2016]:
+                          - strong [ref=e2017]: CVE-2016-1000237
+                        - cell "MEDIUM" [ref=e2018]
+                        - cell "Vulnerability :CVE-2016-1000237 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<1.4.3 Fixed version :1.4.3 CVSS Score :6.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N EPSS Score :0.008400 EPSS Percentile :0.564860" [ref=e2019]
+                      - row [ref=e2020]:
+                        - cell [ref=e2021]:
+                          - strong [ref=e2022]: CVE-2019-25225
+                        - cell "MEDIUM" [ref=e2023]
+                        - cell "Vulnerability :CVE-2019-25225 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<2.0.0-beta Fixed version :2.0.0-beta CVSS Score :6.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N EPSS Score :0.002690 EPSS Percentile :0.173840" [ref=e2024]
+                      - row [ref=e2025]:
+                        - cell [ref=e2026]:
+                          - strong [ref=e2027]: CVE-2026-63670
+                        - cell "MEDIUM" [ref=e2028]
+                        - cell "Vulnerability :CVE-2026-63670 Severity :MEDIUM Package :pkg:npm/sanitize-html@1.4.2 Affected range :<=2.17.5 Fixed version :2.17.6 CVSS Score :6.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N EPSS Score :0.003270 EPSS Percentile :0.236440" [ref=e2029]
+                      - row [ref=e2030]:
+                        - cell [ref=e2031]:
+                          - strong [ref=e2032]: CVE-2026-101911
+                        - cell "MEDIUM" [ref=e2033]
+                        - cell "Vulnerability :CVE-2026-101911 Severity :MEDIUM Package :pkg:npm/ip-address@10.5.0 Affected range :<=10.7.0 Fixed version :10.7.1 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N EPSS Score :0.003010 EPSS Percentile :0.208760" [ref=e2034]
+                      - row [ref=e2035]:
+                        - cell [ref=e2036]:
+                          - strong [ref=e2037]: CVE-2026-101912
+                        - cell "MEDIUM" [ref=e2038]
+                        - cell "Vulnerability :CVE-2026-101912 Severity :MEDIUM Package :pkg:npm/ip-address@10.5.0 Affected range :<=10.7.0 Fixed version :10.7.1 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N EPSS Score :0.003700 EPSS Percentile :0.287350" [ref=e2039]
+                      - row [ref=e2040]:
+                        - cell [ref=e2041]:
+                          - strong [ref=e2042]: CVE-2026-101913
+                        - cell "MEDIUM" [ref=e2043]
+                        - cell "Vulnerability :CVE-2026-101913 Severity :MEDIUM Package :pkg:npm/ip-address@10.5.0 Affected range :<=10.5.0 Fixed version :10.5.1 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N EPSS Score :0.003860 EPSS Percentile :0.304260" [ref=e2044]
+                      - row [ref=e2045]:
+                        - cell [ref=e2046]:
+                          - strong [ref=e2047]: CVE-2026-41907
+                        - cell "MEDIUM" [ref=e2048]
+                        - cell "Vulnerability :CVE-2026-41907 Severity :MEDIUM Package :pkg:npm/uuid@8.3.2 Affected range :<11.1.1 Fixed version :11.1.1 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N EPSS Score :0.003780 EPSS Percentile :0.295190" [ref=e2049]
+                      - row [ref=e2050]:
+                        - cell [ref=e2051]:
+                          - strong [ref=e2052]: CVE-2026-82417
+                        - cell "MEDIUM" [ref=e2053]
+                        - cell "Vulnerability :CVE-2026-82417 Severity :MEDIUM Package :pkg:npm/qs@6.15.3 Affected range :>=2.2.5,<6.16.0 Fixed version :6.16.0 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N EPSS Score :0.004180 EPSS Percentile :0.339640" [ref=e2054]
+                      - row [ref=e2055]:
+                        - cell [ref=e2056]:
+                          - strong [ref=e2057]: CVE-2026-82562
+                        - cell "MEDIUM" [ref=e2058]
+                        - cell "Vulnerability :CVE-2026-82562 Severity :MEDIUM Package :pkg:npm/qs@6.15.3 Affected range :>=6.14.2,<=6.15.3 Fixed version :6.16.0 CVSS Score :6.3 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N EPSS Score :0.005400 EPSS Percentile :0.435670" [ref=e2059]
+                      - row [ref=e2060]:
+                        - cell [ref=e2061]:
+                          - strong [ref=e2062]: CVE-2022-23540
+                        - cell "MEDIUM" [ref=e2063]
+                        - cell "Vulnerability :CVE-2022-23540 Severity :MEDIUM Package :pkg:npm/jsonwebtoken@0.4.0 Affected range :<9.0.0 Fixed version :9.0.0 CVSS Score :6.4 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L EPSS Score :0.005510 EPSS Percentile :0.442280" [ref=e2064]
+                      - row [ref=e2065]:
+                        - cell [ref=e2066]:
+                          - strong [ref=e2067]: CVE-2022-23540
+                        - cell "MEDIUM" [ref=e2068]
+                        - cell "Vulnerability :CVE-2022-23540 Severity :MEDIUM Package :pkg:npm/jsonwebtoken@0.1.0 Affected range :<9.0.0 Fixed version :9.0.0 CVSS Score :6.4 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L EPSS Score :0.005510 EPSS Percentile :0.442280" [ref=e2069]
+                      - row [ref=e2070]:
+                        - cell [ref=e2071]:
+                          - strong [ref=e2072]: CVE-2016-4055
+                        - cell "MEDIUM" [ref=e2073]
+                        - cell "Vulnerability :CVE-2016-4055 Severity :MEDIUM Package :pkg:npm/moment@2.0.0 Affected range :<2.11.2 Fixed version :2.11.2 CVSS Score :6.5 CVSS Vector :CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.099050 EPSS Percentile :0.954580" [ref=e2074]
+                      - row [ref=e2075]:
+                        - cell [ref=e2076]:
+                          - strong [ref=e2077]: CVE-2018-3721
+                        - cell "MEDIUM" [ref=e2078]
+                        - cell "Vulnerability :CVE-2018-3721 Severity :MEDIUM Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.5 Fixed version :4.17.5 CVSS Score :6.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N EPSS Score :0.023840 EPSS Percentile :0.833660" [ref=e2079]
+                      - row [ref=e2080]:
+                        - cell [ref=e2081]:
+                          - strong [ref=e2082]: CVE-2021-23771
+                        - cell "MEDIUM" [ref=e2083]
+                        - cell "Vulnerability :CVE-2021-23771 Severity :MEDIUM Package :pkg:npm/notevil@1.3.3 Affected range :<=1.3.3 Fixed version :not fixed CVSS Score :6.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N EPSS Score :0.010130 EPSS Percentile :0.620350" [ref=e2084]
+                      - row [ref=e2085]:
+                        - cell [ref=e2086]:
+                          - strong [ref=e2087]: CVE-2022-41940
+                        - cell "MEDIUM" [ref=e2088]
+                        - cell "Vulnerability :CVE-2022-41940 Severity :MEDIUM Package :pkg:npm/engine.io@4.1.2 Affected range :>=4.0.0,<6.2.1 Fixed version :6.2.1 CVSS Score :6.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.020690 EPSS Percentile :0.807880" [ref=e2089]
+                      - row [ref=e2090]:
+                        - cell [ref=e2091]:
+                          - strong [ref=e2092]: CVE-2026-1525
+                        - cell "MEDIUM" [ref=e2093]
+                        - cell "Vulnerability :CVE-2026-1525 Severity :MEDIUM Package :pkg:npm/undici@5.29.0 Affected range :<6.24.0 Fixed version :6.24.0 CVSS Score :6.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L EPSS Score :0.004930 EPSS Percentile :0.402870" [ref=e2094]
+                      - row [ref=e2095]:
+                        - cell [ref=e2096]:
+                          - strong [ref=e2097]: CVE-2026-2950
+                        - cell "MEDIUM" [ref=e2098]
+                        - cell "Vulnerability :CVE-2026-2950 Severity :MEDIUM Package :pkg:npm/lodash@2.4.2 Affected range :<=4.17.23 Fixed version :4.18.0 CVSS Score :6.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L EPSS Score :0.003770 EPSS Percentile :0.294760" [ref=e2099]
+                      - row [ref=e2100]:
+                        - cell [ref=e2101]:
+                          - strong [ref=e2102]: CVE-2026-45822
+                        - cell "MEDIUM" [ref=e2103]
+                        - cell "Vulnerability :CVE-2026-45822 Severity :MEDIUM Package :pkg:npm/decode-uri-component@0.2.2 Affected range :<=0.4.2 Fixed version :0.5.0 CVSS Score :6.6 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/S:N/AU:Y/R:U/V:D/RE:M/U:Amber EPSS Score :0.005070 EPSS Percentile :0.412200" [ref=e2104]
+                      - row [ref=e2105]:
+                        - cell [ref=e2106]:
+                          - strong [ref=e2107]: CVE-2023-32695
+                        - cell "MEDIUM" [ref=e2108]
+                        - cell "Vulnerability :CVE-2023-32695 Severity :MEDIUM Package :pkg:npm/socket.io-parser@4.0.5 Affected range :>=4.0.4,<4.2.3 Fixed version :4.2.3 CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N EPSS Score :0.010590 EPSS Percentile :0.634070" [ref=e2109]
+                      - row [ref=e2110]:
+                        - cell [ref=e2111]:
+                          - strong [ref=e2112]: CVE-2024-38355
+                        - cell "MEDIUM" [ref=e2113]
+                        - cell "Vulnerability :CVE-2024-38355 Severity :MEDIUM Package :pkg:npm/socket.io@3.1.2 Affected range :>=3.0.0,<4.6.2 Fixed version :4.6.2 CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N EPSS Score :0.008070 EPSS Percentile :0.554300" [ref=e2114]
+                      - row [ref=e2115]:
+                        - cell [ref=e2116]:
+                          - strong [ref=e2117]: CVE-2026-101910
+                        - cell "MEDIUM" [ref=e2118]
+                        - cell "Vulnerability :CVE-2026-101910 Severity :MEDIUM Package :pkg:npm/ip-address@10.5.0 Affected range :>=10.2.0,<=10.5.0 Fixed version :10.5.1 CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:H/SI:N/SA:N EPSS Score :0.003860 EPSS Percentile :0.304260" [ref=e2119]
+                      - row [ref=e2120]:
+                        - cell [ref=e2121]:
+                          - strong [ref=e2122]: CVE-2026-53655
+                        - cell "MEDIUM" [ref=e2123]
+                        - cell "Vulnerability :CVE-2026-53655 Severity :MEDIUM Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.15 Fixed version :7.5.16 CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N EPSS Score :0.001560 EPSS Percentile :0.041750" [ref=e2124]
+                      - row [ref=e2125]:
+                        - cell [ref=e2126]:
+                          - strong [ref=e2127]: CVE-2026-97058
+                        - cell "MEDIUM" [ref=e2128]
+                        - cell "Vulnerability :CVE-2026-97058 Severity :MEDIUM Package :pkg:npm/sprintf-js@1.0.3 Affected range :<=1.1.3 Fixed version :not fixed CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N EPSS Score :0.003660 EPSS Percentile :0.282500" [ref=e2129]
+                      - row [ref=e2130]:
+                        - cell [ref=e2131]:
+                          - strong [ref=e2132]: CVE-2026-97058
+                        - cell "MEDIUM" [ref=e2133]
+                        - cell "Vulnerability :CVE-2026-97058 Severity :MEDIUM Package :pkg:npm/sprintf-js@1.1.3 Affected range :<=1.1.3 Fixed version :not fixed CVSS Score :6.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N EPSS Score :0.003660 EPSS Percentile :0.282500" [ref=e2134]
+                      - row [ref=e2135]:
+                        - cell [ref=e2136]:
+                          - strong [ref=e2137]: CVE-2018-16487
+                        - cell "HIGH" [ref=e2138]
+                        - cell "Vulnerability :CVE-2018-16487 Severity :HIGH Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.11 Fixed version :4.17.11 EPSS Score :0.015530 EPSS Percentile :0.743110" [ref=e2139]
+                      - row [ref=e2140]:
+                        - cell [ref=e2141]:
+                          - strong [ref=e2142]: CVE-2026-26960
+                        - cell "HIGH" [ref=e2143]
+                        - cell "Vulnerability :CVE-2026-26960 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<7.5.8 Fixed version :7.5.8 CVSS Score :7.1 CVSS Vector :CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N EPSS Score :0.002020 EPSS Percentile :0.092070" [ref=e2144]
+                      - row [ref=e2145]:
+                        - cell [ref=e2146]:
+                          - strong [ref=e2147]: CVE-2021-23337
+                        - cell "HIGH" [ref=e2148]
+                        - cell "Vulnerability :CVE-2021-23337 Severity :HIGH Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.21 Fixed version :4.17.21 CVSS Score :7.2 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H EPSS Score :0.213330 EPSS Percentile :0.975430" [ref=e2149]
+                      - row [ref=e2150]:
+                        - cell [ref=e2151]:
+                          - strong [ref=e2152]: GHSA-25hc-qcg6-38wj
+                        - cell "HIGH" [ref=e2153]
+                        - cell "Vulnerability :GHSA-25hc-qcg6-38wj Severity :HIGH Package :pkg:npm/socket.io@3.1.2 Affected range :>=3.0.0,<4.6.2 Fixed version :2.5.1, 4.6.2 CVSS Score :7.3 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" [ref=e2154]
+                      - row [ref=e2155]:
+                        - cell [ref=e2156]:
+                          - strong [ref=e2157]: CVE-2020-8203
+                        - cell "HIGH" [ref=e2158]
+                        - cell "Vulnerability :CVE-2020-8203 Severity :HIGH Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.20 Fixed version :4.17.20 CVSS Score :7.4 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H EPSS Score :0.052130 EPSS Percentile :0.922700" [ref=e2159]
+                      - row [ref=e2160]:
+                        - cell [ref=e2161]:
+                          - strong [ref=e2162]: CVE-2017-18214
+                        - cell "HIGH" [ref=e2163]
+                        - cell "Vulnerability :CVE-2017-18214 Severity :HIGH Package :pkg:npm/moment@2.0.0 Affected range :<2.19.3 Fixed version :2.19.3 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.036490 EPSS Percentile :0.892700" [ref=e2164]
+                      - row [ref=e2165]:
+                        - cell [ref=e2166]:
+                          - strong [ref=e2167]: CVE-2022-24785
+                        - cell "HIGH" [ref=e2168]
+                        - cell "Vulnerability :CVE-2022-24785 Severity :HIGH Package :pkg:npm/moment@2.0.0 Affected range :<2.29.2 Fixed version :2.29.2 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N EPSS Score :0.139040 EPSS Percentile :0.964420" [ref=e2169]
+                      - row [ref=e2170]:
+                        - cell [ref=e2171]:
+                          - strong [ref=e2172]: CVE-2022-25881
+                        - cell "HIGH" [ref=e2173]
+                        - cell "Vulnerability :CVE-2022-25881 Severity :HIGH Package :pkg:npm/http-cache-semantics@3.8.1 Affected range :<4.1.1 Fixed version :4.1.1 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.016130 EPSS Percentile :0.751860" [ref=e2174]
+                      - row [ref=e2175]:
+                        - cell [ref=e2176]:
+                          - strong [ref=e2177]: CVE-2022-25887
+                        - cell "HIGH" [ref=e2178]
+                        - cell "Vulnerability :CVE-2022-25887 Severity :HIGH Package :pkg:npm/sanitize-html@1.4.2 Affected range :<2.7.1 Fixed version :2.7.1 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.014540 EPSS Percentile :0.725960" [ref=e2179]
+                      - row [ref=e2180]:
+                        - cell [ref=e2181]:
+                          - strong [ref=e2182]: CVE-2025-47935
+                        - cell "HIGH" [ref=e2183]
+                        - cell "Vulnerability :CVE-2025-47935 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.0.0 Fixed version :2.0.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.007900 EPSS Percentile :0.548190" [ref=e2184]
+                      - row [ref=e2185]:
+                        - cell [ref=e2186]:
+                          - strong [ref=e2187]: CVE-2025-47944
+                        - cell "HIGH" [ref=e2188]
+                        - cell "Vulnerability :CVE-2025-47944 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :>=1.4.4-lts.1,<2.0.0 Fixed version :2.0.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.008070 EPSS Percentile :0.554230" [ref=e2189]
+                      - row [ref=e2190]:
+                        - cell [ref=e2191]:
+                          - strong [ref=e2192]: CVE-2025-65945
+                        - cell "HIGH" [ref=e2193]
+                        - cell "Vulnerability :CVE-2025-65945 Severity :HIGH Package :pkg:npm/jws@0.2.6 Affected range :<3.2.3 Fixed version :3.2.3 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N EPSS Score :0.002150 EPSS Percentile :0.109170" [ref=e2194]
+                      - row [ref=e2195]:
+                        - cell [ref=e2196]:
+                          - strong [ref=e2197]: CVE-2025-7338
+                        - cell "HIGH" [ref=e2198]
+                        - cell "Vulnerability :CVE-2025-7338 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :>=1.4.4-lts.1,<2.0.2 Fixed version :2.0.2 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.007090 EPSS Percentile :0.519460" [ref=e2199]
+                      - row [ref=e2200]:
+                        - cell [ref=e2201]:
+                          - strong [ref=e2202]: CVE-2026-102276
+                        - cell "HIGH" [ref=e2203]
+                        - cell "Vulnerability :CVE-2026-102276 Severity :HIGH Package :pkg:npm/brace-expansion@1.1.18 Affected range :<1.1.19 Fixed version :1.1.19 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.003500 EPSS Percentile :0.264960" [ref=e2204]
+                      - row [ref=e2205]:
+                        - cell [ref=e2206]:
+                          - strong [ref=e2207]: CVE-2026-102276
+                        - cell "HIGH" [ref=e2208]
+                        - cell "Vulnerability :CVE-2026-102276 Severity :HIGH Package :pkg:npm/brace-expansion@2.1.4 Affected range :>=2.0.0,<2.1.5 Fixed version :2.1.5 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.003500 EPSS Percentile :0.264960" [ref=e2209]
+                      - row [ref=e2210]:
+                        - cell [ref=e2211]:
+                          - strong [ref=e2212]: CVE-2026-102278
+                        - cell "HIGH" [ref=e2213]
+                        - cell "Vulnerability :CVE-2026-102278 Severity :HIGH Package :pkg:npm/brace-expansion@1.1.18 Affected range :<1.1.20 Fixed version :1.1.20 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.003500 EPSS Percentile :0.264960" [ref=e2214]
+                      - row [ref=e2215]:
+                        - cell [ref=e2216]:
+                          - strong [ref=e2217]: CVE-2026-102278
+                        - cell "HIGH" [ref=e2218]
+                        - cell "Vulnerability :CVE-2026-102278 Severity :HIGH Package :pkg:npm/brace-expansion@2.1.4 Affected range :>=2.0.0,<2.1.6 Fixed version :2.1.6 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.003500 EPSS Percentile :0.264960" [ref=e2219]
+                      - row [ref=e2220]:
+                        - cell [ref=e2221]:
+                          - strong [ref=e2222]: CVE-2026-12151
+                        - cell "HIGH" [ref=e2223]
+                        - cell "Vulnerability :CVE-2026-12151 Severity :HIGH Package :pkg:npm/undici@5.29.0 Affected range :<6.27.0 Fixed version :6.27.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.007890 EPSS Percentile :0.547700" [ref=e2224]
+                      - row [ref=e2225]:
+                        - cell [ref=e2226]:
+                          - strong [ref=e2227]: CVE-2026-1526
+                        - cell "HIGH" [ref=e2228]
+                        - cell "Vulnerability :CVE-2026-1526 Severity :HIGH Package :pkg:npm/undici@5.29.0 Affected range :<6.24.0 Fixed version :6.24.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.011500 EPSS Percentile :0.658370" [ref=e2229]
+                      - row [ref=e2230]:
+                        - cell [ref=e2231]:
+                          - strong [ref=e2232]: CVE-2026-19481
+                        - cell "HIGH" [ref=e2233]
+                        - cell "Vulnerability :CVE-2026-19481 Severity :HIGH Package :pkg:npm/%40fastify/busboy@2.1.1 Affected range :>=1.0.0,<3.2.1 Fixed version :3.2.1 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.004930 EPSS Percentile :0.402970" [ref=e2234]
+                      - row [ref=e2235]:
+                        - cell [ref=e2236]:
+                          - strong [ref=e2237]: CVE-2026-2229
+                        - cell "HIGH" [ref=e2238]
+                        - cell "Vulnerability :CVE-2026-2229 Severity :HIGH Package :pkg:npm/undici@5.29.0 Affected range :<6.24.0 Fixed version :6.24.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.008740 EPSS Percentile :0.576060" [ref=e2239]
+                      - row [ref=e2240]:
+                        - cell [ref=e2241]:
+                          - strong [ref=e2242]: CVE-2026-27903
+                        - cell "HIGH" [ref=e2243]
+                        - cell "Vulnerability :CVE-2026-27903 Severity :HIGH Package :pkg:npm/minimatch@3.0.5 Affected range :<3.1.3 Fixed version :3.1.3 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.005950 EPSS Percentile :0.466800" [ref=e2244]
+                      - row [ref=e2245]:
+                        - cell [ref=e2246]:
+                          - strong [ref=e2247]: CVE-2026-27904
+                        - cell "HIGH" [ref=e2248]
+                        - cell "Vulnerability :CVE-2026-27904 Severity :HIGH Package :pkg:npm/minimatch@3.0.5 Affected range :<3.1.4 Fixed version :3.1.4 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.005050 EPSS Percentile :0.411260" [ref=e2249]
+                      - row [ref=e2250]:
+                        - cell [ref=e2251]:
+                          - strong [ref=e2252]: CVE-2026-48779
+                        - cell "HIGH" [ref=e2253]
+                        - cell "Vulnerability :CVE-2026-48779 Severity :HIGH Package :pkg:npm/ws@7.4.6 Affected range :>=7.0.0,<7.5.11 Fixed version :7.5.11 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.009310 EPSS Percentile :0.593720" [ref=e2254]
+                      - row [ref=e2255]:
+                        - cell [ref=e2256]:
+                          - strong [ref=e2257]: CVE-2026-5079
+                        - cell "HIGH" [ref=e2258]
+                        - cell "Vulnerability :CVE-2026-5079 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :>=1.0.0,<2.2.0 Fixed version :2.2.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.004880 EPSS Percentile :0.399400" [ref=e2259]
+                      - row [ref=e2260]:
+                        - cell [ref=e2261]:
+                          - strong [ref=e2262]: CVE-2026-59725
+                        - cell "HIGH" [ref=e2263]
+                        - cell "Vulnerability :CVE-2026-59725 Severity :HIGH Package :pkg:npm/engine.io@4.1.2 Affected range :>=4.1.0,<6.6.7 Fixed version :6.6.7 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.006360 EPSS Percentile :0.487870" [ref=e2264]
+                      - row [ref=e2265]:
+                        - cell [ref=e2266]:
+                          - strong [ref=e2267]: CVE-2026-69185
+                        - cell "HIGH" [ref=e2268]
+                        - cell "Vulnerability :CVE-2026-69185 Severity :HIGH Package :pkg:npm/socket.io-parser@4.0.5 Affected range :>=4.0.0,<4.2.7 Fixed version :4.2.7 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.006300 EPSS Percentile :0.484520" [ref=e2269]
+                      - row [ref=e2270]:
+                        - cell [ref=e2271]:
+                          - strong [ref=e2272]: CVE-2026-73566
+                        - cell "HIGH" [ref=e2273]
+                        - cell "Vulnerability :CVE-2026-73566 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.20 Fixed version :7.5.21 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.005310 EPSS Percentile :0.429900" [ref=e2274]
+                      - row [ref=e2275]:
+                        - cell [ref=e2276]:
+                          - strong [ref=e2277]: CVE-2026-77078
+                        - cell "HIGH" [ref=e2278]
+                        - cell "Vulnerability :CVE-2026-77078 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.3.0 Fixed version :2.3.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.004880 EPSS Percentile :0.399390" [ref=e2279]
+                      - row [ref=e2280]:
+                        - cell [ref=e2281]:
+                          - strong [ref=e2282]: CVE-2026-82333
+                        - cell "HIGH" [ref=e2283]
+                        - cell "Vulnerability :CVE-2026-82333 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.3.0 Fixed version :2.3.0 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.004880 EPSS Percentile :0.399420" [ref=e2284]
+                      - row [ref=e2285]:
+                        - cell [ref=e2286]:
+                          - strong [ref=e2287]: CVE-2026-84375
+                        - cell "HIGH" [ref=e2288]
+                        - cell "Vulnerability :CVE-2026-84375 Severity :HIGH Package :pkg:npm/js-yaml@3.15.1 Affected range :>=3.0.0,<3.15.2 Fixed version :3.15.2 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.005410 EPSS Percentile :0.436210" [ref=e2289]
+                      - row [ref=e2290]:
+                        - cell [ref=e2291]:
+                          - strong [ref=e2292]: CVE-2026-87776
+                        - cell "HIGH" [ref=e2293]
+                        - cell "Vulnerability :CVE-2026-87776 Severity :HIGH Package :pkg:npm/compression@1.8.1 Affected range :<1.8.2 Fixed version :1.8.2 CVSS Score :7.5 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H EPSS Score :0.006080 EPSS Percentile :0.473340" [ref=e2294]
+                      - row [ref=e2295]:
+                        - cell [ref=e2296]:
+                          - strong [ref=e2297]: GMS-2020-4
+                        - cell "HIGH" [ref=e2298]
+                        - cell "Vulnerability :GMS-2020-4 Severity :HIGH Package :pkg:npm/crypto-js@3.3.0 Affected range :>=3.3.0,<4.0.0 Fixed version :3.2.1, 4.0.0 CVSS Score :7.5 CVSS Vector :AV:N/AC:L/Au:N/C:P/I:P/A:P" [ref=e2299]
+                      - row [ref=e2300]:
+                        - cell [ref=e2301]:
+                          - strong [ref=e2302]: CVE-2020-15084
+                        - cell "HIGH" [ref=e2303]
+                        - cell "Vulnerability :CVE-2020-15084 Severity :HIGH Package :pkg:npm/express-jwt@0.1.3 Affected range :<=5.3.3 Fixed version :6.0.0 CVSS Score :7.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N EPSS Score :0.010500 EPSS Percentile :0.631340" [ref=e2304]
+                      - row [ref=e2305]:
+                        - cell [ref=e2306]:
+                          - strong [ref=e2307]: CVE-2022-23539
+                        - cell "HIGH" [ref=e2308]
+                        - cell "Vulnerability :CVE-2022-23539 Severity :HIGH Package :pkg:npm/jsonwebtoken@0.1.0 Affected range :<=8.5.1 Fixed version :9.0.0 CVSS Score :8.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.005010 EPSS Percentile :0.408440" [ref=e2309]
+                      - row [ref=e2310]:
+                        - cell [ref=e2311]:
+                          - strong [ref=e2312]: CVE-2022-23539
+                        - cell "HIGH" [ref=e2313]
+                        - cell "Vulnerability :CVE-2022-23539 Severity :HIGH Package :pkg:npm/jsonwebtoken@0.4.0 Affected range :<=8.5.1 Fixed version :9.0.0 CVSS Score :8.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.005010 EPSS Percentile :0.408440" [ref=e2314]
+                      - row [ref=e2315]:
+                        - cell [ref=e2316]:
+                          - strong [ref=e2317]: CVE-2026-23745
+                        - cell "HIGH" [ref=e2318]
+                        - cell "Vulnerability :CVE-2026-23745 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.2 Fixed version :7.5.3 CVSS Score :8.2 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:H/SI:L/SA:N EPSS Score :0.003820 EPSS Percentile :0.299170" [ref=e2319]
+                      - row [ref=e2320]:
+                        - cell [ref=e2321]:
+                          - strong [ref=e2322]: CVE-2026-24842
+                        - cell "HIGH" [ref=e2323]
+                        - cell "Vulnerability :CVE-2026-24842 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<7.5.7 Fixed version :7.5.7 CVSS Score :8.2 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N EPSS Score :0.006170 EPSS Percentile :0.478480" [ref=e2324]
+                      - row [ref=e2325]:
+                        - cell [ref=e2326]:
+                          - strong [ref=e2327]: CVE-2026-29786
+                        - cell "HIGH" [ref=e2328]
+                        - cell "Vulnerability :CVE-2026-29786 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.9 Fixed version :7.5.10 CVSS Score :8.2 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:H/SA:L EPSS Score :0.004010 EPSS Percentile :0.321460" [ref=e2329]
+                      - row [ref=e2330]:
+                        - cell [ref=e2331]:
+                          - strong [ref=e2332]: CVE-2026-31802
+                        - cell "HIGH" [ref=e2333]
+                        - cell "Vulnerability :CVE-2026-31802 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.10 Fixed version :7.5.11 CVSS Score :8.2 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N EPSS Score :0.001900 EPSS Percentile :0.079030" [ref=e2334]
+                      - row [ref=e2335]:
+                        - cell [ref=e2336]:
+                          - strong [ref=e2337]: CVE-2016-1000223
+                        - cell "HIGH" [ref=e2338]
+                        - cell "Vulnerability :CVE-2016-1000223 Severity :HIGH Package :pkg:npm/jws@0.2.6 Affected range :<3.0.0 Fixed version :3.0.0 CVSS Score :8.7 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N EPSS Score :0.017980 EPSS Percentile :0.832520" [ref=e2339]
+                      - row [ref=e2340]:
+                        - cell [ref=e2341]:
+                          - strong [ref=e2342]: CVE-2024-37890
+                        - cell "HIGH" [ref=e2343]
+                        - cell "Vulnerability :CVE-2024-37890 Severity :HIGH Package :pkg:npm/ws@7.4.6 Affected range :>=7.0.0,<7.5.10 Fixed version :7.5.10 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.013460 EPSS Percentile :0.705130" [ref=e2344]
+                      - row [ref=e2345]:
+                        - cell [ref=e2346]:
+                          - strong [ref=e2347]: CVE-2025-48997
+                        - cell "HIGH" [ref=e2348]
+                        - cell "Vulnerability :CVE-2025-48997 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :>=1.4.4-lts.1,<2.0.1 Fixed version :2.0.1 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.004400 EPSS Percentile :0.361050" [ref=e2349]
+                      - row [ref=e2350]:
+                        - cell [ref=e2351]:
+                          - strong [ref=e2352]: CVE-2026-2359
+                        - cell "HIGH" [ref=e2353]
+                        - cell "Vulnerability :CVE-2026-2359 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.1.0 Fixed version :2.1.0 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.006750 EPSS Percentile :0.505860" [ref=e2354]
+                      - row [ref=e2355]:
+                        - cell [ref=e2356]:
+                          - strong [ref=e2357]: CVE-2026-26996
+                        - cell "HIGH" [ref=e2358]
+                        - cell "Vulnerability :CVE-2026-26996 Severity :HIGH Package :pkg:npm/minimatch@3.0.5 Affected range :<3.1.3 Fixed version :10.2.1 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.005350 EPSS Percentile :0.432820" [ref=e2359]
+                      - row [ref=e2360]:
+                        - cell [ref=e2361]:
+                          - strong [ref=e2362]: CVE-2026-3304
+                        - cell "HIGH" [ref=e2363]
+                        - cell "Vulnerability :CVE-2026-3304 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.1.0 Fixed version :2.1.0 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.008620 EPSS Percentile :0.571950" [ref=e2364]
+                      - row [ref=e2365]:
+                        - cell [ref=e2366]:
+                          - strong [ref=e2367]: CVE-2026-33151
+                        - cell "HIGH" [ref=e2368]
+                        - cell "Vulnerability :CVE-2026-33151 Severity :HIGH Package :pkg:npm/socket.io-parser@4.0.5 Affected range :>=4.0.0,<4.2.6 Fixed version :4.2.6 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.006300 EPSS Percentile :0.484630" [ref=e2369]
+                      - row [ref=e2370]:
+                        - cell [ref=e2371]:
+                          - strong [ref=e2372]: CVE-2026-3520
+                        - cell "HIGH" [ref=e2373]
+                        - cell "Vulnerability :CVE-2026-3520 Severity :HIGH Package :pkg:npm/multer@1.4.5-lts.2 Affected range :<2.1.1 Fixed version :2.1.1 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.009770 EPSS Percentile :0.609000" [ref=e2374]
+                      - row [ref=e2375]:
+                        - cell [ref=e2376]:
+                          - strong [ref=e2377]: CVE-2026-59874
+                        - cell "HIGH" [ref=e2378]
+                        - cell "Vulnerability :CVE-2026-59874 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.17 Fixed version :7.5.18 CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N EPSS Score :0.006440 EPSS Percentile :0.491660" [ref=e2379]
+                      - row [ref=e2380]:
+                        - cell [ref=e2381]:
+                          - strong [ref=e2382]: CVE-2026-93748
+                        - cell "HIGH" [ref=e2383]
+                        - cell "Vulnerability :CVE-2026-93748 Severity :HIGH Package :pkg:npm/http-cache-semantics@4.2.0 Affected range :<=4.2.0 Fixed version :not fixed CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N EPSS Score :0.005310 EPSS Percentile :0.430100" [ref=e2384]
+                      - row [ref=e2385]:
+                        - cell [ref=e2386]:
+                          - strong [ref=e2387]: CVE-2026-93748
+                        - cell "HIGH" [ref=e2388]
+                        - cell "Vulnerability :CVE-2026-93748 Severity :HIGH Package :pkg:npm/http-cache-semantics@3.8.1 Affected range :<=4.2.0 Fixed version :not fixed CVSS Score :8.7 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N EPSS Score :0.005310 EPSS Percentile :0.430100" [ref=e2389]
+                      - row [ref=e2390]:
+                        - cell [ref=e2391]:
+                          - strong [ref=e2392]: CVE-2026-23950
+                        - cell "HIGH" [ref=e2393]
+                        - cell "Vulnerability :CVE-2026-23950 Severity :HIGH Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.3 Fixed version :7.5.4 CVSS Score :8.8 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:L EPSS Score :0.002570 EPSS Percentile :0.158830" [ref=e2394]
+                      - row [ref=e2395]:
+                        - cell [ref=e2396]:
+                          - strong [ref=e2397]: CVE-2015-9235
+                        - cell "CRITICAL" [ref=e2398]
+                        - cell "Vulnerability :CVE-2015-9235 Severity :CRITICAL Package :pkg:npm/jsonwebtoken@0.1.0 Affected range :<4.2.2 Fixed version :4.2.2 EPSS Score :0.085240 EPSS Percentile :0.949070" [ref=e2399]
+                      - row [ref=e2400]:
+                        - cell [ref=e2401]:
+                          - strong [ref=e2402]: CVE-2015-9235
+                        - cell "CRITICAL" [ref=e2403]
+                        - cell "Vulnerability :CVE-2015-9235 Severity :CRITICAL Package :pkg:npm/jsonwebtoken@0.4.0 Affected range :<4.2.2 Fixed version :4.2.2 EPSS Score :0.085240 EPSS Percentile :0.949070" [ref=e2404]
+                      - row [ref=e2405]:
+                        - cell [ref=e2406]:
+                          - strong [ref=e2407]: GHSA-5mrr-rgp6-x4gr
+                        - cell "CRITICAL" [ref=e2408]
+                        - cell "Vulnerability :GHSA-5mrr-rgp6-x4gr Severity :CRITICAL Package :pkg:npm/marsdb@0.6.11 Affected range :>=0.0.0 Fixed version :not fixed" [ref=e2409]
+                      - row [ref=e2410]:
+                        - cell [ref=e2411]:
+                          - strong [ref=e2412]: CVE-2026-71851
+                        - cell "CRITICAL" [ref=e2413]
+                        - cell "Vulnerability :CVE-2026-71851 Severity :CRITICAL Package :pkg:npm/crypto-js@3.3.0 Affected range :<4.0.0 Fixed version :4.0.0 CVSS Score :9.0 CVSS Vector :CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H EPSS Score :0.005500 EPSS Percentile :0.441400" [ref=e2414]
+                      - row [ref=e2415]:
+                        - cell [ref=e2416]:
+                          - strong [ref=e2417]: CVE-2019-10744
+                        - cell "CRITICAL" [ref=e2418]
+                        - cell "Vulnerability :CVE-2019-10744 Severity :CRITICAL Package :pkg:npm/lodash@2.4.2 Affected range :<4.17.12 Fixed version :4.17.12 CVSS Score :9.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H EPSS Score :0.050060 EPSS Percentile :0.920000" [ref=e2419]
+                      - row [ref=e2420]:
+                        - cell [ref=e2421]:
+                          - strong [ref=e2422]: CVE-2023-46233
+                        - cell "CRITICAL" [ref=e2423]
+                        - cell "Vulnerability :CVE-2023-46233 Severity :CRITICAL Package :pkg:npm/crypto-js@3.3.0 Affected range :<4.2.0 Fixed version :4.2.0 CVSS Score :9.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.006350 EPSS Percentile :0.486900" [ref=e2424]
+                      - row [ref=e2425]:
+                        - cell [ref=e2426]:
+                          - strong [ref=e2427]: CVE-2026-101894
+                        - cell "CRITICAL" [ref=e2428]
+                        - cell "Vulnerability :CVE-2026-101894 Severity :CRITICAL Package :pkg:npm/decompress@4.2.1 Affected range :<=4.2.1 Fixed version :not fixed CVSS Score :9.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.008140 EPSS Percentile :0.556260" [ref=e2429]
+                      - row [ref=e2430]:
+                        - cell [ref=e2431]:
+                          - strong [ref=e2432]: CVE-2026-53486
+                        - cell "CRITICAL" [ref=e2433]
+                        - cell "Vulnerability :CVE-2026-53486 Severity :CRITICAL Package :pkg:npm/decompress@4.2.1 Affected range :<=4.2.1 Fixed version :not fixed CVSS Score :9.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.007490 EPSS Percentile :0.534140" [ref=e2434]
+                      - row [ref=e2435]:
+                        - cell [ref=e2436]:
+                          - strong [ref=e2437]: CVE-2026-90711
+                        - cell "CRITICAL" [ref=e2438]
+                        - cell "Vulnerability :CVE-2026-90711 Severity :CRITICAL Package :pkg:npm/proxy-addr@2.0.7 Affected range :>=1.1.0,<2.0.8 Fixed version :2.0.8 CVSS Score :9.1 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N EPSS Score :0.003320 EPSS Percentile :0.242450" [ref=e2439]
+                      - row [ref=e2440]:
+                        - cell [ref=e2441]:
+                          - strong [ref=e2442]: CVE-2026-59873
+                        - cell "CRITICAL" [ref=e2443]
+                        - cell "Vulnerability :CVE-2026-59873 Severity :CRITICAL Package :pkg:npm/tar@6.2.1 Affected range :<=7.5.18 Fixed version :7.5.19 CVSS Score :9.2 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H EPSS Score :0.006440 EPSS Percentile :0.491640" [ref=e2444]
+    - contentinfo [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img "ChainProof Logo" [ref=e307]
+              - generic [ref=e308]: ChainProof
+            - paragraph [ref=e309]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=e310]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=e313]:
+            - heading "Platform" [level=3] [ref=e314]
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - button "Dashboard" [ref=e317] [cursor=pointer]
+              - listitem [ref=e318]:
+                - button "Live Image Scanner" [ref=e319] [cursor=pointer]
+              - listitem [ref=e320]:
+                - button "Audit Reports" [ref=e321] [cursor=pointer]
+          - generic [ref=e322]:
+            - heading "Security Standards" [level=3] [ref=e323]
+            - generic [ref=e324]:
+              - generic [ref=e325]: Syft SBOM v1.0
+              - generic [ref=e326]: Docker Scout SARIF
+              - generic [ref=e327]: Cosign Sigstore
+              - generic [ref=e328]: Isolation Forest ML
+          - generic [ref=e329]:
+            - heading "Compliance & Legal" [level=3] [ref=e330]
+            - list [ref=e331]:
+              - listitem [ref=e332]:
+                - button "Privacy Policy" [ref=e333] [cursor=pointer]
+              - listitem [ref=e334]:
+                - button "Terms & Conditions" [ref=e335] [cursor=pointer]
+              - listitem [ref=e336]:
+                - generic [ref=e337]: Zero Data-Retention Mode
+        - generic [ref=e341]:
+          - paragraph [ref=e342]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=e343]:
+            - button "Privacy Policy" [ref=e344] [cursor=pointer]
+            - generic [ref=e345]: •
+            - button "Terms of Service" [ref=e346] [cursor=pointer]
+            - generic [ref=e347]: •
+            - generic [ref=e348]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=e1207]: "15"

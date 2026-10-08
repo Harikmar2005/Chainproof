@@ -1,0 +1,122 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - button "ChainProof Home" [ref=e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=e8]
+          - generic [ref=e9]: ChainProof
+          - generic [ref=e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=e11]:
+          - button "Dashboard" [ref=e12] [cursor=pointer]
+          - button "Live Scan" [ref=e14] [cursor=pointer]
+          - button "Audit Reports" [ref=e18] [cursor=pointer]
+          - button "Privacy" [ref=e22] [cursor=pointer]
+          - button "Terms" [ref=e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=e25] [cursor=pointer]: Scan Container
+    - main [ref=e1241]:
+      - generic [ref=e1242]:
+        - generic [ref=e1243]:
+          - button "← Back to Dashboard" [ref=e1244] [cursor=pointer]
+          - generic [ref=e1245]: Security & Transparency
+          - heading "Privacy Policy" [level=1] [ref=e1249]
+          - paragraph [ref=e1250]: "Last Revised: October 2026 • Version 2.4 Enterprise"
+        - generic [ref=e1251]:
+          - generic [ref=e1252]:
+            - heading "1. Overview & Commitment" [level=2] [ref=e1253]
+            - paragraph [ref=e1254]:
+              - text: At
+              - strong [ref=e1255]: ChainProof Security Intelligence
+              - text: ", we place utmost priority on the confidentiality and integrity of your infrastructure and development workflows. This Privacy Policy details the types of technical data collected during container audits and how we safeguard your supply chain assets."
+          - generic [ref=e1256]:
+            - heading "2. Information We Process" [level=2] [ref=e1257]
+            - paragraph [ref=e1258]:
+              - text: ChainProof operates on a
+              - strong [ref=e1259]: minimal data retention
+              - text: "philosophy. When you initiate a security scan, our system processes:"
+            - list [ref=e1260]:
+              - listitem [ref=e1261]:
+                - strong [ref=e1262]: "Public Container Image Identifiers:"
+                - text: The repository URI, tag, and digest submitted for inspection (e.g.,
+                - code [ref=e1263]: nginx:latest
+                - text: ).
+              - listitem [ref=e1264]:
+                - strong [ref=e1265]: "Static Software Metadata:"
+                - text: Package names, layer manifests, SBOM records generated via Syft, and vulnerability identifiers (CVEs) queried from public registries.
+              - listitem [ref=e1266]:
+                - strong [ref=e1267]: "Cryptographic Proofs:"
+                - text: Digital signature metadata verified against public Sigstore / Cosign keyrings.
+              - listitem [ref=e1268]:
+                - strong [ref=e1269]: "Telemetry & Performance Metrics:"
+                - text: Aggregate anonymized response latencies and scan success indicators for performance tuning.
+          - generic [ref=e1270]:
+            - heading "3. Secrets & Credentials Isolation" [level=2] [ref=e1271]
+            - paragraph [ref=e1272]:
+              - text: ChainProof strictly enforces a
+              - strong [ref=e1273]: Zero Secrets on Frontend
+              - text: architecture. Container scans are executed in isolated backend sandboxes. We do not extract, store, or transmit proprietary source code files or embedded environment secrets contained within private filesystem layers.
+          - generic [ref=e1274]:
+            - heading "4. Cookie & Storage Usage" [level=2] [ref=e1275]
+            - paragraph [ref=e1276]:
+              - text: We employ lightweight browser
+              - code [ref=e1277]: localStorage
+              - text: solely to preserve user UI preferences and your explicit cookie consent selection. No persistent third-party advertising cookies or cross-site tracking pixels are placed on your device.
+          - generic [ref=e1278]:
+            - heading "5. Data Security & HTTPS Encryption" [level=2] [ref=e1279]
+            - paragraph [ref=e1280]:
+              - text: All interactions with the ChainProof API and frontend services are strictly enforced over encrypted
+              - strong [ref=e1281]: Transport Layer Security (TLS 1.3 / HTTPS)
+              - text: . Data in transit is protected against interception, tampering, and replay attacks.
+          - generic [ref=e1282]:
+            - heading "6. Contact Us" [level=2] [ref=e1283]
+            - paragraph [ref=e1284]:
+              - text: For inquiries regarding security disclosure, audit log deletion, or privacy compliance, contact our security team at
+              - code [ref=e1285]: security@chainproof.io
+              - text: .
+        - generic [ref=e1286]:
+          - heading "Ready to inspect your container security posture?" [level=3] [ref=e1287]
+          - button "Run Live Container Scan" [ref=e1288] [cursor=pointer]
+    - contentinfo [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img "ChainProof Logo" [ref=e307]
+              - generic [ref=e308]: ChainProof
+            - paragraph [ref=e309]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=e310]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=e313]:
+            - heading "Platform" [level=3] [ref=e314]
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - button "Dashboard" [ref=e317] [cursor=pointer]
+              - listitem [ref=e318]:
+                - button "Live Image Scanner" [ref=e319] [cursor=pointer]
+              - listitem [ref=e320]:
+                - button "Audit Reports" [ref=e321] [cursor=pointer]
+          - generic [ref=e322]:
+            - heading "Security Standards" [level=3] [ref=e323]
+            - generic [ref=e324]:
+              - generic [ref=e325]: Syft SBOM v1.0
+              - generic [ref=e326]: Docker Scout SARIF
+              - generic [ref=e327]: Cosign Sigstore
+              - generic [ref=e328]: Isolation Forest ML
+          - generic [ref=e329]:
+            - heading "Compliance & Legal" [level=3] [ref=e330]
+            - list [ref=e331]:
+              - listitem [ref=e332]:
+                - button "Privacy Policy" [ref=e333] [cursor=pointer]
+              - listitem [ref=e334]:
+                - button "Terms & Conditions" [ref=e335] [cursor=pointer]
+              - listitem [ref=e336]:
+                - generic [ref=e337]: Zero Data-Retention Mode
+        - generic [ref=e341]:
+          - paragraph [ref=e342]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=e343]:
+            - button "Privacy Policy" [ref=e344] [cursor=pointer]
+            - generic [ref=e345]: •
+            - button "Terms of Service" [ref=e346] [cursor=pointer]
+            - generic [ref=e347]: •
+            - generic [ref=e348]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=e1207]: "0"

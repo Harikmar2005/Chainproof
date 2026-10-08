@@ -1,0 +1,280 @@
+- generic [active] [ref=f17e1]:
+  - link "Skip to main content" [ref=f17e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f17e5]:
+    - banner [ref=f17e6]:
+      - generic [ref=f17e7]:
+        - button "ChainProof Home" [ref=f17e8] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=f17e9]
+          - generic [ref=f17e10]: ChainProof
+          - generic [ref=f17e11]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=f17e12]:
+          - button "Dashboard" [ref=f17e13] [cursor=pointer]
+          - button "Live Scan" [ref=f17e15] [cursor=pointer]
+          - button "Audit Reports" [ref=f17e19] [cursor=pointer]
+          - button "Privacy" [ref=f17e23] [cursor=pointer]
+          - button "Terms" [ref=f17e24] [cursor=pointer]
+        - button "Scan a new container image now" [ref=f17e26] [cursor=pointer]: Scan Container
+    - main [ref=f17e30]:
+      - generic [ref=f17e31]:
+        - generic [ref=f17e33]:
+          - generic [ref=f17e34]: CONTAINER SECURITY INTELLIGENCE
+          - heading "Continuous Verification & Supply Chain Intelligence" [level=1] [ref=f17e39]
+          - paragraph [ref=f17e40]: Continuous verification of container vulnerabilities, software composition, provenance, and supply-chain risk with automated AI security decisions.
+          - generic [ref=f17e43]:
+            - textbox "Scan container image" [ref=f17e52]:
+              - /placeholder: Enter container image (e.g. alpine:latest, bkimminich/juice-shop:latest)
+            - button "Scan Container" [ref=f17e53] [cursor=pointer]
+          - generic [ref=f17e56]:
+            - generic [ref=f17e57]: "Benchmark Targets:"
+            - button "alpine:latest" [ref=f17e58] [cursor=pointer]
+            - button "nginx:alpine" [ref=f17e59] [cursor=pointer]
+            - button "python:3.11-slim" [ref=f17e60] [cursor=pointer]
+            - button "juice-shop (High Risk)" [ref=f17e61] [cursor=pointer]
+        - region "Supply chain security telemetry metrics" [ref=f17e62]:
+          - generic [ref=f17e63]:
+            - generic [ref=f17e64]: Images Scanned
+            - generic [ref=f17e67]: "14"
+            - generic [ref=f17e68]: Indexed in security ledger
+          - generic [ref=f17e69]:
+            - generic [ref=f17e70]: Critical Risk Images
+            - generic [ref=f17e74]: "3"
+            - generic [ref=f17e75]: 10 Critical CVEs detected
+          - generic [ref=f17e76]:
+            - generic [ref=f17e77]: Total Vulnerabilities
+            - generic [ref=f17e82]: "201"
+            - generic [ref=f17e83]: Across all audited workloads
+          - generic [ref=f17e84]:
+            - generic [ref=f17e85]: Supply Chain Trust
+            - generic [ref=f17e92]: 0%
+            - generic [ref=f17e93]: 0 Trusted / 3 Blocked
+        - region "AI Security Intelligence Correlation" [ref=f17e94]:
+          - generic [ref=f17e95]:
+            - generic [ref=f17e96]:
+              - generic [ref=f17e97]: AI SECURITY INTELLIGENCE
+              - generic [ref=f17e101]: Multi-Signal Telemetry Correlation
+            - generic [ref=f17e102]: "POLICY: BLOCK"
+          - generic [ref=f17e103]:
+            - generic [ref=f17e104]:
+              - generic [ref=f17e105]:
+                - generic [ref=f17e106]: OVERALL ASSESSMENT
+                - heading "3 container images require immediate remediation before deployment." [level=3] [ref=f17e107]
+              - generic [ref=f17e108]:
+                - generic [ref=f17e109]: AI SIGNAL CORRELATION
+                - generic [ref=f17e110]:
+                  - generic [ref=f17e111]: Vulnerability Exposure
+                  - generic [ref=f17e112]: CRITICAL
+                - generic [ref=f17e113]:
+                  - generic [ref=f17e114]: Supply Chain Integrity
+                  - generic [ref=f17e115]: CRITICAL GAP
+                - generic [ref=f17e116]:
+                  - generic [ref=f17e117]: ML Risk Prediction (Random Forest)
+                  - generic [ref=f17e118]: CRITICAL RISK
+                - generic [ref=f17e119]:
+                  - generic [ref=f17e120]: Configuration Anomaly (Isolation Forest)
+                  - generic [ref=f17e121]: ANOMALY FLAGGED
+            - generic [ref=f17e122]:
+              - generic [ref=f17e123]:
+                - generic [ref=f17e124]: TOP CORRELATED FINDINGS
+                - generic [ref=f17e125]:
+                  - generic [ref=f17e126]:
+                    - generic [ref=f17e127]: "01"
+                    - generic [ref=f17e128]: 10 Critical CVEs identified in active image layer manifests.
+                  - generic [ref=f17e129]:
+                    - generic [ref=f17e130]: "02"
+                    - generic [ref=f17e131]: Unverified Sigstore / Cosign cryptographic provenance on unsigned images.
+                  - generic [ref=f17e132]:
+                    - generic [ref=f17e133]: "03"
+                    - generic [ref=f17e134]: Isolation Forest flagged outlier layer depth and excessive package ratios.
+              - generic [ref=f17e135]:
+                - generic [ref=f17e136]:
+                  - generic [ref=f17e137]: "RECOMMENDED REMEDIATION PIPELINE:"
+                  - generic [ref=f17e138]:
+                    - generic [ref=f17e139]: Patch
+                    - generic [ref=f17e140]: →
+                    - generic [ref=f17e141]: Rebuild
+                    - generic [ref=f17e142]: →
+                    - generic [ref=f17e143]: Sign (Cosign)
+                    - generic [ref=f17e144]: →
+                    - generic [ref=f17e145]: Rescan
+                - button "View AI Security Analysis →" [ref=f17e146] [cursor=pointer]
+        - generic [ref=f17e147]:
+          - generic [ref=f17e148]:
+            - generic [ref=f17e149]:
+              - generic [ref=f17e150]:
+                - heading "Risk Distribution" [level=2] [ref=f17e151]
+                - paragraph [ref=f17e152]: Severity breakdown across audited container fleet.
+              - generic [ref=f17e153]: "Avg Score: 62/100"
+            - generic [ref=f17e154]:
+              - generic [ref=f17e156]:
+                - generic [ref=f17e157]: Critical Risk
+                - strong [ref=f17e158]: 3 images (21%)
+              - generic [ref=f17e162]:
+                - generic [ref=f17e163]: High Risk
+                - strong [ref=f17e164]: 8 images (57%)
+              - generic [ref=f17e168]:
+                - generic [ref=f17e169]: Medium Risk
+                - strong [ref=f17e170]: 3 images (21%)
+              - generic [ref=f17e174]:
+                - generic [ref=f17e175]: Low Risk (Verified)
+                - strong [ref=f17e176]: 0 images (0%)
+          - generic [ref=f17e178]:
+            - generic [ref=f17e179]:
+              - generic [ref=f17e180]:
+                - heading "Security Engine Pipeline" [level=2] [ref=f17e181]
+                - paragraph [ref=f17e182]: Continuous four-tier verification and intelligence workflow.
+              - text: Deterministic & AI
+            - generic [ref=f17e183]:
+              - generic [ref=f17e184]:
+                - generic [ref=f17e185]: "01"
+                - generic [ref=f17e186]:
+                  - generic [ref=f17e187]:
+                    - strong [ref=f17e188]: EVIDENCE COLLECTION
+                    - generic [ref=f17e189]: Scanners
+                  - paragraph [ref=f17e190]: Docker metadata • Syft SBOM catalog • Docker Scout CVEs • Cosign / Sigstore proofs
+              - generic [ref=f17e191]: ↓
+              - generic [ref=f17e192]:
+                - generic [ref=f17e193]: "02"
+                - generic [ref=f17e194]:
+                  - generic [ref=f17e195]:
+                    - strong [ref=f17e196]: ML RISK INTELLIGENCE
+                    - generic [ref=f17e197]: Scikit-Learn
+                  - paragraph [ref=f17e198]: Supervised Random Forest risk classifier • Unsupervised Isolation Forest anomaly detector
+              - generic [ref=f17e199]: ↓
+              - generic [ref=f17e200]:
+                - generic [ref=f17e201]: "03"
+                - generic [ref=f17e202]:
+                  - generic [ref=f17e203]:
+                    - strong [ref=f17e204]: AI CORRELATION
+                    - generic [ref=f17e205]: Reasoning Engine
+                  - paragraph [ref=f17e206]: Multi-signal evidence correlation • Risk-factor prioritization • Actionable remediation roadmap
+              - generic [ref=f17e207]: ↓
+              - generic [ref=f17e208]:
+                - generic [ref=f17e209]: "04"
+                - generic [ref=f17e210]:
+                  - generic [ref=f17e211]:
+                    - strong [ref=f17e212]: SECURITY DECISION
+                    - generic [ref=f17e213]: Policy Gate
+                  - paragraph [ref=f17e214]: "TRUST / REVIEW / BLOCK (Deterministic Risk Score: 0-100)"
+        - generic [ref=f17e215]:
+          - generic [ref=f17e216]:
+            - generic [ref=f17e217]:
+              - heading "Recent Container Security Events" [level=2] [ref=f17e218]
+              - paragraph [ref=f17e219]: Real-time telemetry and decision outputs from recent image inspections
+            - button "View All Audit Records (14) →" [ref=f17e220] [cursor=pointer]
+          - generic [ref=f17e221]:
+            - 'button "alpine:latest 2026-10-08 10:58:25 • 1 CVEs • Score: 32/100 MEDIUM REVIEW" [ref=f17e222] [cursor=pointer]':
+              - generic [ref=f17e232]:
+                - strong [ref=f17e233]: alpine:latest
+                - generic [ref=f17e234]:
+                  - generic [ref=f17e235]: 2026-10-08 10:58:25
+                  - generic [ref=f17e236]: •
+                  - generic [ref=f17e237]: 1 CVEs
+                  - generic [ref=f17e238]: •
+                  - generic [ref=f17e239]: "Score: 32/100"
+              - generic [ref=f17e240]:
+                - generic [ref=f17e241]: MEDIUM
+                - generic [ref=f17e242]: REVIEW
+            - 'button "python:3.11-slim 2026-10-08 09:11:19 • 37 CVEs • Score: 70/100 HIGH REVIEW" [ref=f17e247] [cursor=pointer]':
+              - generic [ref=f17e257]:
+                - strong [ref=f17e258]: python:3.11-slim
+                - generic [ref=f17e259]:
+                  - generic [ref=f17e260]: 2026-10-08 09:11:19
+                  - generic [ref=f17e261]: •
+                  - generic [ref=f17e262]: 37 CVEs
+                  - generic [ref=f17e263]: •
+                  - generic [ref=f17e264]: "Score: 70/100"
+              - generic [ref=f17e265]:
+                - generic [ref=f17e266]: HIGH
+                - generic [ref=f17e267]: REVIEW
+            - 'button "alpine:latest 2026-10-08 09:05:36 • 1 CVEs • Score: 32/100 MEDIUM REVIEW" [ref=f17e272] [cursor=pointer]':
+              - generic [ref=f17e282]:
+                - strong [ref=f17e283]: alpine:latest
+                - generic [ref=f17e284]:
+                  - generic [ref=f17e285]: 2026-10-08 09:05:36
+                  - generic [ref=f17e286]: •
+                  - generic [ref=f17e287]: 1 CVEs
+                  - generic [ref=f17e288]: •
+                  - generic [ref=f17e289]: "Score: 32/100"
+              - generic [ref=f17e290]:
+                - generic [ref=f17e291]: MEDIUM
+                - generic [ref=f17e292]: REVIEW
+            - 'button "nginx:alpine 2026-10-08 09:02:25 • 18 CVEs • Score: 92/100 CRITICAL BLOCK" [ref=f17e297] [cursor=pointer]':
+              - generic [ref=f17e307]:
+                - strong [ref=f17e308]: nginx:alpine
+                - generic [ref=f17e309]:
+                  - generic [ref=f17e310]: 2026-10-08 09:02:25
+                  - generic [ref=f17e311]: •
+                  - generic [ref=f17e312]: 18 CVEs
+                  - generic [ref=f17e313]: •
+                  - generic [ref=f17e314]: "Score: 92/100"
+              - generic [ref=f17e315]:
+                - generic [ref=f17e316]: CRITICAL
+                - generic [ref=f17e317]: BLOCK
+            - 'button "nginx:alpine 2026-10-08 09:02:18 • 18 CVEs • Score: 92/100 CRITICAL BLOCK" [ref=f17e322] [cursor=pointer]':
+              - generic [ref=f17e332]:
+                - strong [ref=f17e333]: nginx:alpine
+                - generic [ref=f17e334]:
+                  - generic [ref=f17e335]: 2026-10-08 09:02:18
+                  - generic [ref=f17e336]: •
+                  - generic [ref=f17e337]: 18 CVEs
+                  - generic [ref=f17e338]: •
+                  - generic [ref=f17e339]: "Score: 92/100"
+              - generic [ref=f17e340]:
+                - generic [ref=f17e341]: CRITICAL
+                - generic [ref=f17e342]: BLOCK
+            - 'button "bkimminich/juice-shop:latest 2026-10-08 08:48:18 • 125 CVEs • Score: 100/100 CRITICAL BLOCK" [ref=f17e347] [cursor=pointer]':
+              - generic [ref=f17e357]:
+                - strong [ref=f17e358]: bkimminich/juice-shop:latest
+                - generic [ref=f17e359]:
+                  - generic [ref=f17e360]: 2026-10-08 08:48:18
+                  - generic [ref=f17e361]: •
+                  - generic [ref=f17e362]: 125 CVEs
+                  - generic [ref=f17e363]: •
+                  - generic [ref=f17e364]: "Score: 100/100"
+              - generic [ref=f17e365]:
+                - generic [ref=f17e366]: CRITICAL
+                - generic [ref=f17e367]: BLOCK
+    - contentinfo [ref=f17e372]:
+      - generic [ref=f17e373]:
+        - generic [ref=f17e374]:
+          - generic [ref=f17e375]:
+            - generic [ref=f17e376]:
+              - img "ChainProof Logo" [ref=f17e377]
+              - generic [ref=f17e378]: ChainProof
+            - paragraph [ref=f17e379]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=f17e380]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=f17e383]:
+            - heading "Platform" [level=3] [ref=f17e384]
+            - list [ref=f17e385]:
+              - listitem [ref=f17e386]:
+                - button "Dashboard" [ref=f17e387] [cursor=pointer]
+              - listitem [ref=f17e388]:
+                - button "Live Image Scanner" [ref=f17e389] [cursor=pointer]
+              - listitem [ref=f17e390]:
+                - button "Audit Reports" [ref=f17e391] [cursor=pointer]
+          - generic [ref=f17e392]:
+            - heading "Security Standards" [level=3] [ref=f17e393]
+            - generic [ref=f17e394]:
+              - generic [ref=f17e395]: Syft SBOM v1.0
+              - generic [ref=f17e396]: Docker Scout SARIF
+              - generic [ref=f17e397]: Cosign Sigstore
+              - generic [ref=f17e398]: Isolation Forest ML
+          - generic [ref=f17e399]:
+            - heading "Compliance & Legal" [level=3] [ref=f17e400]
+            - list [ref=f17e401]:
+              - listitem [ref=f17e402]:
+                - button "Privacy Policy" [ref=f17e403] [cursor=pointer]
+              - listitem [ref=f17e404]:
+                - button "Terms & Conditions" [ref=f17e405] [cursor=pointer]
+              - listitem [ref=f17e406]:
+                - generic [ref=f17e407]: Zero Data-Retention Mode
+        - generic [ref=f17e411]:
+          - paragraph [ref=f17e412]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=f17e413]:
+            - button "Privacy Policy" [ref=f17e414] [cursor=pointer]
+            - generic [ref=f17e415]: •
+            - button "Terms of Service" [ref=f17e416] [cursor=pointer]
+            - generic [ref=f17e417]: •
+            - generic [ref=f17e418]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=f17e4]: "0"

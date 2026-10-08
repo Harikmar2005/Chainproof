@@ -1,0 +1,203 @@
+- generic [active] [ref=f18e1]:
+  - link "Skip to main content" [ref=f18e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f18e4]:
+    - banner [ref=f18e5]:
+      - generic [ref=f18e6]:
+        - button "ChainProof Home" [ref=f18e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=f18e8]
+          - generic [ref=f18e9]: ChainProof
+          - generic [ref=f18e10]: Enterprise v2.4
+        - button "Open menu" [ref=f18e12] [cursor=pointer]
+    - main [ref=f18e17]:
+      - generic [ref=f18e18]:
+        - generic [ref=f18e20]:
+          - generic [ref=f18e21]: CONTAINER SECURITY INTELLIGENCE
+          - heading "Continuous Verification & Supply Chain Intelligence" [level=1] [ref=f18e26]
+          - paragraph [ref=f18e27]: Continuous verification of container vulnerabilities, software composition, provenance, and supply-chain risk with automated AI security decisions.
+          - generic [ref=f18e30]:
+            - textbox "Scan container image" [ref=f18e39]:
+              - /placeholder: Enter container image (e.g. alpine:latest, bkimminich/juice-shop:latest)
+            - button "Scan Container" [ref=f18e40] [cursor=pointer]
+          - generic [ref=f18e43]:
+            - generic [ref=f18e44]: "Benchmark Targets:"
+            - button "alpine:latest" [ref=f18e45] [cursor=pointer]
+            - button "nginx:alpine" [ref=f18e46] [cursor=pointer]
+            - button "python:3.11-slim" [ref=f18e47] [cursor=pointer]
+            - button "juice-shop (High Risk)" [ref=f18e48] [cursor=pointer]
+        - region "Supply chain security telemetry metrics" [ref=f18e49]:
+          - generic [ref=f18e50]:
+            - generic [ref=f18e51]: Images Scanned
+            - generic [ref=f18e54]: "0"
+            - generic [ref=f18e55]: Indexed in security ledger
+          - generic [ref=f18e56]:
+            - generic [ref=f18e57]: Critical Risk Images
+            - generic [ref=f18e61]: "0"
+            - generic [ref=f18e62]: 0 Critical CVEs detected
+          - generic [ref=f18e63]:
+            - generic [ref=f18e64]: Total Vulnerabilities
+            - generic [ref=f18e69]: "0"
+            - generic [ref=f18e70]: Across all audited workloads
+          - generic [ref=f18e71]:
+            - generic [ref=f18e72]: Supply Chain Trust
+            - generic [ref=f18e79]: 100%
+            - generic [ref=f18e80]: 0 Trusted / 0 Blocked
+        - region "AI Security Intelligence Correlation" [ref=f18e81]:
+          - generic [ref=f18e82]:
+            - generic [ref=f18e83]:
+              - generic [ref=f18e84]: AI SECURITY INTELLIGENCE
+              - generic [ref=f18e88]: Multi-Signal Telemetry Correlation
+            - generic [ref=f18e89]: "POLICY: TRUST"
+          - generic [ref=f18e90]:
+            - generic [ref=f18e91]:
+              - generic [ref=f18e92]:
+                - generic [ref=f18e93]: OVERALL ASSESSMENT
+                - heading "No container workloads audited yet. Initiate a scan to generate intelligence." [level=3] [ref=f18e94]
+              - generic [ref=f18e95]:
+                - generic [ref=f18e96]: AI SIGNAL CORRELATION
+                - generic [ref=f18e97]:
+                  - generic [ref=f18e98]: Vulnerability Exposure
+                  - generic [ref=f18e99]: LOW
+                - generic [ref=f18e100]:
+                  - generic [ref=f18e101]: Supply Chain Integrity
+                  - generic [ref=f18e102]: VERIFIED
+                - generic [ref=f18e103]:
+                  - generic [ref=f18e104]: ML Risk Prediction (Random Forest)
+                  - generic [ref=f18e105]: LOW RISK
+                - generic [ref=f18e106]:
+                  - generic [ref=f18e107]: Configuration Anomaly (Isolation Forest)
+                  - generic [ref=f18e108]: NORMAL BASELINE
+            - generic [ref=f18e109]:
+              - generic [ref=f18e110]:
+                - generic [ref=f18e111]: TOP CORRELATED FINDINGS
+                - generic [ref=f18e112]:
+                  - generic [ref=f18e113]:
+                    - generic [ref=f18e114]: "01"
+                    - generic [ref=f18e115]: Zero critical vulnerability exposures across container ledger.
+                  - generic [ref=f18e116]:
+                    - generic [ref=f18e117]: "02"
+                    - generic [ref=f18e118]: Cosign keyless transparency verification active across registry artifacts.
+                  - generic [ref=f18e119]:
+                    - generic [ref=f18e120]: "03"
+                    - generic [ref=f18e121]: Container composition conforms to expected production baseline distributions.
+              - generic [ref=f18e122]:
+                - generic [ref=f18e123]:
+                  - generic [ref=f18e124]: "RECOMMENDED REMEDIATION PIPELINE:"
+                  - generic [ref=f18e125]:
+                    - generic [ref=f18e126]: Patch
+                    - generic [ref=f18e127]: →
+                    - generic [ref=f18e128]: Rebuild
+                    - generic [ref=f18e129]: →
+                    - generic [ref=f18e130]: Sign (Cosign)
+                    - generic [ref=f18e131]: →
+                    - generic [ref=f18e132]: Rescan
+                - button "View AI Security Analysis →" [ref=f18e133] [cursor=pointer]
+        - generic [ref=f18e134]:
+          - generic [ref=f18e135]:
+            - generic [ref=f18e136]:
+              - generic [ref=f18e137]:
+                - heading "Risk Distribution" [level=2] [ref=f18e138]
+                - paragraph [ref=f18e139]: Severity breakdown across audited container fleet.
+              - generic [ref=f18e140]: "Avg Score: 0/100"
+            - generic [ref=f18e141]:
+              - generic [ref=f18e143]:
+                - generic [ref=f18e144]: Critical Risk
+                - strong [ref=f18e145]: 0 images (0%)
+              - generic [ref=f18e148]:
+                - generic [ref=f18e149]: High Risk
+                - strong [ref=f18e150]: 0 images (0%)
+              - generic [ref=f18e153]:
+                - generic [ref=f18e154]: Medium Risk
+                - strong [ref=f18e155]: 0 images (0%)
+              - generic [ref=f18e158]:
+                - generic [ref=f18e159]: Low Risk (Verified)
+                - strong [ref=f18e160]: 0 images (0%)
+          - generic [ref=f18e162]:
+            - generic [ref=f18e163]:
+              - generic [ref=f18e164]:
+                - heading "Security Engine Pipeline" [level=2] [ref=f18e165]
+                - paragraph [ref=f18e166]: Continuous four-tier verification and intelligence workflow.
+              - text: Deterministic & AI
+            - generic [ref=f18e167]:
+              - generic [ref=f18e168]:
+                - generic [ref=f18e169]: "01"
+                - generic [ref=f18e170]:
+                  - generic [ref=f18e171]:
+                    - strong [ref=f18e172]: EVIDENCE COLLECTION
+                    - generic [ref=f18e173]: Scanners
+                  - paragraph [ref=f18e174]: Docker metadata • Syft SBOM catalog • Docker Scout CVEs • Cosign / Sigstore proofs
+              - generic [ref=f18e175]: ↓
+              - generic [ref=f18e176]:
+                - generic [ref=f18e177]: "02"
+                - generic [ref=f18e178]:
+                  - generic [ref=f18e179]:
+                    - strong [ref=f18e180]: ML RISK INTELLIGENCE
+                    - generic [ref=f18e181]: Scikit-Learn
+                  - paragraph [ref=f18e182]: Supervised Random Forest risk classifier • Unsupervised Isolation Forest anomaly detector
+              - generic [ref=f18e183]: ↓
+              - generic [ref=f18e184]:
+                - generic [ref=f18e185]: "03"
+                - generic [ref=f18e186]:
+                  - generic [ref=f18e187]:
+                    - strong [ref=f18e188]: AI CORRELATION
+                    - generic [ref=f18e189]: Reasoning Engine
+                  - paragraph [ref=f18e190]: Multi-signal evidence correlation • Risk-factor prioritization • Actionable remediation roadmap
+              - generic [ref=f18e191]: ↓
+              - generic [ref=f18e192]:
+                - generic [ref=f18e193]: "04"
+                - generic [ref=f18e194]:
+                  - generic [ref=f18e195]:
+                    - strong [ref=f18e196]: SECURITY DECISION
+                    - generic [ref=f18e197]: Policy Gate
+                  - paragraph [ref=f18e198]: "TRUST / REVIEW / BLOCK (Deterministic Risk Score: 0-100)"
+        - generic [ref=f18e199]:
+          - generic [ref=f18e200]:
+            - generic [ref=f18e201]:
+              - heading "Recent Container Security Events" [level=2] [ref=f18e202]
+              - paragraph [ref=f18e203]: Real-time telemetry and decision outputs from recent image inspections
+            - button "View All Audit Records (0) →" [ref=f18e204] [cursor=pointer]
+          - generic [ref=f18e205]:
+            - paragraph [ref=f18e206]: No container audits recorded yet. Run your first scan to populate security telemetry.
+            - button "Scan Image" [ref=f18e207] [cursor=pointer]
+    - contentinfo [ref=f18e210]:
+      - generic [ref=f18e211]:
+        - generic [ref=f18e212]:
+          - generic [ref=f18e213]:
+            - generic [ref=f18e214]:
+              - img "ChainProof Logo" [ref=f18e215]
+              - generic [ref=f18e216]: ChainProof
+            - paragraph [ref=f18e217]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=f18e218]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=f18e221]:
+            - heading "Platform" [level=3] [ref=f18e222]
+            - list [ref=f18e223]:
+              - listitem [ref=f18e224]:
+                - button "Dashboard" [ref=f18e225] [cursor=pointer]
+              - listitem [ref=f18e226]:
+                - button "Live Image Scanner" [ref=f18e227] [cursor=pointer]
+              - listitem [ref=f18e228]:
+                - button "Audit Reports" [ref=f18e229] [cursor=pointer]
+          - generic [ref=f18e230]:
+            - heading "Security Standards" [level=3] [ref=f18e231]
+            - generic [ref=f18e232]:
+              - generic [ref=f18e233]: Syft SBOM v1.0
+              - generic [ref=f18e234]: Docker Scout SARIF
+              - generic [ref=f18e235]: Cosign Sigstore
+              - generic [ref=f18e236]: Isolation Forest ML
+          - generic [ref=f18e237]:
+            - heading "Compliance & Legal" [level=3] [ref=f18e238]
+            - list [ref=f18e239]:
+              - listitem [ref=f18e240]:
+                - button "Privacy Policy" [ref=f18e241] [cursor=pointer]
+              - listitem [ref=f18e242]:
+                - button "Terms & Conditions" [ref=f18e243] [cursor=pointer]
+              - listitem [ref=f18e244]:
+                - generic [ref=f18e245]: Zero Data-Retention Mode
+        - generic [ref=f18e249]:
+          - paragraph [ref=f18e250]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=f18e251]:
+            - button "Privacy Policy" [ref=f18e252] [cursor=pointer]
+            - generic [ref=f18e253]: •
+            - button "Terms of Service" [ref=f18e254] [cursor=pointer]
+            - generic [ref=f18e255]: •
+            - generic [ref=f18e256]: TLS 1.3 / HTTPS Verified

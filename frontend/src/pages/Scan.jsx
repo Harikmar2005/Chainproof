@@ -1,375 +1,227 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { scanImage } from "../services/api";
+import LoadingScanner from "../components/LoadingScanner";
+import SecurityIntelligenceReport from "../components/SecurityIntelligenceReport";
+import { 
+    DockerIcon, 
+    ShieldCheckIcon, 
+    LightningIcon, 
+    AlertTriangleIcon,
+    FileTextIcon 
+} from "../components/Icons";
 
-function Scan() {
-    const [image, setImage] = useState("");
+const DOCKER_IMAGE_REGEX = /^[a-zA-Z0-9]+([._\/-][a-zA-Z0-9]+)*(:[a-zA-Z0-9._-]+)?(@sha256:[a-fA-F0-9]{64})?$/;
+
+const SAMPLE_PRESETS = [
+    { name: "alpine:latest", label: "Alpine Linux (Ultra-slim, Clean)" },
+    { name: "nginx:alpine", label: "Nginx Alpine (Minimal Web Server)" },
+    { name: "python:3.11-slim", label: "Python 3.11 Slim (Standard Base)" },
+    { name: "bkimminich/juice-shop:latest", label: "Juice Shop (High Risk / Vulnerable)" },
+];
+
+function Scan({ onRouteChange, initialImage = "" }) {
+    const [image, setImage] = useState(initialImage);
     const [result, setResult] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [honeypot, setHoneypot] = useState("");
+    const lastScanTimeRef = useRef(0);
 
-    const handleScan = async () => {
-        if (!image.trim()) {
-            setError("Please enter a Docker image name.");
+    const validateImage = (input) => {
+        const clean = input.trim();
+        if (!clean) {
+            return "Please specify a Docker image name to audit (e.g. alpine:latest, bkimminich/juice-shop:latest).";
+        }
+        if (clean.length > 255) {
+            return "Image reference name exceeds maximum allowed length (255 characters).";
+        }
+        if (/[;&|><$`\\]/.test(clean)) {
+            return "Invalid characters detected. Shell control characters are not permitted.";
+        }
+        if (!DOCKER_IMAGE_REGEX.test(clean)) {
+            return "Invalid container format. Expected format like 'repository/image:tag' or 'image:tag'.";
+        }
+        return null;
+    };
+
+    const handleScan = async (overrideImage) => {
+        const targetImage = (overrideImage || image).trim();
+
+        if (honeypot) {
+            console.warn("Spam bot trap triggered.");
+            return;
+        }
+
+        const now = Date.now();
+        if (now - lastScanTimeRef.current < 2000) {
+            setError("Please wait a moment between consecutive scans.");
+            return;
+        }
+
+        const validationError = validateImage(targetImage);
+        if (validationError) {
+            setError(validationError);
             return;
         }
 
         try {
+            lastScanTimeRef.current = now;
             setLoading(true);
             setError("");
             setResult(null);
 
-            const data = await scanImage(image);
-
+            const data = await scanImage(targetImage);
             setResult(data);
         } catch (err) {
-            setError(err.message || "Scan failed.");
+            setError(err?.message || "Container scan failed. Ensure the image exists and Docker daemon is reachable.");
         } finally {
             setLoading(false);
         }
     };
 
-    return (
-        <div className="scan-page">
-            <div className="scan-container">
+    const handlePresetClick = (preset) => {
+        setImage(preset);
+        setError("");
+        handleScan(preset);
+    };
 
+    const handleUpdateResult = (updatedData) => {
+        setResult(updatedData);
+    };
+
+    return (
+        <main className="scan-page" id="main-content">
+            <div className="scan-container">
                 {/* Header */}
                 <div className="scan-header">
+                    <div className="scan-tag">
+                        <ShieldCheckIcon size={14} /> Real-Time Security Intelligence Audit
+                    </div>
                     <h1>Container Security Scanner</h1>
-
                     <p>
-                        Analyze a Docker image using vulnerability scanning,
-                        SBOM analysis, digital signature verification and AI/ML.
+                        Continuous multi-engine inspection correlating Syft SBOM composition, Docker Scout CVEs, 
+                        Sigstore Cosign cryptographic provenance, and ML risk models.
                     </p>
                 </div>
 
-                {/* Scan Input */}
-                <div className="scan-box">
+                {/* Scanner Input Panel */}
+                <section className="scan-box" aria-label="Container Scan Form">
+                    <form 
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            handleScan();
+                        }}
+                    >
+                        <div style={{ display: "none" }} aria-hidden="true">
+                            <input 
+                                type="text" 
+                                name="bot_honey_trap" 
+                                tabIndex="-1" 
+                                value={honeypot} 
+                                onChange={(e) => setHoneypot(e.target.value)} 
+                                autoComplete="off" 
+                            />
+                        </div>
 
-                    <label htmlFor="docker-image">
-                        Docker Image
-                    </label>
+                        <label htmlFor="docker-image-input">
+                            Target Container Image reference:
+                        </label>
 
-                    <div className="scan-input-row">
+                        <div className="scan-input-row">
+                            <div className="input-with-icon">
+                                <DockerIcon size={18} className="input-leading-icon-svg" />
+                                <input
+                                    id="docker-image-input"
+                                    type="text"
+                                    placeholder="e.g. alpine:latest, bkimminich/juice-shop:latest, python:3.11-slim"
+                                    value={image}
+                                    onChange={(e) => {
+                                        setImage(e.target.value);
+                                        if (error) setError("");
+                                    }}
+                                    disabled={loading}
+                                    autoComplete="off"
+                                    spellCheck="false"
+                                    aria-required="true"
+                                    aria-invalid={!!error}
+                                />
+                            </div>
 
-                        <input
-                            id="docker-image"
-                            type="text"
-                            placeholder="Example: alpine:latest"
-                            value={image}
-                            onChange={(e) => setImage(e.target.value)}
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") {
-                                    handleScan();
-                                }
-                            }}
-                            disabled={loading}
+                            <button
+                                type="submit"
+                                className="cta-button primary scan-cta-btn"
+                                disabled={loading}
+                                aria-label="Initiate container scan"
+                            >
+                                {loading ? (
+                                    <span className="btn-loading-flex">
+                                        <span className="btn-spinner"></span> Scanning Pipeline...
+                                    </span>
+                                ) : (
+                                    <>
+                                        <LightningIcon size={16} /> Start Security Audit
+                                    </>
+                                )}
+                            </button>
+                        </div>
+                    </form>
+
+                    {/* Presets */}
+                    <div className="presets-container">
+                        <span className="presets-label">Benchmark Test Targets:</span>
+                        <div className="preset-buttons">
+                            {SAMPLE_PRESETS.map((p) => (
+                                <button
+                                    key={p.name}
+                                    type="button"
+                                    className={`preset-btn ${p.name.includes("juice") ? "preset-danger" : ""}`}
+                                    onClick={() => handlePresetClick(p.name)}
+                                    disabled={loading}
+                                    title={p.label}
+                                >
+                                    {p.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Error message */}
+                    {error && (
+                        <div className="scan-error-alert" role="alert">
+                            <AlertTriangleIcon size={18} className="error-icon-svg" />
+                            <div>
+                                <strong>Scan Failed:</strong>
+                                <p>{error}</p>
+                            </div>
+                        </div>
+                    )}
+                </section>
+
+                {/* Loading Animation */}
+                {loading && <LoadingScanner image={image} />}
+
+                {/* Scan Results: Upgraded Professional Intelligence Report */}
+                {result && !loading && (
+                    <div className="scan-results-area">
+                        <SecurityIntelligenceReport
+                            reportData={result}
+                            onUpdateReport={handleUpdateResult}
                         />
 
-                        <button
-                            onClick={handleScan}
-                            disabled={loading}
-                        >
-                            {loading ? "Scanning..." : "Start Scan"}
-                        </button>
-
-                    </div>
-
-                    <div className="scan-example">
-                        Try: <strong>alpine:latest</strong>
-                    </div>
-
-                </div>
-
-                {/* Loading */}
-                {loading && (
-                    <div className="scan-loading">
-                        <div className="spinner"></div>
-
-                        <h2>Scanning Container Image</h2>
-
-                        <p>
-                            Running Docker, SBOM, vulnerability, signature
-                            and AI/ML analysis...
-                        </p>
-                    </div>
-                )}
-
-                {/* Error */}
-                {error && (
-                    <div className="scan-error">
-                        <strong>Scan Error</strong>
-                        <p>{error}</p>
-                    </div>
-                )}
-
-                {/* Result */}
-                {result && !loading && (
-                    <div className="scan-result">
-
-                        {/* Risk */}
-                        <div className="result-card risk-result">
-
-                            <h2>Security Risk</h2>
-
-                            <div className="risk-score">
-                                {result.risk_score}
-                            </div>
-
-                            <div className="risk-severity">
-                                {result.severity}
-                            </div>
-
-                            <div className="risk-verdict">
-                                {result.verdict}
-                            </div>
-
+                        {/* Bottom Navigation CTA */}
+                        <div className="scan-bottom-cta">
+                            <button
+                                type="button"
+                                className="btn-secondary"
+                                onClick={() => onRouteChange("reports")}
+                            >
+                                <FileTextIcon size={16} /> View Historical Audit Records →
+                            </button>
                         </div>
-
-                        {/* Image Information */}
-                        <div className="result-card">
-
-                            <h2>Container Information</h2>
-
-                            <div className="info-row">
-                                <span>Image</span>
-                                <strong>{result.image}</strong>
-                            </div>
-
-                            {result.docker && (
-                                <>
-                                    <div className="info-row">
-                                        <span>Image Size</span>
-                                        <strong>
-                                            {(
-                                                result.docker.size_bytes /
-                                                (1024 * 1024)
-                                            ).toFixed(2)} MB
-                                        </strong>
-                                    </div>
-
-                                    <div className="info-row">
-                                        <span>Layers</span>
-                                        <strong>
-                                            {result.docker.layers_count}
-                                        </strong>
-                                    </div>
-                                </>
-                            )}
-
-                        </div>
-
-                        {/* Vulnerabilities */}
-                        {result.vulnerabilities && (
-                            <div className="result-card">
-
-                                <h2>Vulnerabilities</h2>
-
-                                <div className="vulnerability-grid">
-
-                                    <div className="vulnerability critical">
-                                        <span>Critical</span>
-                                        <strong>
-                                            {result.vulnerabilities.critical}
-                                        </strong>
-                                    </div>
-
-                                    <div className="vulnerability high">
-                                        <span>High</span>
-                                        <strong>
-                                            {result.vulnerabilities.high}
-                                        </strong>
-                                    </div>
-
-                                    <div className="vulnerability medium">
-                                        <span>Medium</span>
-                                        <strong>
-                                            {result.vulnerabilities.medium}
-                                        </strong>
-                                    </div>
-
-                                    <div className="vulnerability low">
-                                        <span>Low</span>
-                                        <strong>
-                                            {result.vulnerabilities.low}
-                                        </strong>
-                                    </div>
-
-                                </div>
-
-                                <div className="total-vulnerabilities">
-                                    Total vulnerabilities:{" "}
-                                    <strong>
-                                        {result.vulnerabilities.total}
-                                    </strong>
-                                </div>
-
-                            </div>
-                        )}
-
-                        {/* AI / ML */}
-                        {result.ml && (
-                            <div className="result-card">
-
-                                <h2>AI Security Analysis</h2>
-
-                                <div className="ml-section">
-
-                                    <div className="ml-card">
-                                        <h3>Random Forest</h3>
-
-                                        <div className="ml-row">
-                                            <span>Prediction</span>
-                                            <strong>
-                                                {result.ml.random_forest?.prediction || "N/A"}
-                                            </strong>
-                                        </div>
-
-                                        <div className="ml-row">
-                                            <span>Confidence</span>
-                                            <strong>
-                                                {result.ml.random_forest
-                                                    ? `${(
-                                                        result.ml.random_forest.confidence *
-                                                        100
-                                                    ).toFixed(0)}%`
-                                                    : "N/A"}
-                                            </strong>
-                                        </div>
-
-                                        <div className="ml-row">
-                                            <span>Model</span>
-                                            <strong>
-                                                {result.ml.random_forest?.model_loaded
-                                                    ? "Loaded"
-                                                    : "Not Loaded"}
-                                            </strong>
-                                        </div>
-
-                                    </div>
-
-                                    <div className="ml-card">
-                                        <h3>Isolation Forest</h3>
-
-                                        <div className="ml-row">
-                                            <span>Anomaly</span>
-                                            <strong>
-                                                {result.ml.anomaly_detection?.anomaly
-                                                    ? "Detected"
-                                                    : "Normal"}
-                                            </strong>
-                                        </div>
-
-                                        <div className="ml-row">
-                                            <span>Anomaly Score</span>
-                                            <strong>
-                                                {result.ml.anomaly_detection?.score ?? "N/A"}
-                                            </strong>
-                                        </div>
-
-                                        <div className="ml-row">
-                                            <span>Model</span>
-                                            <strong>
-                                                {result.ml.anomaly_detection?.model_loaded
-                                                    ? "Loaded"
-                                                    : "Not Loaded"}
-                                            </strong>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        )}
-
-                        {/* SBOM */}
-                        {result.sbom && (
-                            <div className="result-card">
-
-                                <h2>Software Bill of Materials</h2>
-
-                                <div className="info-row">
-                                    <span>Status</span>
-                                    <strong>{result.sbom.status}</strong>
-                                </div>
-
-                                <div className="info-row">
-                                    <span>Packages</span>
-                                    <strong>{result.sbom.package_count}</strong>
-                                </div>
-
-                            </div>
-                        )}
-
-                        {/* Signature */}
-                        {result.signature && (
-                            <div className="result-card">
-
-                                <h2>Digital Signature</h2>
-
-                                <div className="info-row">
-                                    <span>Signed</span>
-                                    <strong>
-                                        {result.signature.signed
-                                            ? "Yes"
-                                            : "No"}
-                                    </strong>
-                                </div>
-
-                                <div className="info-row">
-                                    <span>Verified</span>
-                                    <strong>
-                                        {result.signature.verified
-                                            ? "Verified"
-                                            : "Not Verified"}
-                                    </strong>
-                                </div>
-
-                            </div>
-                        )}
-
-                        {/* Findings */}
-                        {result.findings &&
-                            result.findings.length > 0 && (
-                                <div className="result-card">
-
-                                    <h2>Security Findings</h2>
-
-                                    <div className="findings-list">
-
-                                        {result.findings.map((finding, index) => (
-                                            <div
-                                                className="finding"
-                                                key={index}
-                                            >
-
-                                                <div>
-                                                    <strong>
-                                                        {finding.type}
-                                                    </strong>
-
-                                                    <p>
-                                                        {finding.message}
-                                                    </p>
-                                                </div>
-
-                                                <span>
-                                                    {finding.severity}
-                                                </span>
-
-                                            </div>
-                                        ))}
-
-                                    </div>
-
-                                </div>
-                            )}
-
                     </div>
                 )}
-
             </div>
-        </div>
+        </main>
     );
 }
 

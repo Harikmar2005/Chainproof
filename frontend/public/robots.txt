@@ -1,0 +1,6 @@
+# ChainProof Robots File
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://chainproof.security/sitemap.xml

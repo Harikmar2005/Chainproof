@@ -10,6 +10,7 @@ from app.ml.risk_model import RiskModel
 from app.ml.anomaly_model import AnomalyModel
 
 from app.risk.risk_engine import calculate_risk
+from app.ai.analyst import analyze_scan
 
 
 risk_model = RiskModel()
@@ -182,7 +183,7 @@ def perform_scan(image: str):
             )
         })
 
-    return {
+    scan_payload = {
 
         "scan_id": scan_id,
 
@@ -200,8 +201,7 @@ def perform_scan(image: str):
             "verdict"
         ],
 
-         "risk": risk_result,
-
+        "risk": risk_result,
 
         "docker": docker_data,
 
@@ -243,3 +243,24 @@ def perform_scan(image: str):
 
         "findings": findings
     }
+
+    # ------------------------------------------------
+    # 10. AI Security Analyst Layer
+    # ------------------------------------------------
+    try:
+        ai_result = analyze_scan(scan_payload)
+        scan_payload["ai_analysis"] = ai_result
+    except Exception as ai_err:
+        scan_payload["ai_analysis"] = {
+            "status": "UNAVAILABLE",
+            "reason": f"AI analysis error: {str(ai_err)}",
+            "assessment": "ANALYSIS UNAVAILABLE",
+            "summary": "AI Security Analyst was unable to process this scan.",
+            "risk_factors": [],
+            "security_decision": "REVIEW",
+            "recommended_action": "Manually inspect CVEs and ML risk factors.",
+            "remediation_steps": [],
+            "confidence": 0.5
+        }
+
+    return scan_payload

@@ -1,0 +1,678 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - button "ChainProof Home" [ref=e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=e8]
+          - generic [ref=e9]: ChainProof
+          - generic [ref=e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=e11]:
+          - button "Dashboard" [ref=e12] [cursor=pointer]
+          - button "Live Scan" [ref=e14] [cursor=pointer]
+          - button "Audit Reports" [ref=e18] [cursor=pointer]
+          - button "Privacy" [ref=e22] [cursor=pointer]
+          - button "Terms" [ref=e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=e25] [cursor=pointer]: Scan Container
+    - main [ref=e352]:
+      - generic [ref=e353]:
+        - generic [ref=e354]:
+          - generic [ref=e355]:
+            - generic [ref=e356]:
+              - button "Dashboard" [ref=e357] [cursor=pointer]
+              - generic [ref=e358]: /
+              - generic [ref=e359]: Audit Reports
+            - heading "Security Audit Records" [level=1] [ref=e360]
+            - paragraph [ref=e361]: Enterprise container vulnerability ledger, ML classification archives, and AI security decisions.
+          - generic [ref=e362]:
+            - button "New Security Scan" [ref=e363] [cursor=pointer]
+            - button "Clear Ledger" [ref=e402] [cursor=pointer]
+        - generic [ref=e366]:
+          - textbox "Filter reports by container image" [ref=e371]:
+            - /placeholder: Filter by image name (e.g. alpine, juice-shop, python)...
+          - generic [ref=e372]:
+            - group "Filter by severity" [ref=e373]:
+              - generic [ref=e374]: "Severity:"
+              - button "ALL" [ref=e375] [cursor=pointer]
+              - button "CRITICAL" [ref=e376] [cursor=pointer]
+              - button "HIGH" [ref=e377] [cursor=pointer]
+              - button "MEDIUM" [ref=e378] [cursor=pointer]
+              - button "LOW" [ref=e379] [cursor=pointer]
+            - group "Filter by decision" [ref=e380]:
+              - generic [ref=e381]: "Decision:"
+              - button "ALL" [ref=e382] [cursor=pointer]
+              - button "BLOCK" [ref=e383] [cursor=pointer]
+              - button "REVIEW" [ref=e384] [cursor=pointer]
+              - button "TRUST" [ref=e385] [cursor=pointer]
+        - table [ref=e407]:
+          - rowgroup [ref=e408]:
+            - row [ref=e409]:
+              - columnheader "#" [ref=e410]
+              - columnheader "Container Image" [ref=e411]
+              - columnheader "Date & Time" [ref=e412]
+              - columnheader "Risk Score" [ref=e413]
+              - columnheader "Severity" [ref=e414]
+              - columnheader "Vulnerabilities" [ref=e415]
+              - columnheader "Signature" [ref=e416]
+              - columnheader "AI Decision" [ref=e417]
+              - columnheader "Actions" [ref=e418]
+          - rowgroup [ref=e419]:
+            - row [ref=e420]:
+              - cell "#13" [ref=e421]
+              - cell "python:3.11-slim 24a9bb1a..." [ref=e423]:
+                - strong [ref=e424]: python:3.11-slim
+                - generic [ref=e425]: 24a9bb1a...
+              - cell "2026-10-08 09:11:19" [ref=e426]
+              - cell "70" [ref=e427]
+              - cell "HIGH" [ref=e430]
+              - cell "37 CVEs" [ref=e432]
+              - cell "Unsigned" [ref=e433]
+              - cell "REVIEW" [ref=e434]
+              - cell [ref=e438]:
+                - generic [ref=e439]:
+                  - button "Inspect" [active] [ref=e440] [cursor=pointer]
+                  - button "JSON" [ref=e441] [cursor=pointer]
+            - row [ref=e445]:
+              - cell "#12" [ref=e446]
+              - cell "alpine:latest 4f148565..." [ref=e448]:
+                - strong [ref=e449]: alpine:latest
+                - generic [ref=e450]: 4f148565...
+              - cell "2026-10-08 09:05:36" [ref=e451]
+              - cell "32" [ref=e452]
+              - cell "MEDIUM" [ref=e455]
+              - cell "1 CVEs" [ref=e457]
+              - cell "Unsigned" [ref=e458]
+              - cell "REVIEW" [ref=e459]
+              - cell [ref=e463]:
+                - generic [ref=e464]:
+                  - button "Inspect" [ref=e465] [cursor=pointer]
+                  - button "JSON" [ref=e466] [cursor=pointer]
+            - row [ref=e470]:
+              - cell "#11" [ref=e471]
+              - cell "nginx:alpine 7bdf08cc..." [ref=e473]:
+                - strong [ref=e474]: nginx:alpine
+                - generic [ref=e475]: 7bdf08cc...
+              - cell "2026-10-08 09:02:25" [ref=e476]
+              - cell "92" [ref=e477]
+              - cell "CRITICAL" [ref=e480]
+              - cell "18 CVEs" [ref=e482]
+              - cell "Unsigned" [ref=e483]
+              - cell "BLOCK" [ref=e484]
+              - cell [ref=e488]:
+                - generic [ref=e489]:
+                  - button "Inspect" [ref=e490] [cursor=pointer]
+                  - button "JSON" [ref=e491] [cursor=pointer]
+            - row [ref=e495]:
+              - cell "#10" [ref=e496]
+              - cell "nginx:alpine 20ba53a1..." [ref=e498]:
+                - strong [ref=e499]: nginx:alpine
+                - generic [ref=e500]: 20ba53a1...
+              - cell "2026-10-08 09:02:18" [ref=e501]
+              - cell "92" [ref=e502]
+              - cell "CRITICAL" [ref=e505]
+              - cell "18 CVEs" [ref=e507]
+              - cell "Unsigned" [ref=e508]
+              - cell "BLOCK" [ref=e509]
+              - cell [ref=e513]:
+                - generic [ref=e514]:
+                  - button "Inspect" [ref=e515] [cursor=pointer]
+                  - button "JSON" [ref=e516] [cursor=pointer]
+            - row [ref=e520]:
+              - cell "#9" [ref=e521]
+              - cell "bkimminich/juice-shop:latest 23455382..." [ref=e523]:
+                - strong [ref=e524]: bkimminich/juice-shop:latest
+                - generic [ref=e525]: 23455382...
+              - cell "2026-10-08 08:48:18" [ref=e526]
+              - cell "100" [ref=e527]
+              - cell "CRITICAL" [ref=e530]
+              - cell "125 CVEs" [ref=e532]
+              - cell "Unsigned" [ref=e533]
+              - cell "BLOCK" [ref=e534]
+              - cell [ref=e538]:
+                - generic [ref=e539]:
+                  - button "Inspect" [ref=e540] [cursor=pointer]
+                  - button "JSON" [ref=e541] [cursor=pointer]
+            - row [ref=e545]:
+              - cell "#8" [ref=e546]
+              - cell "nginx:latest 1f662442..." [ref=e548]:
+                - strong [ref=e549]: nginx:latest
+                - generic [ref=e550]: 1f662442...
+              - cell "2026-10-08 07:07:20" [ref=e551]
+              - cell "60" [ref=e552]
+              - cell "HIGH" [ref=e555]
+              - cell "0 CVEs" [ref=e557]
+              - cell "Unsigned" [ref=e558]
+              - cell "REVIEW" [ref=e559]
+              - cell [ref=e563]:
+                - generic [ref=e564]:
+                  - button "Inspect" [ref=e565] [cursor=pointer]
+                  - button "JSON" [ref=e566] [cursor=pointer]
+            - row [ref=e570]:
+              - cell "#7" [ref=e571]
+              - cell "hello-world:latest ef5953ae..." [ref=e573]:
+                - strong [ref=e574]: hello-world:latest
+                - generic [ref=e575]: ef5953ae...
+              - cell "2026-10-08 07:06:29" [ref=e576]
+              - cell "30" [ref=e577]
+              - cell "MEDIUM" [ref=e580]
+              - cell "0 CVEs" [ref=e582]
+              - cell "Unsigned" [ref=e583]
+              - cell "REVIEW" [ref=e584]
+              - cell [ref=e588]:
+                - generic [ref=e589]:
+                  - button "Inspect" [ref=e590] [cursor=pointer]
+                  - button "JSON" [ref=e591] [cursor=pointer]
+            - row [ref=e595]:
+              - cell "#6" [ref=e596]
+              - cell "idn-shield-real-server:latest f2334860..." [ref=e598]:
+                - strong [ref=e599]: idn-shield-real-server:latest
+                - generic [ref=e600]: f2334860...
+              - cell "2026-10-08 07:04:46" [ref=e601]
+              - cell "60" [ref=e602]
+              - cell "HIGH" [ref=e605]
+              - cell "0 CVEs" [ref=e607]
+              - cell "Unsigned" [ref=e608]
+              - cell "REVIEW" [ref=e609]
+              - cell [ref=e613]:
+                - generic [ref=e614]:
+                  - button "Inspect" [ref=e615] [cursor=pointer]
+                  - button "JSON" [ref=e616] [cursor=pointer]
+            - row [ref=e620]:
+              - cell "#5" [ref=e621]
+              - cell "python:3.11-slim 52086b8d..." [ref=e623]:
+                - strong [ref=e624]: python:3.11-slim
+                - generic [ref=e625]: 52086b8d...
+              - cell "2026-10-08 06:58:01" [ref=e626]
+              - cell "60" [ref=e627]
+              - cell "HIGH" [ref=e630]
+              - cell "0 CVEs" [ref=e632]
+              - cell "Unsigned" [ref=e633]
+              - cell "REVIEW" [ref=e634]
+              - cell [ref=e638]:
+                - generic [ref=e639]:
+                  - button "Inspect" [ref=e640] [cursor=pointer]
+                  - button "JSON" [ref=e641] [cursor=pointer]
+            - row [ref=e645]:
+              - cell "#4" [ref=e646]
+              - cell "nginx:latest 206ac664..." [ref=e648]:
+                - strong [ref=e649]: nginx:latest
+                - generic [ref=e650]: 206ac664...
+              - cell "2026-10-08 06:50:26" [ref=e651]
+              - cell "60" [ref=e652]
+              - cell "HIGH" [ref=e655]
+              - cell "0 CVEs" [ref=e657]
+              - cell "Unsigned" [ref=e658]
+              - cell "REVIEW" [ref=e659]
+              - cell [ref=e663]:
+                - generic [ref=e664]:
+                  - button "Inspect" [ref=e665] [cursor=pointer]
+                  - button "JSON" [ref=e666] [cursor=pointer]
+            - row [ref=e670]:
+              - cell "#3" [ref=e671]
+              - cell "nginx:latest eb3f41bd..." [ref=e673]:
+                - strong [ref=e674]: nginx:latest
+                - generic [ref=e675]: eb3f41bd...
+              - cell "2026-10-08 06:45:57" [ref=e676]
+              - cell "60" [ref=e677]
+              - cell "HIGH" [ref=e680]
+              - cell "0 CVEs" [ref=e682]
+              - cell "Unsigned" [ref=e683]
+              - cell "REVIEW" [ref=e684]
+              - cell [ref=e688]:
+                - generic [ref=e689]:
+                  - button "Inspect" [ref=e690] [cursor=pointer]
+                  - button "JSON" [ref=e691] [cursor=pointer]
+            - row [ref=e695]:
+              - cell "#2" [ref=e696]
+              - cell "nginx:latest 640e5638..." [ref=e698]:
+                - strong [ref=e699]: nginx:latest
+                - generic [ref=e700]: 640e5638...
+              - cell "2026-10-08 06:32:06" [ref=e701]
+              - cell "60" [ref=e702]
+              - cell "HIGH" [ref=e705]
+              - cell "0 CVEs" [ref=e707]
+              - cell "Unsigned" [ref=e708]
+              - cell "REVIEW" [ref=e709]
+              - cell [ref=e713]:
+                - generic [ref=e714]:
+                  - button "Inspect" [ref=e715] [cursor=pointer]
+                  - button "JSON" [ref=e716] [cursor=pointer]
+            - row [ref=e720]:
+              - cell "#1" [ref=e721]
+              - cell "alpine:latest 5460f870..." [ref=e723]:
+                - strong [ref=e724]: alpine:latest
+                - generic [ref=e725]: 5460f870...
+              - cell "2026-10-08 06:07:30" [ref=e726]
+              - cell "54" [ref=e727]
+              - cell "HIGH" [ref=e730]
+              - cell "1 CVEs" [ref=e732]
+              - cell "Unsigned" [ref=e733]
+              - cell "REVIEW" [ref=e734]
+              - cell [ref=e738]:
+                - generic [ref=e739]:
+                  - button "Inspect" [ref=e740] [cursor=pointer]
+                  - button "JSON" [ref=e741] [cursor=pointer]
+        - dialog [ref=e745]:
+          - generic [ref=e746]:
+            - generic [ref=e747]:
+              - generic [ref=e748]: ChainProof Enterprise Security Inspector
+              - button "Close modal" [ref=e749] [cursor=pointer]: ✕
+            - generic [ref=e751]:
+              - generic [ref=e752]:
+                - generic [ref=e753]:
+                  - generic [ref=e754]: CONTAINER SUPPLY CHAIN AUDIT REPORT
+                  - heading "python:3.11-slim" [level=1] [ref=e758]
+                  - generic [ref=e759]:
+                    - generic [ref=e760]: 2026-10-08 09:11:19
+                    - generic [ref=e761]: "ID: 24a9bb1a-ac16-4cd4"
+                - generic [ref=e762]:
+                  - generic [ref=e767]:
+                    - generic [ref=e768]: CHAINPROOF DECISION
+                    - strong [ref=e769]: BLOCK DEPLOYMENT
+                  - generic [ref=e770]:
+                    - text: RISK SCORE
+                    - generic [ref=e771]:
+                      - generic [ref=e772]: "70"
+                      - generic [ref=e773]: /100
+                    - generic [ref=e774]: HIGH SEVERITY
+              - generic [ref=e775]:
+                - generic [ref=e776]:
+                  - button "Intelligence Overview" [ref=e777] [cursor=pointer]
+                  - button "CVE Telemetry (37)" [ref=e778] [cursor=pointer]
+                  - button "Supply Chain Integrity" [ref=e779] [cursor=pointer]
+                  - button "ML Risk Models" [ref=e780] [cursor=pointer]
+                - generic [ref=e781]:
+                  - button "Export JSON" [ref=e782] [cursor=pointer]
+                  - button "Close Inspector" [ref=e786] [cursor=pointer]
+              - generic [ref=e787]:
+                - region "AI Security Analyst Intelligence" [ref=e788]:
+                  - generic [ref=e789]:
+                    - generic [ref=e795]:
+                      - generic [ref=e796]:
+                        - generic [ref=e797]: AI SECURITY ANALYST
+                        - generic [ref=e798]: 85% Confidence
+                      - heading "HIGH RISK - SECURITY REVIEW REQUIRED" [level=2] [ref=e802]
+                    - button "Refresh AI Analysis" [ref=e803] [cursor=pointer]
+                  - generic [ref=e808]:
+                    - generic [ref=e813]:
+                      - text: POLICY DECISION
+                      - heading "SECURITY REVIEW REQUIRED" [level=3] [ref=e814]
+                      - paragraph [ref=e815]: Security team review required prior to cluster deployment; mitigate high-severity findings.
+                    - generic [ref=e816]: REVIEW
+                  - generic [ref=e817]:
+                    - heading "Executive Risk Narrative" [level=4] [ref=e818]
+                    - paragraph [ref=e819]: Container 'python:3.11-slim' presents elevated risk with 3 high-severity CVE(s) and a composite score of 70/100. Workload requires remediation of key vulnerabilities and supply-chain verification.
+                  - generic [ref=e820]:
+                    - heading "Why This Image Is Flagged (Correlated Evidence)" [level=4] [ref=e821]
+                    - generic [ref=e822]:
+                      - generic [ref=e823]:
+                        - generic [ref=e824]:
+                          - strong [ref=e825]: High-Severity Vulnerabilities
+                          - generic [ref=e826]: HIGH
+                        - paragraph [ref=e827]: 3 high-severity CVE(s) identified with potential exploitation pathways
+                      - generic [ref=e828]:
+                        - generic [ref=e829]:
+                          - strong [ref=e830]: Unsigned Container Artifact
+                          - generic [ref=e831]: MEDIUM
+                        - paragraph [ref=e832]: Container is unsigned. No Sigstore Cosign cryptographic provenance found
+                      - generic [ref=e833]:
+                        - generic [ref=e834]:
+                          - strong [ref=e835]: Random Forest Risk Classification
+                          - generic [ref=e836]: MEDIUM
+                        - paragraph [ref=e837]: Random Forest model predicted MEDIUM risk profile (62% confidence)
+                      - generic [ref=e838]:
+                        - generic [ref=e839]:
+                          - strong [ref=e840]: Isolation Forest Anomaly Flag
+                          - generic [ref=e841]: HIGH
+                        - paragraph [ref=e842]: "Isolation Forest identified anomalous feature footprint (Score: -0.0161)"
+                  - generic [ref=e843]:
+                    - heading "Actionable Remediation Roadmap" [level=4] [ref=e849]
+                    - list [ref=e850]:
+                      - listitem [ref=e851]:
+                        - generic [ref=e852]: "1"
+                        - generic [ref=e853]: Upgrade packages harboring the 3 high-severity vulnerabilities to patched release versions.
+                      - listitem [ref=e854]:
+                        - generic [ref=e855]: "2"
+                        - generic [ref=e856]: Sign container artifact using Sigstore Cosign in CI/CD before registry push.
+                      - listitem [ref=e857]:
+                        - generic [ref=e858]: "3"
+                        - generic [ref=e859]: Investigate non-standard base layer configurations and minimize excessive packages.
+                      - listitem [ref=e860]:
+                        - generic [ref=e861]: "4"
+                        - generic [ref=e862]: Rescan container image in ChainProof staging pipeline prior to production release.
+                - generic [ref=e863]:
+                  - generic [ref=e864]:
+                    - heading "Vulnerability Risk" [level=4] [ref=e868]
+                    - generic [ref=e869]:
+                      - generic [ref=e870]:
+                        - strong [ref=e871]: "37"
+                        - text: Total CVEs
+                      - generic [ref=e872]:
+                        - generic [ref=e873]: 0 Critical
+                        - generic [ref=e874]: 3 High
+                        - generic [ref=e875]: 7 Med
+                    - generic [ref=e876]:
+                      - generic [ref=e877]: "Status:"
+                      - strong [ref=e878]: ELEVATED
+                  - generic [ref=e879]:
+                    - heading "Supply Chain Integrity" [level=4] [ref=e886]
+                    - generic [ref=e887]:
+                      - generic [ref=e888]:
+                        - generic [ref=e889]: "Cosign Signature:"
+                        - strong [ref=e890]: ✕ Unverified / Unsigned
+                      - generic [ref=e891]:
+                        - generic [ref=e892]: "SBOM Catalog:"
+                        - strong [ref=e893]: 42 packages indexed
+                    - generic [ref=e894]:
+                      - generic [ref=e895]: "Keyring:"
+                      - strong [ref=e896]: Sigstore Transparency Log
+                  - generic [ref=e897]:
+                    - heading "Random Forest Classifier" [level=4] [ref=e902]
+                    - generic [ref=e903]:
+                      - generic [ref=e904]:
+                        - strong [ref=e905]: MEDIUM
+                        - text: Predicted Posture
+                      - generic [ref=e906]:
+                        - generic [ref=e907]: "Model Confidence:"
+                        - strong [ref=e908]: 62%
+                    - generic [ref=e909]:
+                      - generic [ref=e910]: "Model Status:"
+                      - strong [ref=e911]: Loaded (v1.0.0)
+                  - generic [ref=e912]:
+                    - heading "Anomaly Detection" [level=4] [ref=e917]
+                    - generic [ref=e918]:
+                      - generic [ref=e919]:
+                        - strong [ref=e920]: ANOMALY FLAGGED
+                        - text: Feature Distribution
+                      - generic [ref=e921]:
+                        - generic [ref=e922]: "Anomaly Score:"
+                        - strong [ref=e923]: "-0.0161"
+                    - generic [ref=e924]:
+                      - generic [ref=e925]: "Isolation Forest:"
+                      - strong [ref=e926]: Active
+                - generic [ref=e927]:
+                  - heading "Vulnerability Summary" [level=2] [ref=e928]
+                  - generic [ref=e929]:
+                    - generic [ref=e930]:
+                      - generic [ref=e931]: Critical
+                      - strong [ref=e932]: "0"
+                    - generic [ref=e933]:
+                      - generic [ref=e934]: High
+                      - strong [ref=e935]: "3"
+                    - generic [ref=e936]:
+                      - generic [ref=e937]: Medium
+                      - strong [ref=e938]: "7"
+                    - generic [ref=e939]:
+                      - generic [ref=e940]: Low
+                      - strong [ref=e941]: "27"
+                  - generic [ref=e942]:
+                    - text: "Total vulnerabilities:"
+                    - strong [ref=e943]: "37"
+                - generic [ref=e944]:
+                  - generic [ref=e945]:
+                    - generic [ref=e946]:
+                      - heading "Vulnerability Distribution" [level=2] [ref=e947]
+                      - paragraph [ref=e948]: Severity distribution detected across the container image.
+                    - generic [ref=e949]:
+                      - generic [ref=e950]: Total Detected
+                      - strong [ref=e951]: "37"
+                  - application [ref=e955]:
+                    - generic [ref=e974]:
+                      - generic [ref=e975]:
+                        - generic [ref=e976]: Critical
+                        - generic [ref=e978]: High
+                        - generic [ref=e980]: Medium
+                        - generic [ref=e982]: Low
+                      - generic [ref=e984]:
+                        - generic [ref=e985]: "0"
+                        - generic [ref=e987]: "7"
+                        - generic [ref=e989]: "14"
+                        - generic [ref=e991]: "21"
+                        - generic [ref=e993]: "28"
+                      - generic [ref=e995]:
+                        - generic [ref=e996]: "3"
+                        - generic [ref=e997]: "7"
+                        - generic [ref=e998]: "27"
+                  - generic [ref=e999]:
+                    - generic [ref=e1000]: "Critical: 0"
+                    - generic [ref=e1003]: "High: 3"
+                    - generic [ref=e1006]: "Medium: 7"
+                    - generic [ref=e1009]: "Low: 27"
+                - generic [ref=e1012]:
+                  - heading "Vulnerability Details" [level=2] [ref=e1013]
+                  - table [ref=e1015]:
+                    - rowgroup [ref=e1016]:
+                      - row [ref=e1017]:
+                        - columnheader "CVE" [ref=e1018]
+                        - columnheader "Severity" [ref=e1019]
+                        - columnheader "Details" [ref=e1020]
+                    - rowgroup [ref=e1021]:
+                      - row [ref=e1022]:
+                        - cell [ref=e1023]:
+                          - strong [ref=e1024]: CVE-2005-2541
+                        - cell "LOW" [ref=e1025]
+                        - cell "Vulnerability :CVE-2005-2541 Severity :LOW Package :pkg:deb/debian/tar@1.35%2Bdfsg-3.1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.039920 EPSS Percentile :0.902430" [ref=e1026]
+                      - row [ref=e1027]:
+                        - cell [ref=e1028]:
+                          - strong [ref=e1029]: CVE-2007-5686
+                        - cell "LOW" [ref=e1030]
+                        - cell "Vulnerability :CVE-2007-5686 Severity :LOW Package :pkg:deb/debian/shadow@1%3A4.17.4-2?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.009420 EPSS Percentile :0.597740" [ref=e1031]
+                      - row [ref=e1032]:
+                        - cell [ref=e1033]:
+                          - strong [ref=e1034]: CVE-2010-0928
+                        - cell "LOW" [ref=e1035]
+                        - cell "Vulnerability :CVE-2010-0928 Severity :LOW Package :pkg:deb/debian/openssl@3.5.7-1~deb13u3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>=3.2.1-3 Fixed version :not fixed EPSS Score :0.005360 EPSS Percentile :0.434000" [ref=e1036]
+                      - row [ref=e1037]:
+                        - cell [ref=e1038]:
+                          - strong [ref=e1039]: CVE-2010-4756
+                        - cell "LOW" [ref=e1040]
+                        - cell "Vulnerability :CVE-2010-4756 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.026330 EPSS Percentile :0.850830" [ref=e1041]
+                      - row [ref=e1042]:
+                        - cell [ref=e1043]:
+                          - strong [ref=e1044]: CVE-2011-3374
+                        - cell "LOW" [ref=e1045]
+                        - cell "Vulnerability :CVE-2011-3374 Severity :LOW Package :pkg:deb/debian/apt@3.0.3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.011910 EPSS Percentile :0.670390" [ref=e1046]
+                      - row [ref=e1047]:
+                        - cell [ref=e1048]:
+                          - strong [ref=e1049]: CVE-2011-4116
+                        - cell "LOW" [ref=e1050]
+                        - cell "Vulnerability :CVE-2011-4116 Severity :LOW Package :pkg:deb/debian/perl@5.40.1-6%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.005240 EPSS Percentile :0.426490" [ref=e1051]
+                      - row [ref=e1052]:
+                        - cell [ref=e1053]:
+                          - strong [ref=e1054]: CVE-2013-4392
+                        - cell "LOW" [ref=e1055]
+                        - cell "Vulnerability :CVE-2013-4392 Severity :LOW Package :pkg:deb/debian/systemd@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.004680 EPSS Percentile :0.385080" [ref=e1056]
+                      - row [ref=e1057]:
+                        - cell [ref=e1058]:
+                          - strong [ref=e1059]: CVE-2017-18018
+                        - cell "LOW" [ref=e1060]
+                        - cell "Vulnerability :CVE-2017-18018 Severity :LOW Package :pkg:deb/debian/coreutils@9.7-3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003450 EPSS Percentile :0.259670" [ref=e1061]
+                      - row [ref=e1062]:
+                        - cell [ref=e1063]:
+                          - strong [ref=e1064]: CVE-2018-20796
+                        - cell "LOW" [ref=e1065]
+                        - cell "Vulnerability :CVE-2018-20796 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.057570 EPSS Percentile :0.928740" [ref=e1066]
+                      - row [ref=e1067]:
+                        - cell [ref=e1068]:
+                          - strong [ref=e1069]: CVE-2019-1010022
+                        - cell "LOW" [ref=e1070]
+                        - cell "Vulnerability :CVE-2019-1010022 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.032490 EPSS Percentile :0.879510" [ref=e1071]
+                      - row [ref=e1072]:
+                        - cell [ref=e1073]:
+                          - strong [ref=e1074]: CVE-2019-1010023
+                        - cell "LOW" [ref=e1075]
+                        - cell "Vulnerability :CVE-2019-1010023 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.030440 EPSS Percentile :0.871310" [ref=e1076]
+                      - row [ref=e1077]:
+                        - cell [ref=e1078]:
+                          - strong [ref=e1079]: CVE-2019-1010024
+                        - cell "LOW" [ref=e1080]
+                        - cell "Vulnerability :CVE-2019-1010024 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.031930 EPSS Percentile :0.877210" [ref=e1081]
+                      - row [ref=e1082]:
+                        - cell [ref=e1083]:
+                          - strong [ref=e1084]: CVE-2019-1010025
+                        - cell "LOW" [ref=e1085]
+                        - cell "Vulnerability :CVE-2019-1010025 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.022670 EPSS Percentile :0.825030" [ref=e1086]
+                      - row [ref=e1087]:
+                        - cell [ref=e1088]:
+                          - strong [ref=e1089]: CVE-2019-9192
+                        - cell "LOW" [ref=e1090]
+                        - cell "Vulnerability :CVE-2019-9192 Severity :LOW Package :pkg:deb/debian/glibc@2.41-12%2Bdeb13u4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.024470 EPSS Percentile :0.838630" [ref=e1091]
+                      - row [ref=e1092]:
+                        - cell [ref=e1093]:
+                          - strong [ref=e1094]: CVE-2021-45346
+                        - cell "LOW" [ref=e1095]
+                        - cell "Vulnerability :CVE-2021-45346 Severity :LOW Package :pkg:deb/debian/sqlite3@3.46.1-7%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.016140 EPSS Percentile :0.752530" [ref=e1096]
+                      - row [ref=e1097]:
+                        - cell [ref=e1098]:
+                          - strong [ref=e1099]: CVE-2022-0563
+                        - cell "LOW" [ref=e1100]
+                        - cell "Vulnerability :CVE-2022-0563 Severity :LOW Package :pkg:deb/debian/util-linux@2.41.5-0%2Bdeb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.004270 EPSS Percentile :0.349040" [ref=e1101]
+                      - row [ref=e1102]:
+                        - cell [ref=e1103]:
+                          - strong [ref=e1104]: CVE-2023-31437
+                        - cell "LOW" [ref=e1105]
+                        - cell "Vulnerability :CVE-2023-31437 Severity :LOW Package :pkg:deb/debian/systemd@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003410 EPSS Percentile :0.255420" [ref=e1106]
+                      - row [ref=e1107]:
+                        - cell [ref=e1108]:
+                          - strong [ref=e1109]: CVE-2023-31438
+                        - cell "LOW" [ref=e1110]
+                        - cell "Vulnerability :CVE-2023-31438 Severity :LOW Package :pkg:deb/debian/systemd@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003250 EPSS Percentile :0.235540" [ref=e1111]
+                      - row [ref=e1112]:
+                        - cell [ref=e1113]:
+                          - strong [ref=e1114]: CVE-2023-31439
+                        - cell "LOW" [ref=e1115]
+                        - cell "Vulnerability :CVE-2023-31439 Severity :LOW Package :pkg:deb/debian/systemd@257.13-1~deb13u1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003490 EPSS Percentile :0.264210" [ref=e1116]
+                      - row [ref=e1117]:
+                        - cell [ref=e1118]:
+                          - strong [ref=e1119]: CVE-2025-5278
+                        - cell "LOW" [ref=e1120]
+                        - cell "Vulnerability :CVE-2025-5278 Severity :LOW Package :pkg:deb/debian/coreutils@9.7-3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.002880 EPSS Percentile :0.195980" [ref=e1121]
+                      - row [ref=e1122]:
+                        - cell [ref=e1123]:
+                          - strong [ref=e1124]: CVE-2025-70873
+                        - cell "LOW" [ref=e1125]
+                        - cell "Vulnerability :CVE-2025-70873 Severity :LOW Package :pkg:deb/debian/sqlite3@3.46.1-7%2Bdeb13u2?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003010 EPSS Percentile :0.208930" [ref=e1126]
+                      - row [ref=e1127]:
+                        - cell [ref=e1128]:
+                          - strong [ref=e1129]: CVE-2026-102473
+                        - cell "LOW" [ref=e1130]
+                        - cell "Vulnerability :CVE-2026-102473 Severity :LOW Package :pkg:deb/debian/dash@0.5.12-12?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.001300 EPSS Percentile :0.022720" [ref=e1131]
+                      - row [ref=e1132]:
+                        - cell [ref=e1133]:
+                          - strong [ref=e1134]: CVE-2026-102474
+                        - cell "LOW" [ref=e1135]
+                        - cell "Vulnerability :CVE-2026-102474 Severity :LOW Package :pkg:deb/debian/dash@0.5.12-12?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.001440 EPSS Percentile :0.031780" [ref=e1136]
+                      - row [ref=e1137]:
+                        - cell [ref=e1138]:
+                          - strong [ref=e1139]: CVE-2026-53910
+                        - cell "LOW" [ref=e1140]
+                        - cell "Vulnerability :CVE-2026-53910 Severity :LOW Package :pkg:deb/debian/diffutils@1%3A3.10-4?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.003320 EPSS Percentile :0.242870" [ref=e1141]
+                      - row [ref=e1142]:
+                        - cell [ref=e1143]:
+                          - strong [ref=e1144]: CVE-2026-56391
+                        - cell "LOW" [ref=e1145]
+                        - cell "Vulnerability :CVE-2026-56391 Severity :LOW Package :pkg:deb/debian/coreutils@9.7-3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.001710 EPSS Percentile :0.058590" [ref=e1146]
+                      - row [ref=e1147]:
+                        - cell [ref=e1148]:
+                          - strong [ref=e1149]: CVE-2026-56392
+                        - cell "LOW" [ref=e1150]
+                        - cell "Vulnerability :CVE-2026-56392 Severity :LOW Package :pkg:deb/debian/coreutils@9.7-3?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.001860 EPSS Percentile :0.075200" [ref=e1151]
+                      - row [ref=e1152]:
+                        - cell [ref=e1153]:
+                          - strong [ref=e1154]: CVE-2026-1703
+                        - cell "LOW" [ref=e1155]
+                        - cell "Vulnerability :CVE-2026-1703 Severity :LOW Package :pkg:pypi/pip@24.0 Affected range :<26.0 Fixed version :26.0 CVSS Score :2.0 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N EPSS Score :0.004430 EPSS Percentile :0.364680" [ref=e1156]
+                      - row [ref=e1157]:
+                        - cell [ref=e1158]:
+                          - strong [ref=e1159]: CVE-2025-45582
+                        - cell "MEDIUM" [ref=e1160]
+                        - cell "Vulnerability :CVE-2025-45582 Severity :MEDIUM Package :pkg:deb/debian/tar@1.35%2Bdfsg-3.1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>=1.35+dfsg-3.1 Fixed version :not fixed EPSS Score :0.004890 EPSS Percentile :0.400930" [ref=e1161]
+                      - row [ref=e1162]:
+                        - cell [ref=e1163]:
+                          - strong [ref=e1164]: CVE-2026-8643
+                        - cell "MEDIUM" [ref=e1165]
+                        - cell "Vulnerability :CVE-2026-8643 Severity :MEDIUM Package :pkg:pypi/pip@24.0 Affected range :<26.1.2 Fixed version :26.1.2 CVSS Score :4.1 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N EPSS Score :0.004660 EPSS Percentile :0.383060" [ref=e1166]
+                      - row [ref=e1167]:
+                        - cell [ref=e1168]:
+                          - strong [ref=e1169]: CVE-2026-3219
+                        - cell "MEDIUM" [ref=e1170]
+                        - cell "Vulnerability :CVE-2026-3219 Severity :MEDIUM Package :pkg:pypi/pip@24.0 Affected range :<=26.0.1 Fixed version :26.1 CVSS Score :4.6 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N EPSS Score :0.001800 EPSS Percentile :0.069880" [ref=e1171]
+                      - row [ref=e1172]:
+                        - cell [ref=e1173]:
+                          - strong [ref=e1174]: CVE-2026-6357
+                        - cell "MEDIUM" [ref=e1175]
+                        - cell "Vulnerability :CVE-2026-6357 Severity :MEDIUM Package :pkg:pypi/pip@24.0 Affected range :<26.1 Fixed version :26.1 CVSS Score :5.3 CVSS Vector :CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N EPSS Score :0.001710 EPSS Percentile :0.058640" [ref=e1176]
+                      - row [ref=e1177]:
+                        - cell [ref=e1178]:
+                          - strong [ref=e1179]: CVE-2026-13346
+                        - cell "MEDIUM" [ref=e1180]
+                        - cell "Vulnerability :CVE-2026-13346 Severity :MEDIUM Package :pkg:pypi/pip@24.0 Affected range :<26.2.0 Fixed version :26.2.0 CVSS Score :5.6 CVSS Vector :CVSS:4.0/AV:N/AC:H/AT:P/PR:H/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N EPSS Score :0.002920 EPSS Percentile :0.199650" [ref=e1181]
+                      - row [ref=e1182]:
+                        - cell [ref=e1183]:
+                          - strong [ref=e1184]: CVE-2025-8869
+                        - cell "MEDIUM" [ref=e1185]
+                        - cell "Vulnerability :CVE-2025-8869 Severity :MEDIUM Package :pkg:pypi/pip@24.0 Affected range :<=25.2 Fixed version :25.3 CVSS Score :5.9 CVSS Vector :CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N EPSS Score :0.004690 EPSS Percentile :0.386070" [ref=e1186]
+                      - row [ref=e1187]:
+                        - cell [ref=e1188]:
+                          - strong [ref=e1189]: CVE-2026-59890
+                        - cell "MEDIUM" [ref=e1190]
+                        - cell "Vulnerability :CVE-2026-59890 Severity :MEDIUM Package :pkg:pypi/setuptools@79.0.1 Affected range :<83.0.0 Fixed version :83.0.0 CVSS Score :6.1 CVSS Vector :CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N EPSS Score :0.004050 EPSS Percentile :0.326660" [ref=e1191]
+                      - row [ref=e1192]:
+                        - cell [ref=e1193]:
+                          - strong [ref=e1194]: CVE-2026-24049
+                        - cell "HIGH" [ref=e1195]
+                        - cell "Vulnerability :CVE-2026-24049 Severity :HIGH Package :pkg:pypi/wheel@0.45.1 Affected range :>=0.40.0,<=0.46.1 Fixed version :0.46.2 CVSS Score :7.1 CVSS Vector :CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H EPSS Score :0.003550 EPSS Percentile :0.271540" [ref=e1196]
+                      - row [ref=e1197]:
+                        - cell [ref=e1198]:
+                          - strong [ref=e1199]: CVE-2026-85091
+                        - cell "HIGH" [ref=e1200]
+                        - cell "Vulnerability :CVE-2026-85091 Severity :HIGH Package :pkg:deb/debian/zlib@1%3A1.3.dfsg%2Breally1.3.1-1?os_distro=trixie&os_name=debian&os_version=13 Affected range :>0 Fixed version :not fixed EPSS Score :0.005920 EPSS Percentile :0.466080" [ref=e1201]
+                      - row [ref=e1202]:
+                        - cell [ref=e1203]:
+                          - strong [ref=e1204]: CVE-2026-23949
+                        - cell "HIGH" [ref=e1205]
+                        - cell "Vulnerability :CVE-2026-23949 Severity :HIGH Package :pkg:pypi/jaraco-context@5.3.0 Affected range :>=5.2.0,<6.1.0 Fixed version :6.1.0 CVSS Score :8.6 CVSS Vector :CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N EPSS Score :0.006180 EPSS Percentile :0.479600" [ref=e1206]
+    - contentinfo [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img "ChainProof Logo" [ref=e307]
+              - generic [ref=e308]: ChainProof
+            - paragraph [ref=e309]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=e310]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=e313]:
+            - heading "Platform" [level=3] [ref=e314]
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - button "Dashboard" [ref=e317] [cursor=pointer]
+              - listitem [ref=e318]:
+                - button "Live Image Scanner" [ref=e319] [cursor=pointer]
+              - listitem [ref=e320]:
+                - button "Audit Reports" [ref=e321] [cursor=pointer]
+          - generic [ref=e322]:
+            - heading "Security Standards" [level=3] [ref=e323]
+            - generic [ref=e324]:
+              - generic [ref=e325]: Syft SBOM v1.0
+              - generic [ref=e326]: Docker Scout SARIF
+              - generic [ref=e327]: Cosign Sigstore
+              - generic [ref=e328]: Isolation Forest ML
+          - generic [ref=e329]:
+            - heading "Compliance & Legal" [level=3] [ref=e330]
+            - list [ref=e331]:
+              - listitem [ref=e332]:
+                - button "Privacy Policy" [ref=e333] [cursor=pointer]
+              - listitem [ref=e334]:
+                - button "Terms & Conditions" [ref=e335] [cursor=pointer]
+              - listitem [ref=e336]:
+                - generic [ref=e337]: Zero Data-Retention Mode
+        - generic [ref=e341]:
+          - paragraph [ref=e342]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=e343]:
+            - button "Privacy Policy" [ref=e344] [cursor=pointer]
+            - generic [ref=e345]: •
+            - button "Terms of Service" [ref=e346] [cursor=pointer]
+            - generic [ref=e347]: •
+            - generic [ref=e348]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=e1207]: "0"

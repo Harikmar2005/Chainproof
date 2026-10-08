@@ -1,0 +1,213 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - button "ChainProof Home" [ref=e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=e8]
+          - generic [ref=e9]: ChainProof
+          - generic [ref=e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=e11]:
+          - button "Dashboard" [ref=e12] [cursor=pointer]
+          - button "Live Scan" [ref=e14] [cursor=pointer]
+          - button "Audit Reports" [ref=e18] [cursor=pointer]
+          - button "Privacy" [ref=e22] [cursor=pointer]
+          - button "Terms" [ref=e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=e25] [cursor=pointer]: Scan Container
+    - main [ref=e1427]:
+      - generic [ref=e1428]:
+        - generic [ref=e1429]:
+          - generic [ref=e1430]:
+            - generic [ref=e1431]:
+              - button "Dashboard" [ref=e1432] [cursor=pointer]
+              - generic [ref=e1433]: /
+              - generic [ref=e1434]: Audit Reports
+            - heading "Security Audit Records" [level=1] [ref=e1435]
+            - paragraph [ref=e1436]: Enterprise container vulnerability ledger, ML classification archives, and AI security decisions.
+          - generic [ref=e1437]:
+            - button "New Security Scan" [ref=e1438] [cursor=pointer]
+            - button "Clear Ledger" [ref=e1463] [cursor=pointer]
+        - generic [ref=e1441]:
+          - textbox "Filter reports by container image" [ref=e1446]:
+            - /placeholder: Filter by image name (e.g. alpine, juice-shop, python)...
+          - generic [ref=e1447]:
+            - group "Filter by severity" [ref=e1448]:
+              - generic [ref=e1449]: "Severity:"
+              - button "ALL" [ref=e1450] [cursor=pointer]
+              - button "CRITICAL" [ref=e1451] [cursor=pointer]
+              - button "HIGH" [ref=e1452] [cursor=pointer]
+              - button "MEDIUM" [ref=e1453] [cursor=pointer]
+              - button "LOW" [ref=e1454] [cursor=pointer]
+            - group "Filter by decision" [ref=e1455]:
+              - generic [ref=e1456]: "Decision:"
+              - button "ALL" [ref=e1457] [cursor=pointer]
+              - button "BLOCK" [ref=e1458] [cursor=pointer]
+              - button "REVIEW" [ref=e1459] [cursor=pointer]
+              - button "TRUST" [ref=e1460] [cursor=pointer]
+        - table [ref=e1468]:
+          - rowgroup [ref=e1469]:
+            - row [ref=e1470]:
+              - columnheader "#" [ref=e1471]
+              - columnheader "Container Image" [ref=e1472]
+              - columnheader "Date & Time" [ref=e1473]
+              - columnheader "Risk Score" [ref=e1474]
+              - columnheader "Severity" [ref=e1475]
+              - columnheader "Vulnerabilities" [ref=e1476]
+              - columnheader "Signature" [ref=e1477]
+              - columnheader "AI Decision" [ref=e1478]
+              - columnheader "Actions" [ref=e1479]
+          - rowgroup [ref=e1480]:
+            - row [ref=e1481]:
+              - cell "#11" [ref=e1482]
+              - cell "nginx:alpine 7bdf08cc..." [ref=e1484]:
+                - strong [ref=e1485]: nginx:alpine
+                - generic [ref=e1486]: 7bdf08cc...
+              - cell "2026-10-08 09:02:25" [ref=e1487]
+              - cell "92" [ref=e1488]
+              - cell "CRITICAL" [ref=e1491]
+              - cell "18 CVEs" [ref=e1493]
+              - cell "Unsigned" [ref=e1494]
+              - cell "BLOCK" [ref=e1495]
+              - cell [ref=e1499]:
+                - generic [ref=e1500]:
+                  - button "Inspect" [ref=e1501] [cursor=pointer]
+                  - button "JSON" [ref=e1502] [cursor=pointer]
+            - row [ref=e1506]:
+              - cell "#10" [ref=e1507]
+              - cell "nginx:alpine 20ba53a1..." [ref=e1509]:
+                - strong [ref=e1510]: nginx:alpine
+                - generic [ref=e1511]: 20ba53a1...
+              - cell "2026-10-08 09:02:18" [ref=e1512]
+              - cell "92" [ref=e1513]
+              - cell "CRITICAL" [ref=e1516]
+              - cell "18 CVEs" [ref=e1518]
+              - cell "Unsigned" [ref=e1519]
+              - cell "BLOCK" [ref=e1520]
+              - cell [ref=e1524]:
+                - generic [ref=e1525]:
+                  - button "Inspect" [ref=e1526] [cursor=pointer]
+                  - button "JSON" [ref=e1527] [cursor=pointer]
+            - row [ref=e1531]:
+              - cell "#9" [ref=e1532]
+              - cell "bkimminich/juice-shop:latest 23455382..." [ref=e1534]:
+                - strong [ref=e1535]: bkimminich/juice-shop:latest
+                - generic [ref=e1536]: 23455382...
+              - cell "2026-10-08 08:48:18" [ref=e1537]
+              - cell "100" [ref=e1538]
+              - cell "CRITICAL" [ref=e1541]
+              - cell "125 CVEs" [ref=e1543]
+              - cell "Unsigned" [ref=e1544]
+              - cell "BLOCK" [ref=e1545]
+              - cell [ref=e1549]:
+                - generic [ref=e1550]:
+                  - button "Inspect" [ref=e1551] [cursor=pointer]
+                  - button "JSON" [ref=e1552] [cursor=pointer]
+        - dialog [ref=e1556]:
+          - generic [ref=e1557]:
+            - generic [ref=e1558]:
+              - generic [ref=e1559]: ChainProof Enterprise Security Inspector
+              - button "Close modal" [ref=e1560] [cursor=pointer]: ✕
+            - generic [ref=e1562]:
+              - button "Back to Audit Records" [ref=e1564] [cursor=pointer]
+              - generic [ref=e1567]:
+                - generic [ref=e1568]:
+                  - generic [ref=e1569]: CONTAINER SECURITY INTELLIGENCE REPORT
+                  - heading "bkimminich/juice-shop:latest" [level=1] [ref=e1573]
+                  - generic [ref=e1574]:
+                    - generic [ref=e1575]: 2026-10-08 08:48:18
+                    - generic [ref=e1576]: •
+                    - generic [ref=e1577]: "Audit ID: 23455382-5066-4e6b"
+                - generic [ref=e1578]:
+                  - generic [ref=e1583]:
+                    - generic [ref=e1584]: POLICY DECISION
+                    - strong [ref=e1585]: BLOCK DEPLOYMENT
+                  - generic [ref=e1586]:
+                    - text: RISK SCORE
+                    - generic [ref=e1587]:
+                      - generic [ref=e1588]: "100"
+                      - generic [ref=e1589]: /100
+                    - text: CRITICAL
+              - generic [ref=e1590]:
+                - generic [ref=e1591]:
+                  - button "Intelligence Overview" [ref=e1592] [cursor=pointer]
+                  - button "CVE Telemetry (125)" [ref=e1593] [cursor=pointer]
+                  - button "Supply Chain Integrity" [ref=e1594] [cursor=pointer]
+                  - button "ML Risk Models" [active] [ref=e1595] [cursor=pointer]
+                - generic [ref=e1596]:
+                  - button "Export JSON" [ref=e1597] [cursor=pointer]
+                  - button "Done Inspecting" [ref=e1601] [cursor=pointer]
+              - generic [ref=e3215]:
+                - generic [ref=e3216]:
+                  - heading "Random Forest Classifier" [level=2] [ref=e3217]
+                  - paragraph [ref=e3221]: Supervised Random Forest ensemble trained on multi-vector container vulnerability profiles, package counts, signature status, and layer manifests.
+                  - generic [ref=e3222]:
+                    - generic [ref=e3223]: Predicted Risk Label
+                    - strong [ref=e3224]: CRITICAL
+                  - generic [ref=e3225]:
+                    - generic [ref=e3226]: Model Confidence
+                    - strong [ref=e3227]: 76%
+                  - generic [ref=e3228]:
+                    - generic [ref=e3229]: Base Risk Contribution
+                    - strong [ref=e3230]: 92 pts
+                  - generic [ref=e3231]:
+                    - generic [ref=e3232]: Model Artifact
+                    - strong [ref=e3233]: risk_model.pkl (Scikit-Learn)
+                - generic [ref=e3234]:
+                  - heading "Isolation Forest Anomaly Detection" [level=2] [ref=e3235]
+                  - paragraph [ref=e3239]: Unsupervised Isolation Forest model detecting structural configuration outliers, abnormal dependency ratios, and supply-chain anomalies.
+                  - generic [ref=e3240]:
+                    - generic [ref=e3241]: Anomaly Status
+                    - strong [ref=e3242]: ANOMALY DETECTED
+                  - generic [ref=e3243]:
+                    - generic [ref=e3244]: Decision Function Score
+                    - strong [ref=e3245]: "-0.1433"
+                  - generic [ref=e3246]:
+                    - generic [ref=e3247]: Anomaly Penalty
+                    - strong [ref=e3248]: +7 pts
+                  - generic [ref=e3249]:
+                    - generic [ref=e3250]: Model Artifact
+                    - strong [ref=e3251]: anomaly_model.pkl
+    - contentinfo [ref=e302]:
+      - generic [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - img "ChainProof Logo" [ref=e307]
+              - generic [ref=e308]: ChainProof
+            - paragraph [ref=e309]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=e310]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=e313]:
+            - heading "Platform" [level=3] [ref=e314]
+            - list [ref=e315]:
+              - listitem [ref=e316]:
+                - button "Dashboard" [ref=e317] [cursor=pointer]
+              - listitem [ref=e318]:
+                - button "Live Image Scanner" [ref=e319] [cursor=pointer]
+              - listitem [ref=e320]:
+                - button "Audit Reports" [ref=e321] [cursor=pointer]
+          - generic [ref=e322]:
+            - heading "Security Standards" [level=3] [ref=e323]
+            - generic [ref=e324]:
+              - generic [ref=e325]: Syft SBOM v1.0
+              - generic [ref=e326]: Docker Scout SARIF
+              - generic [ref=e327]: Cosign Sigstore
+              - generic [ref=e328]: Isolation Forest ML
+          - generic [ref=e329]:
+            - heading "Compliance & Legal" [level=3] [ref=e330]
+            - list [ref=e331]:
+              - listitem [ref=e332]:
+                - button "Privacy Policy" [ref=e333] [cursor=pointer]
+              - listitem [ref=e334]:
+                - button "Terms & Conditions" [ref=e335] [cursor=pointer]
+              - listitem [ref=e336]:
+                - generic [ref=e337]: Zero Data-Retention Mode
+        - generic [ref=e341]:
+          - paragraph [ref=e342]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=e343]:
+            - button "Privacy Policy" [ref=e344] [cursor=pointer]
+            - generic [ref=e345]: •
+            - button "Terms of Service" [ref=e346] [cursor=pointer]
+            - generic [ref=e347]: •
+            - generic [ref=e348]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=e1207]: "15"

@@ -1,0 +1,151 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to main content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f3e4]:
+    - banner [ref=f3e5]:
+      - generic [ref=f3e6]:
+        - button "ChainProof Home" [ref=f3e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=f3e8]
+          - generic [ref=f3e9]: ChainProof
+          - generic [ref=f3e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=f3e11]:
+          - button "Dashboard" [ref=f3e12] [cursor=pointer]
+          - button "Live Scan" [ref=f3e14] [cursor=pointer]
+          - button "Audit Reports" [ref=f3e18] [cursor=pointer]
+          - button "Privacy" [ref=f3e22] [cursor=pointer]
+          - button "Terms" [ref=f3e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=f3e25] [cursor=pointer]: Scan Container
+    - main [ref=f3e29]:
+      - generic [ref=f3e30]:
+        - generic [ref=f3e32]:
+          - generic [ref=f3e33]: CONTAINER SECURITY INTELLIGENCE
+          - heading "Continuous Verification & Supply Chain Intelligence" [level=1] [ref=f3e38]
+          - paragraph [ref=f3e39]: Continuous verification of container vulnerabilities, software composition, provenance, and supply-chain risk with automated AI security decisions.
+          - generic [ref=f3e42]:
+            - textbox "Scan container image" [ref=f3e51]:
+              - /placeholder: Enter container image (e.g. alpine:latest, bkimminich/juice-shop:latest)
+            - button "Scan Container" [ref=f3e52] [cursor=pointer]
+          - generic [ref=f3e55]:
+            - generic [ref=f3e56]: "Benchmark Targets:"
+            - button "alpine:latest" [ref=f3e57] [cursor=pointer]
+            - button "nginx:alpine" [ref=f3e58] [cursor=pointer]
+            - button "python:3.11-slim" [ref=f3e59] [cursor=pointer]
+            - button "juice-shop (High Risk)" [ref=f3e60] [cursor=pointer]
+        - region "Supply chain security telemetry metrics" [ref=f3e61]:
+          - generic [ref=f3e62]:
+            - generic [ref=f3e63]: Images Scanned
+            - generic [ref=f3e66]: "0"
+            - generic [ref=f3e67]: Indexed in security ledger
+          - generic [ref=f3e68]:
+            - generic [ref=f3e69]: Critical Risk Images
+            - generic [ref=f3e73]: "0"
+            - generic [ref=f3e74]: 0 Critical CVEs detected
+          - generic [ref=f3e75]:
+            - generic [ref=f3e76]: Total Vulnerabilities
+            - generic [ref=f3e81]: "0"
+            - generic [ref=f3e82]: Across all audited workloads
+          - generic [ref=f3e83]:
+            - generic [ref=f3e84]: Supply Chain Trust
+            - generic [ref=f3e91]: 100%
+            - generic [ref=f3e92]: 0 Trusted / 0 Blocked
+        - generic [ref=f3e93]:
+          - generic [ref=f3e94]:
+            - generic [ref=f3e95]: AI SECURITY POSTURE OVERVIEW
+            - heading "Security posture telemetry ready. Initiate container scans to generate real-time AI security intelligence." [level=3] [ref=f3e98]
+            - paragraph [ref=f3e99]: Continuous verification pipelines active. Sigstore provenance and Syft SBOM indexing operating normally.
+          - button "Audit Ledger & AI Decisions →" [ref=f3e101] [cursor=pointer]
+        - generic [ref=f3e102]:
+          - generic [ref=f3e103]:
+            - generic [ref=f3e104]:
+              - generic [ref=f3e105]:
+                - heading "Risk Distribution" [level=2] [ref=f3e106]
+                - paragraph [ref=f3e107]: Severity breakdown across audited container fleet.
+              - generic [ref=f3e108]: "Avg Score: 0/100"
+            - generic [ref=f3e109]:
+              - generic [ref=f3e111]:
+                - generic [ref=f3e112]: Critical Risk
+                - strong [ref=f3e113]: "0"
+              - generic [ref=f3e116]:
+                - generic [ref=f3e117]: High Risk
+                - strong [ref=f3e118]: "0"
+              - generic [ref=f3e121]:
+                - generic [ref=f3e122]: Medium Risk
+                - strong [ref=f3e123]: "0"
+              - generic [ref=f3e126]:
+                - generic [ref=f3e127]: Low Risk
+                - strong [ref=f3e128]: "0"
+          - generic [ref=f3e130]:
+            - heading "ChainProof Security Engine Pipeline" [level=2] [ref=f3e131]
+            - paragraph [ref=f3e132]: Four-stage decision engine correlating deterministic telemetry with ML & AI.
+            - generic [ref=f3e133]:
+              - generic [ref=f3e134]:
+                - generic [ref=f3e135]: "1"
+                - generic [ref=f3e136]:
+                  - strong [ref=f3e137]: Evidence Collection
+                  - paragraph [ref=f3e138]: Docker metadata, Syft SBOM composition, Docker Scout CVEs, Sigstore Cosign proofs.
+              - generic [ref=f3e139]:
+                - generic [ref=f3e140]: "2"
+                - generic [ref=f3e141]:
+                  - strong [ref=f3e142]: ML Risk Intelligence
+                  - paragraph [ref=f3e143]: Random Forest risk classification and Isolation Forest anomaly outlier detection.
+              - generic [ref=f3e144]:
+                - generic [ref=f3e145]: "3"
+                - generic [ref=f3e146]:
+                  - strong [ref=f3e147]: AI Security Analyst
+                  - paragraph [ref=f3e148]: Synthesizes dominant risk factors and formulates concrete remediation roadmaps.
+              - generic [ref=f3e149]:
+                - generic [ref=f3e150]: "4"
+                - generic [ref=f3e151]:
+                  - strong [ref=f3e152]: ChainProof Decision
+                  - paragraph [ref=f3e153]: Automated policy gate producing an actionable TRUST, REVIEW, or BLOCK verdict.
+        - generic [ref=f3e154]:
+          - generic [ref=f3e155]:
+            - generic [ref=f3e156]:
+              - heading "Recent Container Security Events" [level=2] [ref=f3e157]
+              - paragraph [ref=f3e158]: Real-time telemetry and decision outputs from recent image inspections
+            - button "View All Audit Records (0) →" [ref=f3e159] [cursor=pointer]
+          - generic [ref=f3e160]:
+            - paragraph [ref=f3e161]: No container audits recorded yet. Run your first scan to populate security telemetry.
+            - button "Scan Image" [ref=f3e162] [cursor=pointer]
+    - contentinfo [ref=f3e165]:
+      - generic [ref=f3e166]:
+        - generic [ref=f3e167]:
+          - generic [ref=f3e168]:
+            - generic [ref=f3e169]:
+              - img "ChainProof Logo" [ref=f3e170]
+              - generic [ref=f3e171]: ChainProof
+            - paragraph [ref=f3e172]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=f3e173]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=f3e176]:
+            - heading "Platform" [level=3] [ref=f3e177]
+            - list [ref=f3e178]:
+              - listitem [ref=f3e179]:
+                - button "Dashboard" [ref=f3e180] [cursor=pointer]
+              - listitem [ref=f3e181]:
+                - button "Live Image Scanner" [ref=f3e182] [cursor=pointer]
+              - listitem [ref=f3e183]:
+                - button "Audit Reports" [ref=f3e184] [cursor=pointer]
+          - generic [ref=f3e185]:
+            - heading "Security Standards" [level=3] [ref=f3e186]
+            - generic [ref=f3e187]:
+              - generic [ref=f3e188]: Syft SBOM v1.0
+              - generic [ref=f3e189]: Docker Scout SARIF
+              - generic [ref=f3e190]: Cosign Sigstore
+              - generic [ref=f3e191]: Isolation Forest ML
+          - generic [ref=f3e192]:
+            - heading "Compliance & Legal" [level=3] [ref=f3e193]
+            - list [ref=f3e194]:
+              - listitem [ref=f3e195]:
+                - button "Privacy Policy" [ref=f3e196] [cursor=pointer]
+              - listitem [ref=f3e197]:
+                - button "Terms & Conditions" [ref=f3e198] [cursor=pointer]
+              - listitem [ref=f3e199]:
+                - generic [ref=f3e200]: Zero Data-Retention Mode
+        - generic [ref=f3e204]:
+          - paragraph [ref=f3e205]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=f3e206]:
+            - button "Privacy Policy" [ref=f3e207] [cursor=pointer]
+            - generic [ref=f3e208]: •
+            - button "Terms of Service" [ref=f3e209] [cursor=pointer]
+            - generic [ref=f3e210]: •
+            - generic [ref=f3e211]: TLS 1.3 / HTTPS Verified

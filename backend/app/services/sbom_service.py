@@ -6,7 +6,9 @@ def generate_sbom(image_name: str) -> dict:
         result = subprocess.run(
             ["syft", image_name, "-o", "json"],
             capture_output=True,
-            text=True
+            text=True,
+            encoding="utf-8",
+            errors="replace"
         )
         if result.returncode == 0:
             data = json.loads(result.stdout)

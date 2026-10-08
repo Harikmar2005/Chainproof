@@ -1,0 +1,88 @@
+- generic [active] [ref=f2e1]:
+  - link "Skip to main content" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f2e4]:
+    - banner [ref=f2e5]:
+      - generic [ref=f2e6]:
+        - button "ChainProof Home" [ref=f2e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=f2e8]
+          - generic [ref=f2e9]: ChainProof
+          - generic [ref=f2e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=f2e11]:
+          - button "Dashboard" [ref=f2e12] [cursor=pointer]
+          - button "Live Scan" [ref=f2e14] [cursor=pointer]
+          - button "Audit Reports" [ref=f2e18] [cursor=pointer]
+          - button "Privacy" [ref=f2e22] [cursor=pointer]
+          - button "Terms" [ref=f2e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=f2e25] [cursor=pointer]: Scan Container
+    - main [ref=f2e29]:
+      - generic [ref=f2e30]:
+        - generic [ref=f2e31]:
+          - generic [ref=f2e32]:
+            - generic [ref=f2e33]:
+              - button "Dashboard" [ref=f2e34] [cursor=pointer]
+              - generic [ref=f2e35]: /
+              - generic [ref=f2e36]: Audit Reports
+            - heading "Security Audit Records" [level=1] [ref=f2e37]
+            - paragraph [ref=f2e38]: Enterprise container vulnerability ledger, ML classification archives, and AI security decisions.
+          - button "New Security Scan" [ref=f2e40] [cursor=pointer]
+        - generic [ref=f2e43]:
+          - textbox "Filter reports by container image" [ref=f2e48]:
+            - /placeholder: Filter by image name (e.g. alpine, juice-shop, python)...
+          - generic [ref=f2e49]:
+            - group "Filter by severity" [ref=f2e50]:
+              - generic [ref=f2e51]: "Severity:"
+              - button "ALL" [ref=f2e52] [cursor=pointer]
+              - button "CRITICAL" [ref=f2e53] [cursor=pointer]
+              - button "HIGH" [ref=f2e54] [cursor=pointer]
+              - button "MEDIUM" [ref=f2e55] [cursor=pointer]
+              - button "LOW" [ref=f2e56] [cursor=pointer]
+            - group "Filter by decision" [ref=f2e57]:
+              - generic [ref=f2e58]: "Decision:"
+              - button "ALL" [ref=f2e59] [cursor=pointer]
+              - button "BLOCK" [ref=f2e60] [cursor=pointer]
+              - button "REVIEW" [ref=f2e61] [cursor=pointer]
+              - button "TRUST" [ref=f2e62] [cursor=pointer]
+        - paragraph [ref=f2e64]: Loading security audit ledger...
+    - contentinfo [ref=f2e65]:
+      - generic [ref=f2e66]:
+        - generic [ref=f2e67]:
+          - generic [ref=f2e68]:
+            - generic [ref=f2e69]:
+              - img "ChainProof Logo" [ref=f2e70]
+              - generic [ref=f2e71]: ChainProof
+            - paragraph [ref=f2e72]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=f2e73]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=f2e76]:
+            - heading "Platform" [level=3] [ref=f2e77]
+            - list [ref=f2e78]:
+              - listitem [ref=f2e79]:
+                - button "Dashboard" [ref=f2e80] [cursor=pointer]
+              - listitem [ref=f2e81]:
+                - button "Live Image Scanner" [ref=f2e82] [cursor=pointer]
+              - listitem [ref=f2e83]:
+                - button "Audit Reports" [ref=f2e84] [cursor=pointer]
+          - generic [ref=f2e85]:
+            - heading "Security Standards" [level=3] [ref=f2e86]
+            - generic [ref=f2e87]:
+              - generic [ref=f2e88]: Syft SBOM v1.0
+              - generic [ref=f2e89]: Docker Scout SARIF
+              - generic [ref=f2e90]: Cosign Sigstore
+              - generic [ref=f2e91]: Isolation Forest ML
+          - generic [ref=f2e92]:
+            - heading "Compliance & Legal" [level=3] [ref=f2e93]
+            - list [ref=f2e94]:
+              - listitem [ref=f2e95]:
+                - button "Privacy Policy" [ref=f2e96] [cursor=pointer]
+              - listitem [ref=f2e97]:
+                - button "Terms & Conditions" [ref=f2e98] [cursor=pointer]
+              - listitem [ref=f2e99]:
+                - generic [ref=f2e100]: Zero Data-Retention Mode
+        - generic [ref=f2e104]:
+          - paragraph [ref=f2e105]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=f2e106]:
+            - button "Privacy Policy" [ref=f2e107] [cursor=pointer]
+            - generic [ref=f2e108]: •
+            - button "Terms of Service" [ref=f2e109] [cursor=pointer]
+            - generic [ref=f2e110]: •
+            - generic [ref=f2e111]: TLS 1.3 / HTTPS Verified

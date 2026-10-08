@@ -1,0 +1,378 @@
+- generic [ref=f3e1]:
+  - link "Skip to main content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f3e4]:
+    - banner [ref=f3e5]:
+      - generic [ref=f3e6]:
+        - button "ChainProof Home" [ref=f3e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=f3e8]
+          - generic [ref=f3e9]: ChainProof
+          - generic [ref=f3e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=f3e11]:
+          - button "Dashboard" [ref=f3e12] [cursor=pointer]
+          - button "Live Scan" [ref=f3e14] [cursor=pointer]
+          - button "Audit Reports" [ref=f3e18] [cursor=pointer]
+          - button "Privacy" [ref=f3e22] [cursor=pointer]
+          - button "Terms" [ref=f3e23] [cursor=pointer]
+        - button "Scan a new container image now" [ref=f3e25] [cursor=pointer]: Scan Container
+    - main [ref=f3e215]:
+      - generic [ref=f3e216]:
+        - generic [ref=f3e217]:
+          - generic [ref=f3e218]:
+            - generic [ref=f3e219]:
+              - button "Dashboard" [ref=f3e220] [cursor=pointer]
+              - generic [ref=f3e221]: /
+              - generic [ref=f3e222]: Audit Reports
+            - heading "Security Audit Records" [level=1] [ref=f3e223]
+            - paragraph [ref=f3e224]: Enterprise container vulnerability ledger, ML classification archives, and AI security decisions.
+          - generic [ref=f3e225]:
+            - button "New Security Scan" [ref=f3e226] [cursor=pointer]
+            - button "Clear Ledger" [ref=f3e251] [cursor=pointer]
+        - generic [ref=f3e229]:
+          - textbox "Filter reports by container image" [ref=f3e234]:
+            - /placeholder: Filter by image name (e.g. alpine, juice-shop, python)...
+          - generic [ref=f3e235]:
+            - group "Filter by severity" [ref=f3e236]:
+              - generic [ref=f3e237]: "Severity:"
+              - button "ALL" [ref=f3e238] [cursor=pointer]
+              - button "CRITICAL" [ref=f3e239] [cursor=pointer]
+              - button "HIGH" [ref=f3e240] [cursor=pointer]
+              - button "MEDIUM" [ref=f3e241] [cursor=pointer]
+              - button "LOW" [ref=f3e242] [cursor=pointer]
+            - group "Filter by decision" [ref=f3e243]:
+              - generic [ref=f3e244]: "Decision:"
+              - button "ALL" [ref=f3e245] [cursor=pointer]
+              - button "BLOCK" [ref=f3e246] [cursor=pointer]
+              - button "REVIEW" [ref=f3e247] [cursor=pointer]
+              - button "TRUST" [ref=f3e248] [cursor=pointer]
+        - table [ref=f3e256]:
+          - rowgroup [ref=f3e257]:
+            - row [ref=f3e258]:
+              - columnheader "#" [ref=f3e259]
+              - columnheader "Container Image" [ref=f3e260]
+              - columnheader "Date & Time" [ref=f3e261]
+              - columnheader "Risk Score" [ref=f3e262]
+              - columnheader "Severity" [ref=f3e263]
+              - columnheader "Vulnerabilities" [ref=f3e264]
+              - columnheader "Signature" [ref=f3e265]
+              - columnheader "AI Decision" [ref=f3e266]
+              - columnheader "Actions" [ref=f3e267]
+          - rowgroup [ref=f3e268]:
+            - row [ref=f3e269]:
+              - cell "#14" [ref=f3e270]
+              - cell "alpine:latest 96c74a93..." [ref=f3e272]:
+                - strong [ref=f3e273]: alpine:latest
+                - generic [ref=f3e274]: 96c74a93...
+              - cell "2026-10-08 10:58:25" [ref=f3e275]
+              - cell "32" [ref=f3e276]
+              - cell "MEDIUM" [ref=f3e279]
+              - cell "1 CVEs" [ref=f3e281]
+              - cell "Unsigned" [ref=f3e282]
+              - cell "REVIEW" [ref=f3e283]
+              - cell [ref=f3e287]:
+                - generic [ref=f3e288]:
+                  - button "Inspect" [ref=f3e289] [cursor=pointer]
+                  - button "JSON" [ref=f3e290] [cursor=pointer]
+            - row [ref=f3e294]:
+              - cell "#13" [ref=f3e295]
+              - cell "python:3.11-slim 24a9bb1a..." [ref=f3e297]:
+                - strong [ref=f3e298]: python:3.11-slim
+                - generic [ref=f3e299]: 24a9bb1a...
+              - cell "2026-10-08 09:11:19" [ref=f3e300]
+              - cell "70" [ref=f3e301]
+              - cell "HIGH" [ref=f3e304]
+              - cell "37 CVEs" [ref=f3e306]
+              - cell "Unsigned" [ref=f3e307]
+              - cell "REVIEW" [ref=f3e308]
+              - cell [ref=f3e312]:
+                - generic [ref=f3e313]:
+                  - button "Inspect" [ref=f3e314] [cursor=pointer]
+                  - button "JSON" [ref=f3e315] [cursor=pointer]
+            - row [ref=f3e319]:
+              - cell "#12" [ref=f3e320]
+              - cell "alpine:latest 4f148565..." [ref=f3e322]:
+                - strong [ref=f3e323]: alpine:latest
+                - generic [ref=f3e324]: 4f148565...
+              - cell "2026-10-08 09:05:36" [ref=f3e325]
+              - cell "32" [ref=f3e326]
+              - cell "MEDIUM" [ref=f3e329]
+              - cell "1 CVEs" [ref=f3e331]
+              - cell "Unsigned" [ref=f3e332]
+              - cell "REVIEW" [ref=f3e333]
+              - cell [ref=f3e337]:
+                - generic [ref=f3e338]:
+                  - button "Inspect" [ref=f3e339] [cursor=pointer]
+                  - button "JSON" [ref=f3e340] [cursor=pointer]
+            - row [ref=f3e344]:
+              - cell "#11" [ref=f3e345]
+              - cell "nginx:alpine 7bdf08cc..." [ref=f3e347]:
+                - strong [ref=f3e348]: nginx:alpine
+                - generic [ref=f3e349]: 7bdf08cc...
+              - cell "2026-10-08 09:02:25" [ref=f3e350]
+              - cell "92" [ref=f3e351]
+              - cell "CRITICAL" [ref=f3e354]
+              - cell "18 CVEs" [ref=f3e356]
+              - cell "Unsigned" [ref=f3e357]
+              - cell "BLOCK" [ref=f3e358]
+              - cell [ref=f3e362]:
+                - generic [ref=f3e363]:
+                  - button "Inspect" [ref=f3e364] [cursor=pointer]
+                  - button "JSON" [ref=f3e365] [cursor=pointer]
+            - row [ref=f3e369]:
+              - cell "#10" [ref=f3e370]
+              - cell "nginx:alpine 20ba53a1..." [ref=f3e372]:
+                - strong [ref=f3e373]: nginx:alpine
+                - generic [ref=f3e374]: 20ba53a1...
+              - cell "2026-10-08 09:02:18" [ref=f3e375]
+              - cell "92" [ref=f3e376]
+              - cell "CRITICAL" [ref=f3e379]
+              - cell "18 CVEs" [ref=f3e381]
+              - cell "Unsigned" [ref=f3e382]
+              - cell "BLOCK" [ref=f3e383]
+              - cell [ref=f3e387]:
+                - generic [ref=f3e388]:
+                  - button "Inspect" [ref=f3e389] [cursor=pointer]
+                  - button "JSON" [ref=f3e390] [cursor=pointer]
+            - row [ref=f3e394]:
+              - cell "#9" [ref=f3e395]
+              - cell "bkimminich/juice-shop:latest 23455382..." [ref=f3e397]:
+                - strong [ref=f3e398]: bkimminich/juice-shop:latest
+                - generic [ref=f3e399]: 23455382...
+              - cell "2026-10-08 08:48:18" [ref=f3e400]
+              - cell "100" [ref=f3e401]
+              - cell "CRITICAL" [ref=f3e404]
+              - cell "125 CVEs" [ref=f3e406]
+              - cell "Unsigned" [ref=f3e407]
+              - cell "BLOCK" [ref=f3e408]
+              - cell [ref=f3e412]:
+                - generic [ref=f3e413]:
+                  - button "Inspect" [ref=f3e414] [cursor=pointer]
+                  - button "JSON" [ref=f3e415] [cursor=pointer]
+            - row [ref=f3e419]:
+              - cell "#8" [ref=f3e420]
+              - cell "nginx:latest 1f662442..." [ref=f3e422]:
+                - strong [ref=f3e423]: nginx:latest
+                - generic [ref=f3e424]: 1f662442...
+              - cell "2026-10-08 07:07:20" [ref=f3e425]
+              - cell "60" [ref=f3e426]
+              - cell "HIGH" [ref=f3e429]
+              - cell "0 CVEs" [ref=f3e431]
+              - cell "Unsigned" [ref=f3e432]
+              - cell "REVIEW" [ref=f3e433]
+              - cell [ref=f3e437]:
+                - generic [ref=f3e438]:
+                  - button "Inspect" [ref=f3e439] [cursor=pointer]
+                  - button "JSON" [ref=f3e440] [cursor=pointer]
+            - row [ref=f3e444]:
+              - cell "#7" [ref=f3e445]
+              - cell "hello-world:latest ef5953ae..." [ref=f3e447]:
+                - strong [ref=f3e448]: hello-world:latest
+                - generic [ref=f3e449]: ef5953ae...
+              - cell "2026-10-08 07:06:29" [ref=f3e450]
+              - cell "30" [ref=f3e451]
+              - cell "MEDIUM" [ref=f3e454]
+              - cell "0 CVEs" [ref=f3e456]
+              - cell "Unsigned" [ref=f3e457]
+              - cell "REVIEW" [ref=f3e458]
+              - cell [ref=f3e462]:
+                - generic [ref=f3e463]:
+                  - button "Inspect" [ref=f3e464] [cursor=pointer]
+                  - button "JSON" [ref=f3e465] [cursor=pointer]
+            - row [ref=f3e469]:
+              - cell "#6" [ref=f3e470]
+              - cell "idn-shield-real-server:latest f2334860..." [ref=f3e472]:
+                - strong [ref=f3e473]: idn-shield-real-server:latest
+                - generic [ref=f3e474]: f2334860...
+              - cell "2026-10-08 07:04:46" [ref=f3e475]
+              - cell "60" [ref=f3e476]
+              - cell "HIGH" [ref=f3e479]
+              - cell "0 CVEs" [ref=f3e481]
+              - cell "Unsigned" [ref=f3e482]
+              - cell "REVIEW" [ref=f3e483]
+              - cell [ref=f3e487]:
+                - generic [ref=f3e488]:
+                  - button "Inspect" [ref=f3e489] [cursor=pointer]
+                  - button "JSON" [ref=f3e490] [cursor=pointer]
+            - row [ref=f3e494]:
+              - cell "#5" [ref=f3e495]
+              - cell "python:3.11-slim 52086b8d..." [ref=f3e497]:
+                - strong [ref=f3e498]: python:3.11-slim
+                - generic [ref=f3e499]: 52086b8d...
+              - cell "2026-10-08 06:58:01" [ref=f3e500]
+              - cell "60" [ref=f3e501]
+              - cell "HIGH" [ref=f3e504]
+              - cell "0 CVEs" [ref=f3e506]
+              - cell "Unsigned" [ref=f3e507]
+              - cell "REVIEW" [ref=f3e508]
+              - cell [ref=f3e512]:
+                - generic [ref=f3e513]:
+                  - button "Inspect" [ref=f3e514] [cursor=pointer]
+                  - button "JSON" [ref=f3e515] [cursor=pointer]
+            - row [ref=f3e519]:
+              - cell "#4" [ref=f3e520]
+              - cell "nginx:latest 206ac664..." [ref=f3e522]:
+                - strong [ref=f3e523]: nginx:latest
+                - generic [ref=f3e524]: 206ac664...
+              - cell "2026-10-08 06:50:26" [ref=f3e525]
+              - cell "60" [ref=f3e526]
+              - cell "HIGH" [ref=f3e529]
+              - cell "0 CVEs" [ref=f3e531]
+              - cell "Unsigned" [ref=f3e532]
+              - cell "REVIEW" [ref=f3e533]
+              - cell [ref=f3e537]:
+                - generic [ref=f3e538]:
+                  - button "Inspect" [ref=f3e539] [cursor=pointer]
+                  - button "JSON" [ref=f3e540] [cursor=pointer]
+            - row [ref=f3e544]:
+              - cell "#3" [ref=f3e545]
+              - cell "nginx:latest eb3f41bd..." [ref=f3e547]:
+                - strong [ref=f3e548]: nginx:latest
+                - generic [ref=f3e549]: eb3f41bd...
+              - cell "2026-10-08 06:45:57" [ref=f3e550]
+              - cell "60" [ref=f3e551]
+              - cell "HIGH" [ref=f3e554]
+              - cell "0 CVEs" [ref=f3e556]
+              - cell "Unsigned" [ref=f3e557]
+              - cell "REVIEW" [ref=f3e558]
+              - cell [ref=f3e562]:
+                - generic [ref=f3e563]:
+                  - button "Inspect" [ref=f3e564] [cursor=pointer]
+                  - button "JSON" [ref=f3e565] [cursor=pointer]
+            - row [ref=f3e569]:
+              - cell "#2" [ref=f3e570]
+              - cell "nginx:latest 640e5638..." [ref=f3e572]:
+                - strong [ref=f3e573]: nginx:latest
+                - generic [ref=f3e574]: 640e5638...
+              - cell "2026-10-08 06:32:06" [ref=f3e575]
+              - cell "60" [ref=f3e576]
+              - cell "HIGH" [ref=f3e579]
+              - cell "0 CVEs" [ref=f3e581]
+              - cell "Unsigned" [ref=f3e582]
+              - cell "REVIEW" [ref=f3e583]
+              - cell [ref=f3e587]:
+                - generic [ref=f3e588]:
+                  - button "Inspect" [ref=f3e589] [cursor=pointer]
+                  - button "JSON" [ref=f3e590] [cursor=pointer]
+            - row [ref=f3e594]:
+              - cell "#1" [ref=f3e595]
+              - cell "alpine:latest 5460f870..." [ref=f3e597]:
+                - strong [ref=f3e598]: alpine:latest
+                - generic [ref=f3e599]: 5460f870...
+              - cell "2026-10-08 06:07:30" [ref=f3e600]
+              - cell "54" [ref=f3e601]
+              - cell "HIGH" [ref=f3e604]
+              - cell "1 CVEs" [ref=f3e606]
+              - cell "Unsigned" [ref=f3e607]
+              - cell "REVIEW" [ref=f3e608]
+              - cell [ref=f3e612]:
+                - generic [ref=f3e613]:
+                  - button "Inspect" [ref=f3e614] [cursor=pointer]
+                  - button "JSON" [ref=f3e615] [cursor=pointer]
+        - dialog [ref=f3e619]:
+          - generic [ref=f3e620]:
+            - generic [ref=f3e621]:
+              - generic [ref=f3e622]: ChainProof Enterprise Security Inspector
+              - button "Close modal" [ref=f3e623] [cursor=pointer]: ✕
+            - generic [ref=f3e625]:
+              - button "Back to Audit Records" [ref=f3e627] [cursor=pointer]
+              - generic [ref=f3e630]:
+                - generic [ref=f3e631]:
+                  - generic [ref=f3e632]: CONTAINER SECURITY INTELLIGENCE REPORT
+                  - heading "alpine:latest" [level=1] [ref=f3e636]
+                  - generic [ref=f3e637]:
+                    - generic [ref=f3e638]: 2026-10-08 10:58:25
+                    - generic [ref=f3e639]: •
+                    - generic [ref=f3e640]: "Audit ID: 96c74a93-3945-47aa"
+                - generic [ref=f3e641]:
+                  - generic [ref=f3e646]:
+                    - generic [ref=f3e647]: POLICY DECISION
+                    - strong [ref=f3e648]: REVIEW REQUIRED
+                  - generic [ref=f3e649]:
+                    - text: RISK SCORE
+                    - generic [ref=f3e650]:
+                      - generic [ref=f3e651]: "32"
+                      - generic [ref=f3e652]: /100
+                    - text: MEDIUM
+              - generic [ref=f3e653]:
+                - generic [ref=f3e654]:
+                  - button "Intelligence Overview" [ref=f3e655] [cursor=pointer]
+                  - button "CVE Telemetry (1)" [ref=f3e656] [cursor=pointer]
+                  - button "Supply Chain Integrity" [ref=f3e657] [cursor=pointer]
+                  - button "ML Risk Models" [active] [ref=f3e658] [cursor=pointer]
+                - generic [ref=f3e659]:
+                  - button "Export JSON" [ref=f3e660] [cursor=pointer]
+                  - button "Done Inspecting" [ref=f3e664] [cursor=pointer]
+              - generic [ref=f3e1067]:
+                - generic [ref=f3e1068]:
+                  - heading "Random Forest Classifier" [level=2] [ref=f3e1069]
+                  - paragraph [ref=f3e1073]: Supervised Random Forest ensemble trained on multi-vector container vulnerability profiles, package counts, signature status, and layer manifests.
+                  - generic [ref=f3e1074]:
+                    - generic [ref=f3e1075]: Predicted Risk Label
+                    - strong [ref=f3e1076]: LOW
+                  - generic [ref=f3e1077]:
+                    - generic [ref=f3e1078]: Model Confidence
+                    - strong [ref=f3e1079]: 64%
+                  - generic [ref=f3e1080]:
+                    - generic [ref=f3e1081]: Base Risk Contribution
+                    - strong [ref=f3e1082]: 15 pts
+                  - generic [ref=f3e1083]:
+                    - generic [ref=f3e1084]: Model Artifact
+                    - strong [ref=f3e1085]: risk_model.pkl (Scikit-Learn)
+                - generic [ref=f3e1086]:
+                  - heading "Isolation Forest Anomaly Detection" [level=2] [ref=f3e1087]
+                  - paragraph [ref=f3e1091]: Unsupervised Isolation Forest model detecting structural configuration outliers, abnormal dependency ratios, and supply-chain anomalies.
+                  - generic [ref=f3e1092]:
+                    - generic [ref=f3e1093]: Anomaly Status
+                    - strong [ref=f3e1094]: ANOMALY DETECTED
+                  - generic [ref=f3e1095]:
+                    - generic [ref=f3e1096]: Decision Function Score
+                    - strong [ref=f3e1097]: "-0.0274"
+                  - generic [ref=f3e1098]:
+                    - generic [ref=f3e1099]: Anomaly Penalty
+                    - strong [ref=f3e1100]: +7 pts
+                  - generic [ref=f3e1101]:
+                    - generic [ref=f3e1102]: Model Artifact
+                    - strong [ref=f3e1103]: anomaly_model.pkl
+    - contentinfo [ref=f3e165]:
+      - generic [ref=f3e166]:
+        - generic [ref=f3e167]:
+          - generic [ref=f3e168]:
+            - generic [ref=f3e169]:
+              - img "ChainProof Logo" [ref=f3e170]
+              - generic [ref=f3e171]: ChainProof
+            - paragraph [ref=f3e172]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=f3e173]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=f3e176]:
+            - heading "Platform" [level=3] [ref=f3e177]
+            - list [ref=f3e178]:
+              - listitem [ref=f3e179]:
+                - button "Dashboard" [ref=f3e180] [cursor=pointer]
+              - listitem [ref=f3e181]:
+                - button "Live Image Scanner" [ref=f3e182] [cursor=pointer]
+              - listitem [ref=f3e183]:
+                - button "Audit Reports" [ref=f3e184] [cursor=pointer]
+          - generic [ref=f3e185]:
+            - heading "Security Standards" [level=3] [ref=f3e186]
+            - generic [ref=f3e187]:
+              - generic [ref=f3e188]: Syft SBOM v1.0
+              - generic [ref=f3e189]: Docker Scout SARIF
+              - generic [ref=f3e190]: Cosign Sigstore
+              - generic [ref=f3e191]: Isolation Forest ML
+          - generic [ref=f3e192]:
+            - heading "Compliance & Legal" [level=3] [ref=f3e193]
+            - list [ref=f3e194]:
+              - listitem [ref=f3e195]:
+                - button "Privacy Policy" [ref=f3e196] [cursor=pointer]
+              - listitem [ref=f3e197]:
+                - button "Terms & Conditions" [ref=f3e198] [cursor=pointer]
+              - listitem [ref=f3e199]:
+                - generic [ref=f3e200]: Zero Data-Retention Mode
+        - generic [ref=f3e204]:
+          - paragraph [ref=f3e205]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=f3e206]:
+            - button "Privacy Policy" [ref=f3e207] [cursor=pointer]
+            - generic [ref=f3e208]: •
+            - button "Terms of Service" [ref=f3e209] [cursor=pointer]
+            - generic [ref=f3e210]: •
+            - generic [ref=f3e211]: TLS 1.3 / HTTPS Verified
+  - generic [aria-hidden] [ref=f3e981]: "0"

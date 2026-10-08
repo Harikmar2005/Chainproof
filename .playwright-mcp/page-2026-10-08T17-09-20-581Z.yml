@@ -1,0 +1,179 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - button "ChainProof Home" [ref=e7] [cursor=pointer]:
+          - img "ChainProof Shield Logo" [ref=e8]
+          - generic [ref=e9]: ChainProof
+          - generic [ref=e10]: Enterprise v2.4
+        - navigation "Main Navigation" [ref=e11]:
+          - button "Dashboard" [ref=e12] [cursor=pointer]
+          - button "Live Scan" [ref=e14] [cursor=pointer]
+          - button "Audit Reports" [ref=e18] [cursor=pointer]
+          - button "Solutions" [ref=e22] [cursor=pointer]
+          - button "Privacy" [ref=e26] [cursor=pointer]
+          - button "Terms" [ref=e27] [cursor=pointer]
+        - button "Scan a new container image now" [ref=e29] [cursor=pointer]: Scan Container
+    - main [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: ENTERPRISE CONTAINER SUPPLY CHAIN SOLUTIONS
+          - heading "End-to-End Container Defense From Code Commit to Kubernetes Runtime" [level=1] [ref=e41]
+          - paragraph [ref=e42]: ChainProof delivers continuous verification, cryptographic supply-chain integrity, machine-learning anomaly detection, and automated AI security decisions for modern enterprise DevOps.
+          - generic [ref=e43]:
+            - button "Scan a Container Image" [ref=e44] [cursor=pointer]
+            - button "View Security Dashboard" [ref=e47] [cursor=pointer]
+        - region "Enterprise Solution Pillars" [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: CORE CAPABILITIES
+            - heading "Engineered for Zero-Trust DevOps" [level=2] [ref=e54]
+            - paragraph [ref=e55]: Five integrated layers of protection safeguarding your modern container fleet.
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: PROVENANCE & INTEGRITY
+              - heading "Zero-Trust Supply Chain Verification" [level=3] [ref=e66]
+              - paragraph [ref=e67]: Catalog every open-source component with Syft SBOMs and enforce tamper-proof cryptographic provenance with Sigstore Cosign and Rekor transparency logs.
+              - list [ref=e69]:
+                - listitem [ref=e70]:
+                  - generic [ref=e74]: Automated SPDX and CycloneDX SBOM cataloging
+                - listitem [ref=e75]:
+                  - generic [ref=e79]: Keyless OIDC container signing with Sigstore
+                - listitem [ref=e80]:
+                  - generic [ref=e84]: SLSA Level 3 build provenance attestation
+                - listitem [ref=e85]:
+                  - generic [ref=e89]: Cryptographic digest verification at every deployment stage
+            - generic [ref=e90]:
+              - generic [ref=e91]: PREDICTIVE THREAT DETECTION
+              - heading "ML & AI Threat Correlation Engine" [level=3] [ref=e97]
+              - paragraph [ref=e98]: Combine supervised Random Forest classification, unsupervised Isolation Forest anomaly detection, and deterministic multi-signal AI reasoning.
+              - list [ref=e100]:
+                - listitem [ref=e101]:
+                  - generic [ref=e105]: Supervised Random Forest risk prediction (0-100 score)
+                - listitem [ref=e106]:
+                  - generic [ref=e110]: Unsupervised Isolation Forest composition anomaly detection
+                - listitem [ref=e111]:
+                  - generic [ref=e115]: Multi-signal correlation across CVEs, SBOM, and signatures
+                - listitem [ref=e116]:
+                  - generic [ref=e120]: Zero-hallucination evidence-grounded policy decisions
+            - generic [ref=e121]:
+              - generic [ref=e122]: SHIFT-LEFT ENFORCEMENT
+              - heading "Automated CI/CD Pipeline Gates" [level=3] [ref=e127]
+              - paragraph [ref=e128]: Stop vulnerable, unverified, or anomalous containers before they ever touch your artifact registry or cloud environments.
+              - list [ref=e130]:
+                - listitem [ref=e131]:
+                  - generic [ref=e135]: Drop-in GitHub Actions, GitLab CI, and Jenkins integration
+                - listitem [ref=e136]:
+                  - generic [ref=e140]: Automated pull request gating on 'BLOCK' verdicts
+                - listitem [ref=e141]:
+                  - generic [ref=e145]: Instant developer feedback with prescriptive fix instructions
+                - listitem [ref=e146]:
+                  - generic [ref=e150]: Non-blocking review workflows for staging clusters
+            - generic [ref=e151]:
+              - generic [ref=e152]: RUNTIME & ADMISSION CONTROL
+              - heading "Kubernetes Admission Enforcement" [level=3] [ref=e158]
+              - paragraph [ref=e159]: Prevent unauthorized or untrusted container images from running in production Kubernetes clusters using Kyverno and OPA Gatekeeper policies.
+              - list [ref=e161]:
+                - listitem [ref=e162]:
+                  - generic [ref=e166]: Zero-trust cluster admission policy enforcement
+                - listitem [ref=e167]:
+                  - generic [ref=e171]: Real-time signature and digest verification on pod creation
+                - listitem [ref=e172]:
+                  - generic [ref=e176]: Automated blocking of unapproved base image layers
+                - listitem [ref=e177]:
+                  - generic [ref=e181]: Seamless integration with AWS EKS, GKE, and Azure AKS
+            - generic [ref=e182]:
+              - generic [ref=e183]: AUTOMATED REMEDIATION
+              - heading "Intelligent Fix & Hardening Engine" [level=3] [ref=e194]
+              - paragraph [ref=e195]: Transform raw vulnerability lists into actionable, ordered Dockerfile refactoring roadmaps and minimal base image migrations.
+              - list [ref=e197]:
+                - listitem [ref=e198]:
+                  - generic [ref=e202]: Automated multi-stage Dockerfile hardening suggestions
+                - listitem [ref=e203]:
+                  - generic [ref=e207]: Distroless and minimal base image migration recommendations
+                - listitem [ref=e208]:
+                  - generic [ref=e212]: Prescriptive package patch roadmaps ranked by exploitability
+                - listitem [ref=e213]:
+                  - generic [ref=e217]: One-click downloadable bash remediation scripts
+        - region "DevOps Integration Sandbox" [ref=e218]:
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - generic [ref=e221]: SEAMLESS INTEGRATION
+              - heading "Deploy in Seconds Across Your Stack" [level=2] [ref=e222]
+              - paragraph [ref=e223]: Copy production-ready configurations for GitHub Actions, Kubernetes, or Cosign.
+            - generic [ref=e224]:
+              - button "GitHub Actions Gate" [ref=e225] [cursor=pointer]
+              - button "Kyverno K8s Policy" [ref=e228] [cursor=pointer]
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - generic [ref=e234]: .github/workflows/chainproof-security-gate.yml
+              - button "Copy Configuration" [ref=e235] [cursor=pointer]
+            - code [ref=e240]: "name: ChainProof Enterprise Supply Chain Defense on: push: branches: [ \"main\" ] pull_request: branches: [ \"main\" ] jobs: chainproof-security-gate: runs-on: ubuntu-latest steps: - name: Checkout Repository uses: actions/checkout@v4 - name: Build Container Image run: docker build -t my-org/app:${{ github.sha }} . - name: ChainProof Security Intelligence Audit uses: chainproof/security-gate-action@v2 with: image: 'my-org/app:${{ github.sha }}' max-risk-score: 50 fail-on-decision: 'BLOCK' strict-signature-enforcement: true - name: Sign Container with Sigstore Cosign if: success() run: | cosign sign --key ${{ secrets.COSIGN_KEY }} my-org/app:${{ github.sha }}"
+        - region "Business Impact" [ref=e241]:
+          - generic [ref=e242]:
+            - strong [ref=e243]: 95%
+            - generic [ref=e244]: Vulnerability Reduction
+            - paragraph [ref=e245]: Via automated minimal base migration
+          - generic [ref=e246]:
+            - strong [ref=e247]: 100%
+            - generic [ref=e248]: Cryptographic Provenance
+            - paragraph [ref=e249]: Sigstore Cosign keyless attestation
+          - generic [ref=e250]:
+            - strong [ref=e251]: < 3s
+            - generic [ref=e252]: AI Decision Latency
+            - paragraph [ref=e253]: Real-time multi-signal risk correlation
+          - generic [ref=e254]:
+            - strong [ref=e255]: "0"
+            - generic [ref=e256]: False Positive Trust
+            - paragraph [ref=e257]: Supervised RF + Isolation Forest ML
+        - generic [ref=e259]:
+          - heading "Ready to Secure Your Container Pipeline?" [level=2] [ref=e260]
+          - paragraph [ref=e261]: Experience continuous verification, ML risk intelligence, and automated AI security decisions.
+          - generic [ref=e262]:
+            - button "Start Live Security Scan" [ref=e263] [cursor=pointer]
+            - button "View Audit Reports" [ref=e266] [cursor=pointer]
+    - contentinfo [ref=e270]:
+      - generic [ref=e271]:
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - generic [ref=e274]:
+              - img "ChainProof Logo" [ref=e275]
+              - generic [ref=e276]: ChainProof
+            - paragraph [ref=e277]: Enterprise-grade container vulnerability analysis, SBOM verification, and AI-driven supply chain defense for modern DevOps.
+            - generic [ref=e278]: All Systems Operational • SSL / HTTPS Enforced
+          - generic [ref=e281]:
+            - heading "Platform" [level=3] [ref=e282]
+            - list [ref=e283]:
+              - listitem [ref=e284]:
+                - button "Dashboard" [ref=e285] [cursor=pointer]
+              - listitem [ref=e286]:
+                - button "Live Image Scanner" [ref=e287] [cursor=pointer]
+              - listitem [ref=e288]:
+                - button "Audit Reports" [ref=e289] [cursor=pointer]
+              - listitem [ref=e290]:
+                - button "Enterprise Solutions" [ref=e291] [cursor=pointer]
+          - generic [ref=e292]:
+            - heading "Security Standards" [level=3] [ref=e293]
+            - generic [ref=e294]:
+              - generic [ref=e295]: Syft SBOM v1.0
+              - generic [ref=e296]: Docker Scout SARIF
+              - generic [ref=e297]: Cosign Sigstore
+              - generic [ref=e298]: Isolation Forest ML
+          - generic [ref=e299]:
+            - heading "Compliance & Legal" [level=3] [ref=e300]
+            - list [ref=e301]:
+              - listitem [ref=e302]:
+                - button "Privacy Policy" [ref=e303] [cursor=pointer]
+              - listitem [ref=e304]:
+                - button "Terms & Conditions" [ref=e305] [cursor=pointer]
+              - listitem [ref=e306]:
+                - generic [ref=e307]: Zero Data-Retention Mode
+        - generic [ref=e311]:
+          - paragraph [ref=e312]: © 2026 ChainProof Security Intelligence. All rights reserved.
+          - generic [ref=e313]:
+            - button "Privacy Policy" [ref=e314] [cursor=pointer]
+            - generic [ref=e315]: •
+            - button "Terms of Service" [ref=e316] [cursor=pointer]
+            - generic [ref=e317]: •
+            - generic [ref=e318]: TLS 1.3 / HTTPS Verified
