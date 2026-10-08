@@ -8,6 +8,7 @@ import Reports from "./pages/Reports";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Solutions from "./pages/Solutions";
+import ChainBreak from "./pages/ChainBreak";
 import NotFound from "./pages/NotFound";
 import { Analytics } from "./services/analytics";
 
@@ -17,6 +18,7 @@ function getRouteFromHash() {
     if (hash === "scan") return "scan";
     if (hash === "reports" || hash === "history") return "reports";
     if (hash === "solutions" || hash === "solution") return "solutions";
+    if (hash.startsWith("chainbreak") || hash.startsWith("game")) return "chainbreak";
     if (hash === "privacy" || hash === "privacy-policy") return "privacy";
     if (hash === "terms" || hash === "terms-and-conditions") return "terms";
     return "404";
@@ -61,6 +63,8 @@ function App() {
                 return <Reports onRouteChange={navigateTo} />;
             case "solutions":
                 return <Solutions onRouteChange={navigateTo} />;
+            case "chainbreak":
+                return <ChainBreak onRouteChange={navigateTo} />;
             case "privacy":
                 return <PrivacyPolicy onRouteChange={navigateTo} />;
             case "terms":

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BarChartIcon, SearchIcon, FileTextIcon, LightningIcon, LockIcon, ShieldCheckIcon } from "./Icons";
+import { BarChartIcon, SearchIcon, FileTextIcon, LightningIcon, LockIcon, ShieldCheckIcon, GamepadIcon } from "./Icons";
 
 function Navbar({ currentRoute, onRouteChange }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,6 +76,13 @@ function Navbar({ currentRoute, onRouteChange }) {
                     </button>
                     <button
                         type="button"
+                        className={`nav-link chainbreak-nav-link ${currentRoute === "chainbreak" ? "active" : ""}`}
+                        onClick={() => handleNav("chainbreak")}
+                    >
+                        <GamepadIcon size={16} /> ChainBreak <span className="nav-gamethon-tag">NEW</span>
+                    </button>
+                    <button
+                        type="button"
                         className={`nav-link ${currentRoute === "privacy" ? "active" : ""}`}
                         onClick={() => handleNav("privacy")}
                     >
@@ -147,6 +154,13 @@ function Navbar({ currentRoute, onRouteChange }) {
                             onClick={() => handleNav("solutions")}
                         >
                             <ShieldCheckIcon size={18} /> Enterprise Solutions
+                        </button>
+                        <button
+                            type="button"
+                            className={`mobile-nav-link chainbreak-mobile-link ${currentRoute === "chainbreak" ? "active" : ""}`}
+                            onClick={() => handleNav("chainbreak")}
+                        >
+                            <GamepadIcon size={18} /> 🎮 ChainBreak Escape Room
                         </button>
                         <div className="drawer-divider" />
                         <button

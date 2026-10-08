@@ -49,6 +49,11 @@ function Footer({ onRouteChange }) {
                                     Enterprise Solutions
                                 </button>
                             </li>
+                            <li>
+                                <button type="button" className="footer-gamethon-link" onClick={() => onRouteChange("chainbreak")}>
+                                    🎮 ChainBreak Escape Room
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
