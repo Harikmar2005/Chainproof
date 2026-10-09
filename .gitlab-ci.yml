@@ -1,0 +1,33 @@
+# ChainProof GitLab CI/CD Container Security Gate
+
+stages:
+  - build
+  - security-audit
+  - deploy
+
+build_image:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:dind
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
+
+chainproof_policy_gate:
+  stage: security-audit
+  image: curlimages/curl:latest
+  script:
+    - |
+      echo "Triggering ChainProof CI/CD security audit for $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA..."
+      RES=$(curl -s -X POST "${CHAINPROOF_API_URL:-http://chainproof-backend:8000/api/v1}/webhooks/cicd" \
+        -H "Content-Type: application/json" \
+        -H "X-API-Key: ${CHAINPROOF_API_KEY}" \
+        -d "{\"target\": \"${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}\", \"sync\": true, \"pipeline_id\": \"${CI_PIPELINE_ID}\"}")
+      echo "$RES"
+      if echo "$RES" | grep -q '"blocked":true'; then
+        echo "ERROR: ChainProof blocked pipeline due to Critical supply-chain risk."
+        exit 1
+      fi
+      echo "SUCCESS: ChainProof audit passed."
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

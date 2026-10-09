@@ -30,6 +30,60 @@ if (import.meta.env.DEV) {
 }
 
 /**
+ * Retrieve authorization headers from secure local storage
+ */
+export function getAuthHeaders() {
+    const headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    };
+    try {
+        const token = localStorage.getItem("chainproof_token");
+        const apiKey = localStorage.getItem("chainproof_api_key");
+        if (token) {
+            headers["Authorization"] = `Bearer ${token}`;
+        } else if (apiKey) {
+            headers["X-API-Key"] = apiKey;
+        }
+    } catch (_) {}
+    return headers;
+}
+
+export async function loginUser(username, password) {
+    const res = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    });
+    if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || "Authentication failed");
+    }
+    const data = await res.json();
+    if (data.access_token) {
+        localStorage.setItem("chainproof_token", data.access_token);
+        localStorage.setItem("chainproof_user", JSON.stringify(data.user));
+    }
+    return data;
+}
+
+export function logoutUser() {
+    try {
+        localStorage.removeItem("chainproof_token");
+        localStorage.removeItem("chainproof_user");
+    } catch (_) {}
+}
+
+export function getStoredUser() {
+    try {
+        const raw = localStorage.getItem("chainproof_user");
+        return raw ? JSON.parse(raw) : null;
+    } catch (_) {
+        return null;
+    }
+}
+
+/**
  * Format network errors into clear actionable diagnostic messages
  */
 function handleNetworkError(err, actionContext = "operation") {
@@ -54,9 +108,7 @@ export async function scanImage(image) {
     try {
         response = await fetch(`${API_BASE_URL}/scan`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: getAuthHeaders(),
             body: JSON.stringify({
                 image: cleanImage,
             }),
@@ -154,4 +206,86 @@ export async function analyzeScan(scanData) {
         decision: data.security_decision
     });
     return data;
+}
+
+/**
+ * Fetch automation rules
+ */
+export async function getAutomations() {
+    const res = await fetch(`${API_BASE_URL}/automations`, { headers: getAuthHeaders() });
+    if (!res.ok) throw new Error("Failed to load automations");
+    return await res.json();
+}
+
+/**
+ * Trigger an automation run on-demand
+ */
+export async function triggerAutomationRun(id) {
+    const res = await fetch(`${API_BASE_URL}/automations/${id}/run`, { 
+        method: "POST", 
+        headers: getAuthHeaders() 
+    });
+    if (!res.ok) throw new Error("Failed to trigger automation run");
+    return await res.json();
+}
+
+/**
+ * Fetch background job execution history
+ */
+export async function getJobs(limit = 50) {
+    const res = await fetch(`${API_BASE_URL}/jobs?limit=${limit}`, { headers: getAuthHeaders() });
+    if (!res.ok) throw new Error("Failed to load jobs");
+    return await res.json();
+}
+
+/**
+ * Fetch security notifications
+ */
+export async function getNotifications(limit = 50) {
+    const res = await fetch(`${API_BASE_URL}/notifications?limit=${limit}`, { headers: getAuthHeaders() });
+    if (!res.ok) throw new Error("Failed to load notifications");
+    return await res.json();
+}
+
+/**
+ * Fetch monitored container images
+ */
+export async function getMonitoredImages() {
+    const res = await fetch(`${API_BASE_URL}/monitored-images`, { headers: getAuthHeaders() });
+    if (!res.ok) throw new Error("Failed to load monitored images");
+    return await res.json();
+}
+
+/**
+ * Add a monitored container image
+ */
+export async function addMonitoredImage(data) {
+    const res = await fetch(`${API_BASE_URL}/monitored-images`, {
+        method: "POST",
+        headers: getAuthHeaders(),
+        body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error("Failed to add monitored image");
+    return await res.json();
+}
+
+/**
+ * Delete a monitored container image
+ */
+export async function deleteMonitoredImage(id) {
+    const res = await fetch(`${API_BASE_URL}/monitored-images/${id}`, {
+        method: "DELETE",
+        headers: getAuthHeaders()
+    });
+    if (!res.ok) throw new Error("Failed to delete monitored image");
+    return await res.json();
+}
+
+/**
+ * Check backend system health and tool diagnostics
+ */
+export async function getSystemHealth() {
+    const res = await fetch(`${API_BASE_URL}/health`);
+    if (!res.ok) throw new Error("Failed to check health");
+    return await res.json();
 }

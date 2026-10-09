@@ -1,0 +1,42 @@
+name: ChainProof Container Security Gate
+
+on:
+  push:
+    branches: [ "main", "release/*" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  chainproof-scan:
+    name: ChainProof Supply-Chain Audit & Policy Gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Target Docker Container
+        run: |
+          docker build -t my-app:${{ github.sha }} .
+
+      - name: Run ChainProof Security Gate
+        env:
+          CHAINPROOF_API_URL: ${{ secrets.CHAINPROOF_API_URL || 'https://api.chainproof.io/api/v1' }}
+          CHAINPROOF_API_KEY: ${{ secrets.CHAINPROOF_API_KEY }}
+        run: |
+          echo "Evaluating container security policy against ChainProof Cloud..."
+          RESPONSE=$(curl -s -X POST "$CHAINPROOF_API_URL/webhooks/cicd" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: $CHAINPROOF_API_KEY" \
+            -d "{\"target\": \"my-app:${{ github.sha }}\", \"sync\": true, \"pipeline_id\": \"${{ github.run_id }}\"}")
+
+          echo "ChainProof Response: $RESPONSE"
+          
+          # Check if deployment was blocked by deterministic policy gate
+          IS_BLOCKED=$(echo "$RESPONSE" | grep -o '"blocked":true' || true)
+          if [ -n "$IS_BLOCKED" ]; then
+            echo "❌ CRITICAL SECURITY RISK DETECTED: ChainProof blocked this deployment."
+            exit 1
+          fi
+
+          echo "✅ ChainProof Security Audit Passed. Proceeding with deployment."

@@ -151,7 +151,8 @@ function Scan({ onRouteChange, initialImage = "" }) {
                                     placeholder="e.g. alpine:latest, bkimminich/juice-shop:latest, python:3.11-slim"
                                     value={image}
                                     onChange={(e) => {
-                                        setImage(e.target.value);
+                                        const clean = e.target.value.replace(/[<>'"`&;|\\]/g, "").slice(0, 255);
+                                        setImage(clean);
                                         if (error) setError("");
                                     }}
                                     disabled={loading}

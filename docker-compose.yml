@@ -1,4 +1,23 @@
-# ChainProof Docker Compose
+# ==============================================================================
+# ChainProof Production Docker Compose Configuration
+# ==============================================================================
 version: "3.8"
 
-services: {}
+services:
+  chainproof-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chainproof-backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=https://chainproof-theta.vercel.app,http://localhost:5173,http://127.0.0.1:5173
+      - AI_ANALYST_PROVIDER=deterministic
+    volumes:
+      # Mount host Docker socket for container inspection and image vulnerability scanning
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Persist historical scan reports
+      - ./backend/data:/app/data
+

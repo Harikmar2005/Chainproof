@@ -151,7 +151,7 @@ function Reports({ onRouteChange }) {
                             type="text"
                             placeholder="Filter by image name (e.g. alpine, juice-shop, python)..."
                             value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
+                            onChange={(e) => setSearchTerm(e.target.value.replace(/[<>'"`&]/g, "").slice(0, 100))}
                             aria-label="Filter reports by container image"
                         />
                         {searchTerm && (

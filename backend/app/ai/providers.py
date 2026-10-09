@@ -16,6 +16,8 @@ from app.ai.prompts import SYSTEM_PROMPT, build_user_prompt
 
 class BaseAIProvider(ABC):
     """Abstract base provider for AI Security Analyst."""
+    name: str = "base"
+    provider_type: str = "unknown"
 
     @abstractmethod
     def analyze(self, evidence: Dict[str, Any]) -> Dict[str, Any]:
@@ -59,6 +61,8 @@ class DeterministicSecurityAnalyst(BaseAIProvider):
     to generate authoritative, multi-signal evidence-grounded security decisions.
     Always available with zero external API dependencies.
     """
+    name: str = "deterministic_rule_based"
+    provider_type: str = "rule_based"
 
     def analyze(self, evidence: Dict[str, Any]) -> Dict[str, Any]:
         image_name = evidence.get("image", "Container image")
@@ -348,6 +352,8 @@ class DeterministicSecurityAnalyst(BaseAIProvider):
 
 class OpenAIProvider(BaseAIProvider):
     """OpenAI API Provider (GPT-4o / GPT-4o-mini)."""
+    name: str = "openai"
+    provider_type: str = "external_llm"
 
     def __init__(self, api_key: str, model: str = "gpt-4o-mini", base_url: str = "https://api.openai.com/v1"):
         self.api_key = api_key
@@ -387,6 +393,8 @@ class OpenAIProvider(BaseAIProvider):
 
 class GeminiProvider(BaseAIProvider):
     """Google Gemini API Provider."""
+    name: str = "gemini"
+    provider_type: str = "external_llm"
 
     def __init__(self, api_key: str, model: str = "gemini-1.5-flash"):
         self.api_key = api_key
@@ -424,6 +432,8 @@ class GeminiProvider(BaseAIProvider):
 
 class AnthropicProvider(BaseAIProvider):
     """Anthropic Claude API Provider."""
+    name: str = "anthropic"
+    provider_type: str = "external_llm"
 
     def __init__(self, api_key: str, model: str = "claude-3-5-sonnet-20241022"):
         self.api_key = api_key
@@ -464,6 +474,8 @@ class AnthropicProvider(BaseAIProvider):
 
 class OllamaProvider(BaseAIProvider):
     """Local Ollama Provider."""
+    name: str = "ollama"
+    provider_type: str = "local_llm"
 
     def __init__(self, base_url: str = "http://localhost:11434", model: str = "llama3"):
         self.base_url = base_url.rstrip("/")

@@ -24,9 +24,21 @@ frontend/dist/
 *.db
 *.sqlite
 *.sqlite3
+data/
+backend/data/*.json
+desktop/agent/*.json
+!backend/data/training_data*.csv
 
-# Reports generated at runtime
-backend/data/reports.json
+# Vercel & Deployment
+.vercel/
+
+# Tauri / Rust
+target/
+frontend/src-tauri/target/
+
+# Mobile / Expo
+mobile/.expo/
+mobile/web-build/
 
 # OS
 .DS_Store

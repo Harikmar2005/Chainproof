@@ -1,20 +1,20 @@
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 import os
+import threading
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
+from typing import Dict, Any
 
+from app.api.auth import require_admin, require_analyst_or_admin
+from app.services.sanitizer import sanitize_raw_string
+from app.storage.db import DATA_DIR
+from app.ai.analyst import analyze_scan
 
 router = APIRouter(tags=["Reports"])
 
-
-from app.ai.analyst import analyze_scan
-
-REPORTS_FILE = os.path.join(
-    "data",
-    "reports.json"
-)
-
+REPORTS_FILE = os.path.join(DATA_DIR, "reports.json")
+_reports_lock = threading.Lock()
 
 
 def make_json_safe(value):
@@ -22,39 +22,30 @@ def make_json_safe(value):
     Convert values returned by Docker / ML / NumPy
     into standard JSON-compatible Python values.
     """
-
-    # None / normal JSON values
     if value is None:
         return None
 
     if isinstance(value, (str, int, float, bool)):
         return value
 
-    # Dictionaries
     if isinstance(value, dict):
         return {
             str(key): make_json_safe(val)
             for key, val in value.items()
         }
 
-    # Lists / tuples / sets
     if isinstance(value, (list, tuple, set)):
         return [
             make_json_safe(item)
             for item in value
         ]
 
-    # NumPy values such as:
-    # numpy.bool_
-    # numpy.int64
-    # numpy.float64
     if hasattr(value, "item"):
         try:
             return value.item()
         except Exception:
             pass
 
-    # Fallback for unexpected objects
     return str(value)
 
 
@@ -63,129 +54,115 @@ def get_all_reports():
     Reads scan history from reports.json.
     Enriches with ai_analysis if missing.
     """
-
-    if not os.path.exists(REPORTS_FILE):
-        return []
-
-    try:
-
-        with open(
-            REPORTS_FILE,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            reports = json.load(f)
-
-        if not isinstance(reports, list):
+    with _reports_lock:
+        if not os.path.exists(REPORTS_FILE):
             return []
 
-        # Enrich legacy reports if needed
-        for report in reports:
-            if isinstance(report, dict):
-                ai = report.get("ai_analysis")
-                if not ai or not isinstance(ai, dict) or "correlated_risks" not in ai or not ai.get("correlated_risks"):
-                    try:
-                        report["ai_analysis"] = analyze_scan(report)
-                    except Exception:
-                        pass
+        try:
+            with open(REPORTS_FILE, "r", encoding="utf-8") as f:
+                reports = json.load(f)
 
-        return reports
+            if not isinstance(reports, list):
+                return []
 
+            for report in reports:
+                if isinstance(report, dict):
+                    ai = report.get("ai_analysis")
+                    if not ai or not isinstance(ai, dict) or "correlated_risks" not in ai or not ai.get("correlated_risks"):
+                        try:
+                            report["ai_analysis"] = analyze_scan(report)
+                        except Exception:
+                            pass
 
-    except Exception:
+            return reports
 
-        return []
-
+        except Exception:
+            return []
 
 
 def save_report(scan_data: dict):
     """
-    Appends a new scan result to reports.json.
+    Appends a new scan result to reports.json using atomic file write.
     """
-
-    os.makedirs(
-        "data",
-        exist_ok=True
-    )
-
-    # Convert all ML / Docker / scanner values
-    # into JSON-compatible Python values.
     scan_data = make_json_safe(scan_data)
 
-    reports = get_all_reports()
+    with _reports_lock:
+        reports = []
+        if os.path.exists(REPORTS_FILE):
+            try:
+                with open(REPORTS_FILE, "r", encoding="utf-8") as f:
+                    reports = json.load(f)
+            except Exception:
+                reports = []
 
-    # Add ID
-    scan_data["id"] = len(reports) + 1
+        scan_data["id"] = len(reports) + 1
+        now_dt = datetime.now(timezone.utc)
+        scan_data["timestamp"] = now_dt.strftime("%Y-%m-%d %H:%M:%S")
 
-    # Add timestamp
-    scan_data["timestamp"] = datetime.utcnow().strftime(
-        "%Y-%m-%d %H:%M:%S"
-    )
+        reports.insert(0, scan_data)
 
-    # Newest scan first
-    reports.insert(
-        0,
-        scan_data
-    )
+        tmp_file = f"{REPORTS_FILE}.tmp"
+        with open(tmp_file, "w", encoding="utf-8") as f:
+            json.dump(reports, f, indent=2, ensure_ascii=False)
 
-    with open(
-        REPORTS_FILE,
-        "w",
-        encoding="utf-8"
-    ) as f:
+        try:
+            os.chmod(tmp_file, 0o600)
+        except Exception:
+            pass
 
-        json.dump(
-            reports,
-            f,
-            indent=2,
-            ensure_ascii=False
-        )
+        if os.path.exists(REPORTS_FILE):
+            os.replace(tmp_file, REPORTS_FILE)
+        else:
+            os.rename(tmp_file, REPORTS_FILE)
 
 
 def clear_all_reports():
     """
     Clears all scan history.
     """
+    with _reports_lock:
+        tmp_file = f"{REPORTS_FILE}.tmp"
+        with open(tmp_file, "w", encoding="utf-8") as f:
+            json.dump([], f, indent=2)
 
-    os.makedirs(
-        "data",
-        exist_ok=True
-    )
+        try:
+            os.chmod(tmp_file, 0o600)
+        except Exception:
+            pass
 
-    with open(
-        REPORTS_FILE,
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            [],
-            f,
-            indent=2
-        )
+        if os.path.exists(REPORTS_FILE):
+            os.replace(tmp_file, REPORTS_FILE)
+        else:
+            os.rename(tmp_file, REPORTS_FILE)
 
 
 @router.get("/reports")
-def list_reports():
-
+def list_reports(user: Dict[str, Any] = Depends(require_analyst_or_admin)):
+    """List historical container security scan reports (Analyst & Admin)."""
     return get_all_reports()
 
 
+@router.get("/reports/{report_id}")
+def get_report(report_id: str, user: Dict[str, Any] = Depends(require_analyst_or_admin)):
+    """Retrieve details for an individual scan report by ID or scan_id (Analyst & Admin)."""
+    clean_id = sanitize_raw_string(str(report_id), max_length=100)
+    reports = get_all_reports()
+    for r in reports:
+        if str(r.get("id")) == clean_id or str(r.get("scan_id")) == clean_id:
+            return r
+    raise HTTPException(status_code=404, detail="Scan report not found")
+
+
 @router.delete("/reports")
-def clear_reports():
-
+def clear_reports(admin: Dict[str, Any] = Depends(require_admin)):
+    """Clear all historical scan reports (Admin only)."""
     try:
-
         clear_all_reports()
-
         return {
             "status": "success",
             "message": "Scan history cleared successfully."
         }
-
     except Exception as e:
-
         raise HTTPException(
             status_code=500,
             detail=str(e)

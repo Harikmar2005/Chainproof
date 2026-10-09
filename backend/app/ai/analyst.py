@@ -84,18 +84,21 @@ class AIAnalyst:
 
         try:
             analysis = self.provider.analyze(evidence)
-            validated = self._validate_and_normalize(analysis, evidence)
+            validated = self._validate_and_normalize(analysis, evidence, active_provider=self.provider)
             return validated
         except Exception as primary_error:
             logger.warning(f"Primary AI provider failed: {primary_error}. Falling back to deterministic analyst.")
             try:
                 fallback_analysis = self.fallback_provider.analyze(evidence)
-                validated = self._validate_and_normalize(fallback_analysis, evidence)
+                validated = self._validate_and_normalize(fallback_analysis, evidence, active_provider=self.fallback_provider)
                 return validated
             except Exception as fallback_error:
                 logger.error(f"Fallback AI analyst failed: {fallback_error}")
                 return {
                     "status": "UNAVAILABLE",
+                    "ai_provider": "unavailable",
+                    "ai_provider_type": "unavailable",
+                    "is_llm_generated": False,
                     "reason": "AI analysis temporarily unavailable",
                     "overall_assessment": "SECURITY CORRELATION UNAVAILABLE",
                     "assessment": "SECURITY ASSESSMENT UNAVAILABLE",
@@ -110,7 +113,7 @@ class AIAnalyst:
                     "confidence": 0.5
                 }
 
-    def _validate_and_normalize(self, analysis: Dict[str, Any], evidence: Dict[str, Any]) -> Dict[str, Any]:
+    def _validate_and_normalize(self, analysis: Dict[str, Any], evidence: Dict[str, Any], active_provider=None) -> Dict[str, Any]:
         """
         Sanitize and guarantee all fields match the required correlation schema.
         """
@@ -251,8 +254,16 @@ class AIAnalyst:
         except Exception:
             confidence = 0.94
 
+        # Provider provenance
+        p_name = getattr(active_provider, "name", "deterministic_rule_based") if active_provider else "deterministic_rule_based"
+        p_type = getattr(active_provider, "provider_type", "rule_based") if active_provider else "rule_based"
+        is_llm = p_type in ("external_llm", "local_llm")
+
         return {
             "status": "success",
+            "ai_provider": p_name,
+            "ai_provider_type": p_type,
+            "is_llm_generated": is_llm,
             "overall_assessment": assessment,
             "assessment": assessment,
             "correlation_confidence": round(confidence, 2),

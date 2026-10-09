@@ -156,7 +156,8 @@ function Dashboard({ onRouteChange, onQuickScan }) {
                                         placeholder="Enter container image (e.g. alpine:latest, bkimminich/juice-shop:latest)"
                                         value={quickInput}
                                         onChange={(e) => {
-                                            setQuickInput(e.target.value);
+                                            const sanitized = e.target.value.replace(/[<>'"`&;|\\]/g, "").slice(0, 200);
+                                            setQuickInput(sanitized);
                                             if (quickError) setQuickError("");
                                         }}
                                         aria-label="Scan container image"

@@ -5,3 +5,5 @@ docker
 pandas
 scikit-learn
 joblib
+bcrypt
+pyjwt

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://tauri.app/schema.json",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "ChainProof",
+    "version": "2.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "dialog": {
+        "all": true
+      },
+      "notification": {
+        "all": true
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": [
+          "http://127.0.0.1:8008/*",
+          "http://127.0.0.1:8000/*",
+          "http://localhost:8008/*",
+          "http://localhost:8000/*",
+          "https://*/*"
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "io.chainproof.desktop",
+      "icon": [
+        "icons/icon.png"
+      ]
+    },
+    "security": {
+      "csp": "default-src 'self' 'unsafe-inline' 'unsafe-eval' http://127.0.0.1:* http://localhost:* https://*"
+    },
+    "windows": [
+      {
+        "title": "ChainProof Enterprise Container Security",
+        "width": 1280,
+        "height": 840,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  }
+}
